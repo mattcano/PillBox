@@ -15,5 +15,6 @@ class User < ActiveRecord::Base
   has_many :coaches, :through => :coaches_dependents
 
   has_many :medications
+  has_many :reminders
 
 end

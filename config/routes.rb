@@ -1,5 +1,8 @@
 PillBox::Application.routes.draw do
 
+  resources :reminders
+
+
   resources :medications
 
 
