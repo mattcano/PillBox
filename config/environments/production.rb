@@ -1,6 +1,9 @@
 PillBox::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Added so Devise can run on Heroku: http://devise.plataformatec.com.br/
+  config.assets.initialize_on_precompile = false
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
