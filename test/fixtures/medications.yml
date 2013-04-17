@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  drug: MyString
+  dosage_quant: 1
+  dosage_size: MyString
+  frequency: 1
+  period: MyString
+  user_id: 1
+  bottle_size: 1
+  notes: MyText
+
+two:
+  name: MyString
+  drug: MyString
+  dosage_quant: 1
+  dosage_size: MyString
+  frequency: 1
+  period: MyString
+  user_id: 1
+  bottle_size: 1
+  notes: MyText
