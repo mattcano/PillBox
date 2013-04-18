@@ -11,3 +11,10 @@
  *= require_self
  *= require_tree .
  */
+
+ #logo {
+  font-family: 'Chango', cursive;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #8B77B5;
+ }
