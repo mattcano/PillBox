@@ -1,6 +1,14 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
+ #logo {
+  font-family: 'Chango', cursive;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #8B77B5;
+ }
 
-#test_header {
-  
-}
+ body {
+  background-image: url("background_tile.png");
+ }
+
+ #header-container {
+  width: 90%;
+ }
