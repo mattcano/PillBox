@@ -1,4 +1,7 @@
 class MedicationsController < ApplicationController
+
+   before_filter :authenticate_user!
+  
   # GET /medications
   # GET /medications.json
   def index

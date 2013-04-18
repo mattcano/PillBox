@@ -1,4 +1,7 @@
 class RemindersController < ApplicationController
+
+   before_filter :authenticate_user!
+  
   # GET /reminders
   # GET /reminders.json
   def index

@@ -4,9 +4,9 @@
 <div class="row-fluid">
 
   <div class="span6 offset3 sign-up">
-    <button class="btn btn-large btn-warning" type="button">Create Your Own Pillbox</button>
+    <%= link_to("Create Your Own Pillbox", "users/sign_up", html_options = {:class => "btn btn-large btn-warning"}) %>
     <hr>
-    <button class="btn btn-large btn-danger" type="button">Become a Pillbox Coach</button>
+    <%= link_to("Become a Pillbox Coach", "#", html_options = {:class => "btn btn-large btn-danger"}) %>
   </div>
   
 </div>  
