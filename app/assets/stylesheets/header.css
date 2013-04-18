@@ -4,3 +4,7 @@
   font-weight: bolder;
   color: #8B77B5;
  }
+
+ body {
+  background-image: url("background_tile.png");
+ }
