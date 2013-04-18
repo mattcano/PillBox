@@ -24,24 +24,17 @@
               </li>
             </ul>
             <% if user_signed_in? %>
-              <div class="pull-right user-header"><%= current_user.email %>
+              <div class="pull-right user-header">
+                <span class="user-name"><%= current_user.email %></span>
                 <%= link_to("Log Out", destroy_user_session_path, :method => :delete) %>
               </div>
             <% else %>
-              <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-              <%= devise_error_messages! %>
-              <div><%= f.label :email %><br />
-              <%= f.email_field :email, :autofocus => true %></div>
-
-              <div><%= f.label :password %><br />
-              <%= f.password_field :password %></div>
-
-              <% if devise_mapping.rememberable? -%>
-                <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-              <% end -%>
-
-              <div><%= f.submit "Sign in" %></div>
-            <% end %>
+              <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "navbar-form pull-right"}) do |f| %>
+                <%= devise_error_messages! %>
+                <%= f.email_field :email, :placeholder => "Email", :class => "header-form"%>
+                <%= f.password_field :password, :placeholder => "Password", :class => "header-form"%>
+                <%= f.submit "Sign in", :class => "btn" %>
+              <% end %>
               <!-- <form class="navbar-form pull-right">
                 <input class="span2" type="text" placeholder="Email">
                 <input class="span2" type="password" placeholder="Password">

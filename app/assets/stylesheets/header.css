@@ -9,3 +9,15 @@
  #header-container {
   width: 90%;
  }
+
+ .user-header {
+  margin-top: 10px;
+ }
+
+ .header-form {
+  width: 100px;
+ }
+
+ .user-name {
+  color: #49afcd;
+ }
