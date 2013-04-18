@@ -1,10 +1,16 @@
-<%= render 'common/header' %>
+<div id="logo" class="main" >PillBox</div>
 
-<div id="test_header">
+<div class="row-fluid">
 
-  <% 30.times do %>
-    <h1>This is Home Index</h1>
-  <% end %>
-
+  <div class="span6 offset3 sign-up">
+    <button class="btn btn-large btn-warning" type="button">Create Your Own Pillbox</button>
+    <hr>
+    <button class="btn btn-large btn-danger" type="button">Become a Pillbox Coach</button>
+  </div>
+  
 </div>  
+
+<hr>
+
+<%= render 'about-partial' %>
 

@@ -12,4 +12,6 @@
  *= require_tree .
  */
 
-
+.main-body {
+  margin-top: 50px;
+}

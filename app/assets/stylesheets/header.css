@@ -1,10 +1,11 @@
  #logo {
-  font-family: 'Chango', cursive;
+  font-family: 'Chango', arial;
   font-size: 2em;
   font-weight: bolder;
-  color: #8B77B5;
+  color: #49afcd;
  }
 
- body {
-  background-image: url("background_tile.png");
+
+ #header-container {
+  width: 90%;
  }
