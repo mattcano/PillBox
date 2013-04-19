@@ -18,10 +18,26 @@
   <div><%= f.label :phone_number %><br />
   <%= f.telephone_field :phone_number %></div>
 
-  <div><%= f.label :phone_is_cell, "Phone is SMS capable" %>
+  <div><%= f.label :phone_is_cell, "Is your phone SMS capable?" %>
   <%= f.check_box :phone_is_cell %></div>
 
   <div><br><%= f.submit "Sign up" %></div>
+
+  <hr>
+
+  <h3 class="muted">Settings</h3>
+
+  <div><%= f.label :notification_freq, "Notification frequency: " %><br />
+  <%= f.select(:notification_freq, options_for_select([["All", "All"], ["Daily", "Daily"], ["Bi-weekly", "Bi-weekly"], ["Weekly", "Weekly"]], "All")) %></div>
+
+  <div><br><%= f.label :email_enabled, "Would you like us to send you <strong>Email Notifications</strong>?".html_safe %>
+  <%= f.check_box :email_enabled %></div>
+
+  <div><br><%= f.label :sms_enabled, "Would you like us to send you <strong>SMS Notifications</strong>?".html_safe %>
+  <%= f.check_box :sms_enabled %></div>
+
+   <div><br><%= f.label :calls_enabled, "Would you like to enable automated <strong>Call Notifications</strong>?".html_safe %>
+  <%= f.check_box :calls_enabled %></div> 
 <% end %>
 
 <%= render "devise/shared/links" %>

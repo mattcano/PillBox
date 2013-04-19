@@ -3,8 +3,11 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, :autofocus => true %></div>
+
   <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <%= f.email_field :email %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -19,11 +22,35 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
 
-  <div><%= f.submit "Update" %></div>
+  <div><%= f.label :phone_number %><br />
+  <%= f.telephone_field :phone_number %></div>
+
+  <div><%= f.label :phone_is_cell, "Is your phone SMS capable?" %>
+  <%= f.check_box :phone_is_cell %></div>
+
+  <hr>
+
+  <h3 class="muted">Settings</h3>
+
+  <div><%= f.label :notification_freq, "Notification frequency: " %><br />
+  <%= f.select(:notification_freq, options_for_select([["All", "All"], ["Daily", "Daily"], ["Bi-weekly", "Bi-weekly"], ["Weekly", "Weekly"]], "All")) %></div>
+
+  <div><br><%= f.label :email_enabled, "Would you like us to send you <strong>Email Notifications</strong>?".html_safe %>
+  <%= f.check_box :email_enabled %></div>
+
+  <div><br><%= f.label :sms_enabled, "Would you like us to send you <strong>SMS Notifications</strong>?".html_safe %>
+  <%= f.check_box :sms_enabled %></div>
+
+  <div><br><%= f.label :calls_enabled, "Would you like to enable automated <strong>Call Notifications</strong>?".html_safe %>
+  <%= f.check_box :calls_enabled %></div> 
+
+  <div><br><%= f.submit "Update", :class => "btn btn-success" %></div>
 <% end %>
+
+<hr>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => "btn btn-danger" %></p>
 
 <%= link_to "Back", :back %>

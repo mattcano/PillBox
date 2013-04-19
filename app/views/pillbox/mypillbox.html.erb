@@ -1,10 +1,10 @@
-<%= current_user.inspect %>
+<% if current_user.name %>
+<h1 class="pagination-centered"><%= current_user.name %>'s PillBox</h1>
+<% else %>
+<h1 class="pagination-centered">My PillBox</h1>
+<% end %>
+
 <br>
-<%= current_user.email %>
-<br>
-<%= current_user.name %>
-<br>
-<%= current_user.phone_is_cell %>
 
 <%= render 'reminders' %>
 

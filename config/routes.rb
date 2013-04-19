@@ -19,6 +19,8 @@ PillBox::Application.routes.draw do
   match "/buddies" => "pillbox#buddies"
   match "/settings" => "pillbox#settings"
 
+  match 'user_root' => 'pillbox#mypillbox'
+
   # get "/medications/new", :controller => "medications", :action => "new"
 
 end

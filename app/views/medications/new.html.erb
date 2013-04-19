@@ -1,4 +1,4 @@
-<h1>New medication</h1>
+<h1>New medication<%= " for: " + current_user.name if current_user.name %></h1>
 
 <%= render 'form' %>
 

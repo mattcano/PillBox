@@ -3,8 +3,12 @@
   font-size: 2em;
   font-weight: bolder;
   color: #49afcd;
+  text-decoration: none;
  }
 
+.grey-text {
+  color: #999999;
+}
 
  #header-container {
   width: 90%;
