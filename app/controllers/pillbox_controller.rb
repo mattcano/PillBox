@@ -1,6 +1,12 @@
 class PillboxController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user! 
+  before_filter :update_meds_array
+
+  def update_meds_array
+    @meds_array = current_user.medications.order(:name)
+    @counter = 1
+  end
 
   def mypillbox
   end

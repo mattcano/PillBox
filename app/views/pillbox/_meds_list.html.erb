@@ -8,24 +8,22 @@
         <th>Name</th>
         <th>Drug</th>
         <th>Dosage</th>
+        <th>Frequency</th>
         <th>Notes</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Vicodin</td>
-        <td>Hydrocodone</td>
-        <td>2 pills</td>
-        <td>Take with food.</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Vicodin</td>
-        <td>Hydrocodone</td>
-        <td>2 pills</td>
-        <td>Take with food.</td>
-      </tr>
+      <% @meds_array.each do |med|%>
+        <tr>
+          <td><%= @counter %></td>
+          <td><%= med.name %></td>
+          <td><%= med.drug %></td>
+          <td><%= med.dosage_quant.to_s + " " + med.dosage_size %></td>
+          <td><%= med.frequency.to_s + " " + med.period %></td>
+          <td><%= med.notes %></td>
+        </tr>
+        <% @counter += 1 %>
+      <% end %>
     </tbody>
 
   </table>

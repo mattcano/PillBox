@@ -4,6 +4,9 @@
 <h1 class="pagination-centered">My PillBox</h1>
 <% end %>
 
+<%= @meds_array.inspect %>
+<br>
+<%= current_user.medications.order(:name).inspect %>
 <br>
 
 <%= render 'reminders' %>

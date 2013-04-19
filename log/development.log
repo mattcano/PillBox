@@ -38871,3 +38871,2396 @@ Served asset /reminders.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 21:31:31 -0700
 Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/meds_list" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Processing by PillboxController#meds_list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered pillbox/_meds_list.html.erb (0.1ms)
+  Rendered pillbox/meds_list.html.erb within layouts/application (24.8ms)
+  Rendered common/_header.html.erb (0.7ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 233ms (Views: 231.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:25 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 21:42:26 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/meds_list" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Processing by PillboxController#meds_list as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/meds_list.html.erb within layouts/application (1.0ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:38 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered pillbox/_reminders.html.erb (0.0ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.1ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (83.3ms)
+  Rendered common/_header.html.erb (0.9ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 181ms (Views: 179.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:42 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 21:57:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/meds_list" for 127.0.0.1 at 2013-04-18 21:58:04 -0700
+Processing by PillboxController#meds_list as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/meds_list.html.erb within layouts/application (0.6ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 91.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered pillbox/_reminders.html.erb (0.0ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (2.4ms)
+  Rendered common/_header.html.erb (0.4ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mMedication Load (0.3ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (23.4ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 117.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 21:58:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 21:59:52 -0700
+
+ActionController::RoutingError (undefined local variable or method `update_meds_array' for PillboxController:Class):
+  app/controllers/pillbox_controller.rb:4:in `<class:PillboxController>'
+  app/controllers/pillbox_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 22:00:20 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mMedication Load (0.2ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (21.2ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 181ms (Views: 71.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:20 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:20 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:20 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:20 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 22:00:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (1.7ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (8.2ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 64.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Iy9T9yErzV2BzptFy25VApxO7pUDJEyLHogIS+F2L7I="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Processing by HomeController#index as HTML
+  Rendered home/_about-partial.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered common/_header.html.erb (2.1ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 101ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/together.jpg" for 127.0.0.1 at 2013-04-18 23:01:47 -0700
+Served asset /together.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (83.1ms)
+  Rendered common/_header.html.erb (1.8ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 183ms (Views: 181.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:44 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /reminders.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /pillbox.js - 200 OK (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:45 -0700
+Served asset /medications.js - 200 OK (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"olCW6AAtMFiTjIKsGHXObkvABeGx7F2q+Jdq/vqyXuA=", "user"=>{"email"=>"cano.matt@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'cano.matt@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 87ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"olCW6AAtMFiTjIKsGHXObkvABeGx7F2q+Jdq/vqyXuA=", "user"=>{"email"=>"cano.matt@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+  Rendered common/_header.html.erb (1.4ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 184ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:04:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-04-18 23:05:03 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"olCW6AAtMFiTjIKsGHXObkvABeGx7F2q+Jdq/vqyXuA=", "user"=>{"email"=>"cano.matt@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'cano.matt@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-04-19 03:41:01.840255', "current_sign_in_at" = '2013-04-19 06:05:04.090746', "sign_in_count" = 13, "updated_at" = '2013-04-19 06:05:04.091693' WHERE "users"."id" = 5[0m
+  [1m[35m (49.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/mypillbox
+Completed 302 Found in 144ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mMedication Load (0.2ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (5.5ms)
+  Rendered common/_header.html.erb (0.7ms)
+  Rendered common/_footer.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:05:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/myreminders" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Processing by PillboxController#reminders as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered pillbox/_reminders.html.erb (0.0ms)
+  Rendered pillbox/reminders.html.erb within layouts/application (1.0ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 176ms (Views: 173.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:31 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/meds_list" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Processing by PillboxController#meds_list as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/meds_list.html.erb within layouts/application (0.8ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 91.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:06:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.8ms)
+  Rendered common/_header.html.erb (0.4ms)
+  Rendered common/_footer.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 136.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:06:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/coaches" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Processing by PillboxController#coaches as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/coaches.html.erb within layouts/application (1.3ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /reminders.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:00 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:07:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/buddies" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Processing by PillboxController#buddies as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/buddies.html.erb within layouts/application (1.3ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 181ms (Views: 131.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:03 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:07:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/credits" for 127.0.0.1 at 2013-04-18 23:07:07 -0700
+Processing by HomeController#credits as HTML
+  Rendered home/credits.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered common/_header.html.erb (2.0ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 170ms (Views: 169.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:07:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (0.2ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (5.3ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 99ms (Views: 96.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:07:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/myreminders" for 127.0.0.1 at 2013-04-18 23:08:19 -0700
+Processing by PillboxController#reminders as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered pillbox/_reminders.html.erb (0.0ms)
+  Rendered pillbox/reminders.html.erb within layouts/application (0.7ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 93ms (Views: 91.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:19 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:19 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:08:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (0.2ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  Rendered pillbox/_reminders.html.erb (0.2ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (10.7ms)
+  Rendered common/_header.html.erb (0.7ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 146.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:21 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-18 23:08:22 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-18 23:08:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-19 03:38:33 -0700
+Processing by HomeController#index as HTML
+  Rendered home/_about-partial.html.erb (1.5ms)
+  Rendered home/index.html.erb within layouts/application (34.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered common/_header.html.erb (128.5ms)
+  Rendered common/_footer.html.erb (0.6ms)
+Completed 200 OK in 646ms (Views: 641.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /application.css - 200 OK (21ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /footer.css - 200 OK (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /home.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /bootstrap-responsive.css - 200 OK (2ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /header.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /bootstrap.css - 200 OK (7ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /medications.css - 200 OK (2ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /pillbox.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:34 -0700
+Served asset /jquery.js - 304 Not Modified (65ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /pillbox.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /medications.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /reminders.css - 200 OK (2ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /reminders.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /application.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/background_tile.png" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /background_tile.png - 304 Not Modified (42ms)
+
+
+Started GET "/assets/together.jpg" for 127.0.0.1 at 2013-04-19 03:38:35 -0700
+Served asset /together.jpg - 304 Not Modified (21ms)
+
+
+Started GET "/meds_list" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Processing by PillboxController#meds_list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered pillbox/_meds_list.html.erb (1.1ms)
+  Rendered pillbox/meds_list.html.erb within layouts/application (25.8ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.1ms)
+Completed 200 OK in 281ms (Views: 113.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mMedication Load (0.2ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  Rendered pillbox/_reminders.html.erb (0.5ms)
+  Rendered pillbox/_meds_list.html.erb (0.0ms)
+  Rendered pillbox/_coaches.html.erb (0.7ms)
+  Rendered pillbox/_buddies.html.erb (0.5ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (117.0ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 216ms (Views: 211.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:39:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-19 03:49:26 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (0.1ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+  Rendered pillbox/_meds_list.html.erb (1.0ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (21.5ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 202ms (Views: 107.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/medications/new" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Processing by MedicationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered medications/_form.html.erb (116.4ms)
+  Rendered medications/new.html.erb within layouts/application (138.8ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 257.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /pillbox.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:49:54 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/medications" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Processing by MedicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"olCW6AAtMFiTjIKsGHXObkvABeGx7F2q+Jdq/vqyXuA=", "medication"=>{"user_id"=>"5", "name"=>"Advil", "drug"=>"ibuprophen", "dosage_quant"=>"2", "dosage_size"=>"pills", "bottle_size"=>"200", "frequency"=>"2", "period"=>"per day", "notes"=>"Take 400mg as long as soreness persists."}, "commit"=>"Create Medication"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (69.8ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", 200], ["created_at", Fri, 19 Apr 2013 10:50:45 UTC +00:00], ["dosage_quant", 2], ["dosage_size", "pills"], ["drug", "ibuprophen"], ["frequency", 2], ["name", "Advil"], ["notes", "Take 400mg as long as soreness persists."], ["period", "per day"], ["updated_at", Fri, 19 Apr 2013 10:50:45 UTC +00:00], ["user_id", 5]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/medications/3
+Completed 302 Found in 87ms (ActiveRecord: 75.5ms)
+
+
+Started GET "/medications/3" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Processing by MedicationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (0.2ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered medications/show.html.erb within layouts/application (2.1ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 101.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:45 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/meds_list" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Processing by PillboxController#meds_list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (0.2ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  Rendered pillbox/_meds_list.html.erb (1.4ms)
+  Rendered pillbox/meds_list.html.erb within layouts/application (2.2ms)
+  Rendered common/_header.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 93ms (Views: 89.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:50:49 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-19 03:51:07 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (0.2ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  Rendered pillbox/_reminders.html.erb (0.0ms)
+  Rendered pillbox/_meds_list.html.erb (0.3ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (6.1ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:51:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-19 03:53:29 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mMedication Load (0.3ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+ERROR: compiling _app_views_pillbox__meds_list_html_erb___2794787603048469260_70347017274400 RAISED /Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:23: unknown regexp options - td
+unmatched close parenthesis: /td>
+          <td><%= med.notes );@output_buffer.safe_concat('</
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:24: syntax error, unexpected '<'
+        </tr>
+         ^
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:27: unknown regexp options - tbdy
+unmatched close parenthesis: /tr>
+');         @counter += 1 
+       end 
+@output_buffer.safe_concat('    </
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:29: syntax error, unexpected '<'
+  </table>
+   ^
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:31: unknown regexp options - dv
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:31: unterminated string meets end of file
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:31: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_pillbox__meds_list_html_erb___2794787603048469260_70347017274400(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "pillbox/_meds_list";_old_output_buffer = @output_buffer;meds_list = local_assigns[:meds_list];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+<div class="meds-list">
+  <h3>My Meds</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Drug</th>
+        <th>Dosage</th>
+        <th>Frequency</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+');       @meds_array.each do |med|
+@output_buffer.safe_concat('        <tr>
+          <td>');@output_buffer.append= ( @counter );@output_buffer.safe_concat('</td>
+          <td>');@output_buffer.append= ( med.name );@output_buffer.safe_concat('</td>
+          <td>');@output_buffer.append= ( med.drug );@output_buffer.safe_concat('</td>
+          <td>');@output_buffer.append= ( med.dosage_quant.to_s + " " + med.dosage_size );@output_buffer.safe_concat('</td>
+          <td>');@output_buffer.append= ( med.frequency.to_s + " " + med.period</td>
+          <td><%= med.notes );@output_buffer.safe_concat('</td>
+        </tr>
+');         @counter += 1 
+       end 
+@output_buffer.safe_concat('    </tbody>
+
+  </table>
+
+</div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/Matt/temp/PillBox/app/views/pillbox/mypillbox.html.erb:16:in `_app_views_pillbox_mypillbox_html_erb___695383598065179008_70347031213100'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:436:in `_run__1195131264503340882__process_action__574676599534101784__callbacks'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__3673693049521325162__call__3193967213650186491__callbacks'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered pillbox/_meds_list.html.erb (23.2ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:23: unknown regexp options - td
+unmatched close parenthesis: /td>
+          <td><%= med.notes );@output_buffer.safe_concat('</
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:24: syntax error, unexpected '<'
+        </tr>
+         ^
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:27: unknown regexp options - tbdy
+unmatched close parenthesis: /tr>
+');         @counter += 1 
+       end 
+@output_buffer.safe_concat('    </
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:29: syntax error, unexpected '<'
+  </table>
+   ^
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:31: unknown regexp options - dv
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:31: unterminated string meets end of file
+/Users/Matt/temp/PillBox/app/views/pillbox/_meds_list.html.erb:31: syntax error, unexpected $end, expecting ')'):
+    20:           <td><%= med.drug %></td>
+    21:           <td><%= med.dosage_quant.to_s + " " + med.dosage_size %></td>
+    22:           <td><%= med.frequency.to_s + " " + med.period</td>
+    23:           <td><%= med.notes %></td>
+    24:         </tr>
+    25:         <% @counter += 1 %>
+    26:       <% end %>
+  app/views/pillbox/mypillbox.html.erb:16:in `_app_views_pillbox_mypillbox_html_erb___695383598065179008_70347031213100'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.5ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 5 ORDER BY name
+  Rendered pillbox/_reminders.html.erb (0.1ms)
+  Rendered pillbox/_meds_list.html.erb (1.4ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (8.4ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 93ms (Views: 89.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
