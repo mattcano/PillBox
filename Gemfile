@@ -7,6 +7,12 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+group :test do
+  gem 'simplecov'
+  gem 'rspec-rails'
+  gem 'capybara'
+end
+
 group :production do
   gem "pg"
 end
