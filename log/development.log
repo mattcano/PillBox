@@ -41265,3 +41265,122 @@ Served asset /reminders.js - 304 Not Modified (0ms)
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-19 03:53:36 -0700
 Served asset /application.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-15 21:10:08 -0700
+Processing by HomeController#index as HTML
+  Rendered home/_about-partial.html.erb (1.1ms)
+  Rendered home/index.html.erb within layouts/application (67.2ms)
+  Rendered common/_header.html.erb (199.7ms)
+  Rendered common/_footer.html.erb (0.6ms)
+Completed 200 OK in 1067ms (Views: 1032.5ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /bootstrap.css - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /bootstrap-responsive.css - 200 OK (2ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /pillbox.css - 200 OK (2ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /header.css - 200 OK (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /home.css - 200 OK (2ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /medications.css - 200 OK (1ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /footer.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /bootstrap.js - 200 OK (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /home.js - 200 OK (2ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:10 -0700
+Served asset /medications.js - 200 OK (1ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /reminders.css - 200 OK (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /application.css - 200 OK (54ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /scaffolds.css - 200 OK (5ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /pillbox.js - 200 OK (1ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /reminders.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /jquery.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/together.jpg" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /together.jpg - 200 OK (78ms)
+
+
+Started GET "/assets/background_tile.png" for 127.0.0.1 at 2013-05-15 21:10:11 -0700
+Served asset /background_tile.png - 200 OK (193ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-05-15 21:10:18 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OKIa5K/XygzDnu0MPafk0c97bGocAkMAyRVaNMME1Q4=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OKIa5K/XygzDnu0MPafk0c97bGocAkMAyRVaNMME1Q4=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (41.8ms)
+  Rendered common/_header.html.erb (1.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 241ms (Views: 239.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-15 21:10:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
