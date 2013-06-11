@@ -1102,3 +1102,537 @@ Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.3ms)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 68]]
   [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.8ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (39.4ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$r4RERkiYpAox/lZtCa7Oge/xE2Vwm9WKU9qISF54GTmox6/NGL1Ge"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:13:01.649722', "current_sign_in_at" = '2013-06-11 19:13:01.649722', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:13:01.651104' WHERE "users"."id" = 69[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 186ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 69]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$vfaG2/7WmZk/vPjXqtNFH.tCIqN3gXUnB.UxYTbnQQNlkWnb2Ky/a"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (19.4ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["user_id", 70]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["user_id", 70]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 70 LIMIT 1[0m
+Completed 200 OK in 71ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+  [1m[35mMedication Load (0.4ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 70 ORDER BY name
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 70]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$4wVLguoPRkzQUsFm08.pSeVbNTCfYkG.VpnDbqe8lAP1Qfrv0sHrm"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 71]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$FiSxBpEFPs9ffJ58Wz1Flegz0ipro8.usPMZIj8n9HC/xk4Ss5./6"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:01 UTC +00:00], ["user_id", 72]]
+  [1m[36m (4.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:02 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:02 UTC +00:00], ["user_id", 72]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 72[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 72]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (3.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$tMrz9LuZD0DyFpJweVrlWOlAvEu0qT0jImqjTQ3Qp2MpmkCCMMPfK"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00]]
+  [1m[35m (55.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 73]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$sK2VZZ/iT2BgZD7k3.2t9Oud//oHiUIUBSmOF.8HITLUZLHhlJ/mq"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["user_id", 74]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["user_id", 74]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 74[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 74]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$BVCxcxMeBvpD4UJj8EeoiuKxEI0eydrfCOJG7HtITAuiHK7r8XRuG"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["user_id", 75]]
+  [1m[35m (4.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:13:28 UTC +00:00], ["user_id", 75]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 75 LIMIT 1
+  Rendered pillbox/mypillbox.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 75 ORDER BY name[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 75]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:13:29 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$hjYL8V4tSr0n.yNJ0tcX4eKd7H7YPC5JOrY0tNrT2PQAIApd48Jyi"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:13:29 UTC +00:00]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:13:29.077616', "current_sign_in_at" = '2013-06-11 19:13:29.077616', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:13:29.078851' WHERE "users"."id" = 76
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 40ms (ActiveRecord: 0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 76]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.8ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:15:23 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$1ASEEUvSDmN2l8J6z4uNHO8r2zV2.n381zxvlySTxAusyYF10BY0W"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:15:23 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:15:23 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:15:23 UTC +00:00], ["user_id", 77]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:15:23 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:15:23 UTC +00:00], ["user_id", 77]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 77 LIMIT 1[0m
+  Rendered pillbox/mypillbox.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 55.9ms | ActiveRecord: 0.3ms)
+  [1m[35mMedication Load (0.3ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 77 ORDER BY name
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 77]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$vx5Evsm/YDB6iWa9GRAvtO5KfpnomMD9N4RPUPEnQJqZMLnGVIuva"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:15:24.061066', "current_sign_in_at" = '2013-06-11 19:15:24.061066', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:15:24.062301' WHERE "users"."id" = 78[0m
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 43ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 78]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$JqwHznwmi/QYzpATq/7nA.Tpt3du2Pb9oILSofMFW5AiUDfzRAE7q"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00], ["user_id", 79]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00], ["user_id", 79]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36mMedication Load (0.4ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 79[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 79]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$pb7H6y/zjvdDyagbwl314OgJQMd61/XbTBWH/6XpYPIJlSz6hqFLu"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:15:24 UTC +00:00]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 80]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.8ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$WsF60dkvVZhvHxLs9MvrJOH7hII3MpvpN.7.jpjdTp0JoRlTZELNC"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00]]
+  [1m[35m (52.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 81]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$plAbBmGya5SlvMGnjfGFJOwKngPf3vJGUc8qdtAhXOdXAFciDPpkC"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["user_id", 82]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["user_id", 82]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 82 LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 58.8ms | ActiveRecord: 0.3ms)
+  [1m[35mMedication Load (0.3ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 82 ORDER BY name
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 82]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$WpFq9B.Ocpe9w7zcx7XtXecZHlDU7ntJxP6pi7hz1DonXDacCbT4G"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00]]
+  [1m[35m (3.6ms)[0m  commit transaction
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:32:48.388292', "current_sign_in_at" = '2013-06-11 19:32:48.388292', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:32:48.389485' WHERE "users"."id" = 83[0m
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 41ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 83]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$jNymN7a6xpM7RWokE5eZUu/Ff1KuvZLhzHRI1Fu01vVScoLEQ8ZHi"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["user_id", 84]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["user_id", 84]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 84[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 84]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$nVtwdpopclz/KImljA71z.fb3R1HMPVdAmBQ2y2fYpQrUJPNxKLv2"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:32:48 UTC +00:00]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 85]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.8ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$1eB/9JDTT5y7474p1/kEYu5S/YPILkbUU2l0idU4yoaGY5L1CWu0y"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00]]
+  [1m[35m (48.4ms)[0m  commit transaction
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:40:24.410537', "current_sign_in_at" = '2013-06-11 19:40:24.410537', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:40:24.411873' WHERE "users"."id" = 86[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 57ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 86]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$YX1JbG8K.IwRJtI4qi0tmebfSwI5R1a6Lsd99ydCnKEalOBgerME."], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["user_id", 87]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["user_id", 87]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 87 LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+  [1m[35mMedication Load (0.3ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 87 ORDER BY name
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 87]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$/WJp7r6.icdDs.9//kDnZuo6NWqWK7iFYvIP04n9E/W8qe/lGv5.6"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 88]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$uV5hlBWq/9y.FSrx5BeF1Ow7nsBaB5Nc.pNpJFfPZRS749ClpQR7a"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 89]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$NR4BPa8R.r1c623F6PTI5edzqzMkIeMHBJSE8hogEFjrMW/RxtTHu"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["user_id", 90]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:40:24 UTC +00:00], ["user_id", 90]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 90[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 90]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$COuGyTRxL0CIyUeJjGX.y.aQb2I.jv.j1jAEsQZHe.xXky4iwnmsy"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00]]
+  [1m[35m (48.9ms)[0m  commit transaction
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:50:49.447799', "current_sign_in_at" = '2013-06-11 19:50:49.447799', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:50:49.450382' WHERE "users"."id" = 91[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 65ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 91]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$yQX1.SlnZAOThLbScSvVe.B/TXFgjlwlvzseYtA6RPBanB7PPZRGy"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["user_id", 92]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["user_id", 92]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 92 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[35mMedication Load (0.3ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 92 ORDER BY name
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 92]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$M9nfCdwmqGxl2GIL44ZqmO1TPNKuB/0NF06Zp8EICIgP9KbsROLsC"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 93]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$3HuKe0DXQLjaMMErjPIBh.90ZtIura5CliBwEblWfPagI.dhEY9oS"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 94]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$Oemr0w57z6.FVQ5jf53Twu1dEHEhfkeIdU8SkrvkdskIzn9qICbju"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["user_id", 95]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:50:49 UTC +00:00], ["user_id", 95]]
+  [1m[35m (4.6ms)[0m  commit transaction
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 95[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 95]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$Dzk6ggC0k7m8qYzO/1kZR.36ZcVqhWWBG3nBuLeAN.TEQOucsA8J."], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00]]
+  [1m[35m (11.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["user_id", 96]]
+  [1m[36m (17.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["user_id", 96]]
+  [1m[35m (8.3ms)[0m  commit transaction
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 96[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 96]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$nSwlm8A.BDJ2SHx1UxcjsuOAev8zBK7ZKCHIeftnEwQVosnW6BaFW"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 97]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$ATf.JzpfZrPdiH5Ql4jX/uBAeFJrcfIMbDOU8OpijqwKdCTjNsx/C"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00]]
+  [1m[36m (15.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 98]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$GRXtxP1YG1QroK0XuRPKzOxFo4QyHpx5mxXbR18aUjG6ccF/STRuC"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["user_id", 99]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["user_id", 99]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 99 LIMIT 1
+Completed 200 OK in 64ms (Views: 58.0ms | ActiveRecord: 0.3ms)
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 99 ORDER BY name[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 99]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$CUU3K5nrCBHFUZpX69dEJeuBWzeybyUyQwUyarXCYEyJEu90pIvVe"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:22 UTC +00:00]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:51:22.391959', "current_sign_in_at" = '2013-06-11 19:51:22.391959', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:51:22.393218' WHERE "users"."id" = 100
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 41ms (ActiveRecord: 0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 100]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$M3jCbppQjtUXmYHq.fe.SebPuIRzWI0CHCIjkt1ywkhSANTDVGHl6"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00]]
+  [1m[35m (4.8ms)[0m  commit transaction
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mail@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-11 19:51:52.682694', "current_sign_in_at" = '2013-06-11 19:51:52.682694', "last_sign_in_ip" = '0.0.0.0', "current_sign_in_ip" = '0.0.0.0', "sign_in_count" = 1, "updated_at" = '2013-06-11 19:51:52.684076' WHERE "users"."id" = 101[0m
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://test.host/mypillbox
+Completed 302 Found in 59ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 101]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$mdBavS9G.SYCVXrP71q1ceIiB4Ld.JeeW2iMt8CQc6jMejFrlbrnW"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Omega"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["user_id", 102]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", "Alpha"], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["user_id", 102]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+  [1m[35mMedication Load (0.4ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 102 ORDER BY name
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 102]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$mqlsCDJcJIQpmzC/JSmpve9oa3XvA0Mn4PKtLfij6mc.SrkW54esm"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 103]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mail@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mail@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$04$/MA.3hbmutXKeVIa7CzpD.1mOke/kp1J/Do3ATL7S.dnwGU2.p23."], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Matt"], ["notification_freq", nil], ["phone_is_cell", true], ["phone_number", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["user_id", 104]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "medications" ("bottle_size", "created_at", "dosage_quant", "dosage_size", "drug", "frequency", "name", "notes", "period", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bottle_size", nil], ["created_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["dosage_quant", nil], ["dosage_size", nil], ["drug", nil], ["frequency", nil], ["name", nil], ["notes", nil], ["period", nil], ["updated_at", Tue, 11 Jun 2013 19:51:52 UTC +00:00], ["user_id", 104]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36mMedication Load (0.3ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 104[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 104]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
