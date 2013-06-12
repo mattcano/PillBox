@@ -18,9 +18,7 @@ class Medication < ActiveRecord::Base
   # Creates the next "num" reminders
   def create_reminders(num)
     now = Time.now
-   
     if self.period == "per day"
-      binding.pry
       while num > 0 
         if self.frequency == 1
           time = 9

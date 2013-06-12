@@ -47,7 +47,8 @@ class MedicationsController < ApplicationController
 
     respond_to do |format|
       if @medication.save
-        format.html { redirect_to @medication, notice: 'Medication was successfully created.' }
+        @medication.create_reminders(5)
+        format.html { redirect_to mypillbox_url, notice: 'Medication was successfully created.' }
         format.json { render json: @medication, status: :created, location: @medication }
       else
         format.html { render action: "new" }
@@ -63,9 +64,11 @@ class MedicationsController < ApplicationController
 
     respond_to do |format|
       if @medication.update_attributes(params[:medication])
-        format.html { redirect_to @medication, notice: 'Medication was successfully updated.' }
+        @medication.create_reminders(5)
+        format.html { redirect_to mypillbox_url, notice: 'Medication was successfully updated.' }
         format.json { head :no_content }
       else
+        @medication.create_reminders(5)
         format.html { render action: "edit" }
         format.json { render json: @medication.errors, status: :unprocessable_entity }
       end

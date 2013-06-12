@@ -16,8 +16,8 @@
       <% @reminder_array.each_with_index do |r, index|%>
         <tr>
           <td><%= index + 1 %></td>
-          <td><%= r.date.to_date == Date.today ? "Today" : r.date.strftime("%m/%d/%y") %></td>
-          <td><%= r.date.strftime("%l:%M%p %Z") %></td>
+          <td><%= r.date.to_date == Date.today ? "Today" : r.date.localtime.strftime("%m/%d/%y") %></td>
+          <td><%= r.date.localtime.strftime("%l:%M%p %Z") %></td>
           <td><%= r.message %></td>
           <td><%= r.medication.drug %></td>
           <td><%= r.medication.notes %></td>
