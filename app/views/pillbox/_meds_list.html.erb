@@ -13,16 +13,15 @@
       </tr>
     </thead>
     <tbody>
-      <% @meds_array.each do |med|%>
+      <% @meds_array.each_with_index do |med, index|%>
         <tr>
-          <td><%= @counter %></td>
+          <td><%= index + 1 %></td>
           <td><%= med.name %></td>
           <td><%= med.drug %></td>
           <td><%= med.dosage_quant.to_s + " " + med.dosage_size %></td>
           <td><%= med.frequency.to_s + " " + med.period %></td>
           <td><%= med.notes %></td>
         </tr>
-        <% @counter += 1 %>
       <% end %>
     </tbody>
 

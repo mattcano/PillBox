@@ -7,31 +7,22 @@
         <th></th>
         <th>Date</th>
         <th>Time</th>
-        <th>Name</th>
+        <th>Reminder</th>
         <th>Drug</th>
-        <th>Dosage</th>
-        <th>Notes</th>
+        <th>Note</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Today</td>
-        <td>9pm</td>
-        <td>Vicondin</td>
-        <td>Hydrocodone</td>
-        <td>2 pills</td>
-        <td>Take with food.</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Today</td>
-        <td>9pm</td>
-        <td>Vicondin</td>
-        <td>Hydrocodone</td>
-        <td>2 pills</td>
-        <td>Take with food.</td>
-      </tr>
+      <% @reminder_array.each_with_index do |r, index|%>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= r.date.to_date == Date.today ? "Today" : r.date.strftime("%m/%d/%y") %></td>
+          <td><%= r.date.strftime("%l:%M%p %Z") %></td>
+          <td><%= r.message %></td>
+          <td><%= r.medication.drug %></td>
+          <td><%= r.medication.notes %></td>
+        </tr>
+      <% end %>
     </tbody>
 
   </table>

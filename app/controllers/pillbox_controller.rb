@@ -1,7 +1,8 @@
 class PillboxController < ApplicationController
 
   before_filter :authenticate_user! 
-  before_filter :update_meds_array
+  before_filter :update_meds_array, :only => [:mypillbox, :meds_list]
+  before_filter :update_reminder_array, :only => [:mypillbox, :reminders]
 
   def mypillbox
   end
@@ -21,11 +22,14 @@ class PillboxController < ApplicationController
   def settings
   end
 
-  private
+private
 
   def update_meds_array
     @meds_array = current_user.medications.order(:name)
-    @counter = 1
+  end
+
+  def update_reminder_array
+    @reminder_array = current_user.reminders.order(:date)
   end
 
 end
