@@ -3,11 +3,14 @@
 
 RailsAdmin.config do |config|
 
-
+  config.authenticate_with do
+    redirect_to(main_app.root_path, flash: {warning: "You must be signed-in as an administrator to access that page"}) unless signed_in? && current_user.try(:admin?)
+  end
+  
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['Pill Box', 'Admin']
+  config.main_app_name = ['Pill Box', 'Restricted Access']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 

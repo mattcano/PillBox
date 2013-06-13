@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611200322) do
+ActiveRecord::Schema.define(:version => 20130613014302) do
 
   create_table "coaches_dependents", :force => true do |t|
     t.integer  "dependent_id"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20130611200322) do
     t.boolean  "sms_enabled",            :default => true
     t.string   "notification_freq"
     t.boolean  "email_enabled",          :default => true
+    t.boolean  "admin",                  :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
