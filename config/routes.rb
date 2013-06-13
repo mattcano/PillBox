@@ -7,8 +7,7 @@ PillBox::Application.routes.draw do
 
   resources :medications
 
-
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
   root :to => 'home#index'
   match "/about" => "home#about"

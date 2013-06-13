@@ -49381,3 +49381,2060 @@ Served asset /rails_admin/rails_admin.js - 304 Not Modified (36ms)
 
 Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-06-12 16:53:15 -0700
 Served asset /fontawesome-webfont.woff - 304 Not Modified (45ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-12 17:26:26 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered common/_header.html.erb (113.8ms)
+  Rendered common/_footer.html.erb (0.6ms)
+Completed 200 OK in 706ms (Views: 700.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /footer.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /reminders.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /medications.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /pillbox.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /medications.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /reminders.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:28 -0700
+Served asset /pillbox.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:28 -0700
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/background_tile.png" for 127.0.0.1 at 2013-06-12 17:26:28 -0700
+Served asset /background_tile.png - 304 Not Modified (1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-06-12 17:26:30 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uoRzN8jPyUjsaEE9kVUqbFOEEkoX3yPppaw7RqJ8QEE="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 62ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-12 17:26:30 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered common/_header.html.erb (3.4ms)
+  Rendered common/_footer.html.erb (0.1ms)
+Completed 200 OK in 221ms (Views: 220.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background_tile.png" for 127.0.0.1 at 2013-06-12 17:26:31 -0700
+Served asset /background_tile.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:26:33 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:   <div><%= f.label :name %><br />
+    7:   <%= f.text_field :name, :autofocus => true %></div>
+  app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:30:45 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:   <div><%= f.label :name %><br />
+    7:   <%= f.text_field :name, :autofocus => true %></div>
+  app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:31:48 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:   <div><%= f.label :name %><br />
+    7:   <%= f.text_field :name, :autofocus => true %></div>
+  app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:31:51 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:   <div><%= f.label :name %><br />
+    7:   <%= f.text_field :name, :autofocus => true %></div>
+  app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:32:09 -0700
+
+LoadError (Expected /Users/Matt/temp/PillBox/app/controllers/devise/registrations_controller.rb to define Devise::RegistrationsController):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/mapper.rb:42:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  rack-pjax (0.7.0) lib/rack/pjax.rb:12:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.0.5) lib/remotipart/middleware.rb:30:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1069798896289116501__call__2498971338875494013__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:32:56 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:   <div><%= f.label :name %><br />
+    7:   <%= f.text_field :name, :autofocus => true %></div>
+  app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (42.7ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (54.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:34:15 -0700
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (super: no superclass method `new' for #<Devise::RegistrationsController:0x007fc2f4535700>):
+  app/controllers/devise/registrations_controller.rb:25:in `new'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:35:03 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:   <div><%= f.label :name %><br />
+    7:   <%= f.text_field :name, :autofocus => true %></div>
+  app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:35:32 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.4ms)
+  Rendered common/_header.html.erb (1.8ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 305ms (Views: 211.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background_tile.png" for 127.0.0.1 at 2013-06-12 17:35:33 -0700
+Served asset /background_tile.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:36:19 -0700
+
+ActionController::RoutingError (uninitialized constant RegistrationsController):
+  app/controllers/devise/registrations_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.3ms)
+  Rendered common/_header.html.erb (1.8ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 301ms (Views: 205.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background_tile.png" for 127.0.0.1 at 2013-06-12 17:39:14 -0700
+Served asset /background_tile.png - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-12 17:39:55 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7eX4LjWAi4lQaN1kePnO21APXAC7xSM2UYxnb/jAtT8=", "user"=>{"name"=>"Test Matt", "email"=>"mcano11@stanford.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"805-628-2266", "phone_is_cell"=>"1", "notification_freq"=>"All", "email_enabled"=>"1", "sms_enabled"=>"1", "calls_enabled"=>"0"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `devise_parameter_sanitizer' for #<Devise::RegistrationsController:0x007fc2f71fabf0>):
+  app/controllers/devise/registrations_controller.rb:125:in `sign_up_params'
+  app/controllers/devise/registrations_controller.rb:7:in `create'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-12 17:44:10 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7eX4LjWAi4lQaN1kePnO21APXAC7xSM2UYxnb/jAtT8=", "user"=>{"name"=>"Test Matt", "email"=>"mcano11@stanford.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"805-628-2266", "phone_is_cell"=>"1", "notification_freq"=>"All", "email_enabled"=>"1", "sms_enabled"=>"1", "calls_enabled"=>"0"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'mcano11@stanford.edu' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Thu, 13 Jun 2013 00:44:10 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "mcano11@stanford.edu"], ["email_enabled", true], ["encrypted_password", "$2a$10$p9OMoEnpNC9HO1ZUYYyRNOrmEFP7.DeBKO5GS0JZBRlJi9WejeMfi"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Test Matt"], ["notification_freq", "All"], ["phone_is_cell", true], ["phone_number", 805], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Thu, 13 Jun 2013 00:44:10 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered pillbox_mailer/welcome_email.html.erb (0.5ms)
+  Rendered pillbox_mailer/welcome_email.text.erb (2.1ms)
+Completed 500 Internal Server Error in 1248ms
+
+ActionView::Template::Error (undefined method `login' for #<User:0x007fc2f5439e40>):
+    2: ===============================================
+    3:  
+    4: You have successfully signed up to example.com,
+    5: your username is: <%= @user.login %>.
+    6:  
+    7:  
+    8: Thanks for joining and have a great day!
+  app/views/pillbox_mailer/welcome_email.text.erb:5:in `_app_views_pillbox_mailer_welcome_email_text_erb__405722347626908149_70237657137680'
+  app/mailers/pillbox_mailer.rb:7:in `welcome_email'
+  app/controllers/devise/registrations_controller.rb:11:in `create'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered common/_header.html.erb (2.1ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 213ms (Views: 212.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /application.css - 304 Not Modified (71ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:44:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:44:35 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:   <div><%= f.label :name %><br />
+    7:   <%= f.text_field :name, :autofocus => true %></div>
+  app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1402295128076012365_70237672301600'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:44:51 -0700
+
+NoMethodError (undefined method `action' for Devise::RegistrationsController:Class):
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/mapper.rb:42:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  rack-pjax (0.7.0) lib/rack/pjax.rb:12:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.0.5) lib/remotipart/middleware.rb:30:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1069798896289116501__call__2498971338875494013__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:45:02 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (112.2ms)
+  Rendered common/_header.html.erb (1.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 324ms (Views: 322.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:45:03 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-12 17:45:29 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7eX4LjWAi4lQaN1kePnO21APXAC7xSM2UYxnb/jAtT8=", "user"=>{"name"=>"Erik", "email"=>"sferik+testing1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"4153122382", "phone_is_cell"=>"1", "notification_freq"=>"All", "email_enabled"=>"1", "sms_enabled"=>"1", "calls_enabled"=>"0"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `build_resource' for #<Devise::RegistrationsController:0x007fc2f7058ea0>):
+  app/controllers/devise/registrations_controller.rb:5:in `create'
+
+
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/Matt/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-12 17:48:02 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7eX4LjWAi4lQaN1kePnO21APXAC7xSM2UYxnb/jAtT8=", "user"=>{"name"=>"Erik", "email"=>"sferik+testing1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"4153122382", "phone_is_cell"=>"1", "notification_freq"=>"All", "email_enabled"=>"1", "sms_enabled"=>"1", "calls_enabled"=>"0"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'sferik+testing1@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Thu, 13 Jun 2013 00:48:02 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "sferik+testing1@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$10$CLHNMhdS/GPPLaRHtat9auE2dfcDNw2Wslg12z5m.tEg6RYggNVSq"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Erik"], ["notification_freq", "All"], ["phone_is_cell", true], ["phone_number", 4153122382], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Thu, 13 Jun 2013 00:48:02 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-06-13 00:48:02.744390', "current_sign_in_at" = '2013-06-13 00:48:02.744390', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-06-13 00:48:02.745489' WHERE "users"."id" = 9
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/mypillbox
+Completed 302 Found in 183ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-06-12 17:48:02 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT "reminders".* FROM "reminders" WHERE "reminders"."user_id" = 9 ORDER BY date[0m
+  Rendered pillbox/_reminders_short.html.erb (2.9ms)
+  [1m[35mMedication Load (0.1ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 9 ORDER BY name
+  Rendered pillbox/_meds_list.html.erb (3.0ms)
+  Rendered pillbox/_coaches.html.erb (0.4ms)
+  Rendered pillbox/_buddies.html.erb (0.3ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (11.2ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 338ms (Views: 219.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:48:03 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7eX4LjWAi4lQaN1kePnO21APXAC7xSM2UYxnb/jAtT8="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered common/_header.html.erb (2.2ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 223ms (Views: 222.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:45 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:49:47 -0700
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+  Rendered common/_header.html.erb (1.9ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 245ms (Views: 243.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:49:48 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-12 17:51:28 -0700
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO0aIfTMSZ9tgkLSg+Ty3Gbl8Edyr6UIejsfn7TeAWw=", "user"=>{"name"=>"Erik", "email"=>"sferik+testing2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"4153122382", "phone_is_cell"=>"1", "notification_freq"=>"All", "email_enabled"=>"1", "sms_enabled"=>"1", "calls_enabled"=>"0"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'sferik+testing2@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Thu, 13 Jun 2013 00:51:28 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "sferik+testing2@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$10$SwAae1g4qLpG0BJ4Df7lD.CyaebfvrGZIE1lCXDXLpWp1WttCYyi2"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Erik"], ["notification_freq", "All"], ["phone_is_cell", true], ["phone_number", 4153122382], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Thu, 13 Jun 2013 00:51:28 UTC +00:00]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  Rendered pillbox_mailer/welcome_email.html.erb (0.5ms)
+  Rendered pillbox_mailer/welcome_email.text.erb (0.4ms)
+
+Sent mail to sferik+testing2@gmail.com (84ms)
+Date: Wed, 12 Jun 2013 17:51:28 -0700
+From: pillbox.application@gmail.com
+To: sferik+testing2@gmail.com
+Message-ID: <51b91790d4784_245d3fe17a8d0e28357c0@matthew-canos-macbook-pro.local.mail>
+Subject: Welcome to PillBox
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_51b91790cd89d_245d3fe17a8d0e283546c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_51b91790cd89d_245d3fe17a8d0e283546c
+Date: Wed, 12 Jun 2013 17:51:28 -0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <51b91790d2589_245d3fe17a8d0e28355fa@matthew-canos-macbook-pro.local.mail>
+
+Welcome to Pillbox, Erik
+===============================================
+
+You have successfully created your Pillbox account!
+
+Thanks for joining and have a great day!
+
+----==_mimepart_51b91790cd89d_245d3fe17a8d0e283546c
+Date: Wed, 12 Jun 2013 17:51:28 -0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <51b91790d3f6c_245d3fe17a8d0e2835648@matthew-canos-macbook-pro.local.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Welcome to Pillbox, Erik</h1>
+    <p>
+      You have successfully created your Pillbox account!
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+----==_mimepart_51b91790cd89d_245d3fe17a8d0e283546c--
+
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-13 00:51:28.934697', "current_sign_in_at" = '2013-06-13 00:51:28.934697', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-06-13 00:51:28.935843' WHERE "users"."id" = 10[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/mypillbox
+Completed 302 Found in 313ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-06-12 17:51:28 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT "reminders".* FROM "reminders" WHERE "reminders"."user_id" = 10 ORDER BY date
+  Rendered pillbox/_reminders_short.html.erb (1.7ms)
+  [1m[36mMedication Load (0.1ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 10 ORDER BY name[0m
+  Rendered pillbox/_meds_list.html.erb (1.5ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (5.9ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 238ms (Views: 218.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /medications.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:51:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-06-12 17:53:41 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TO0aIfTMSZ9tgkLSg+Ty3Gbl8Edyr6UIejsfn7TeAWw="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-12 17:53:41 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered common/_header.html.erb (3.9ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 227ms (Views: 226.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:42 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:53:43 -0700
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+  Rendered common/_header.html.erb (1.6ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 341ms (Views: 339.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-12 17:53:57 -0700
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rP4QUzh++hSSJ2v1VYYQGKDNAQRwAknIBTkD1xHzINY=", "user"=>{"name"=>"Erik", "email"=>"sferik+testing3@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"4153122382", "phone_is_cell"=>"1", "notification_freq"=>"All", "email_enabled"=>"1", "sms_enabled"=>"1", "calls_enabled"=>"0"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'sferik+testing3@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Thu, 13 Jun 2013 00:53:58 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "sferik+testing3@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$10$9AcJQhPIM0tanfnGnkdCLuU.stWONbKORfM33twMOcEhx50PpzmWa"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Erik"], ["notification_freq", "All"], ["phone_is_cell", true], ["phone_number", 4153122382], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Thu, 13 Jun 2013 00:53:58 UTC +00:00]]
+  [1m[35m (48.5ms)[0m  commit transaction
+  Rendered pillbox_mailer/welcome_email.html.erb (0.1ms)
+  Rendered pillbox_mailer/welcome_email.text.erb (0.1ms)
+
+Sent mail to sferik+testing3@gmail.com (18ms)
+Date: Wed, 12 Jun 2013 17:53:58 -0700
+From: pillbox.application@gmail.com
+To: sferik+testing3@gmail.com
+Message-ID: <51b9182625dc1_245d3fe17ab11f483611c@matthew-canos-macbook-pro.local.mail>
+Subject: Welcome to PillBox
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_51b9182622700_245d3fe17ab11f483589";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_51b9182622700_245d3fe17ab11f483589
+Date: Wed, 12 Jun 2013 17:53:58 -0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <51b9182624b80_245d3fe17ab11f48359e5@matthew-canos-macbook-pro.local.mail>
+
+Welcome to Pillbox, Erik
+===============================================
+
+You have successfully created your Pillbox account!
+
+Thanks for joining and have a great day!
+
+----==_mimepart_51b9182622700_245d3fe17ab11f483589
+Date: Wed, 12 Jun 2013 17:53:58 -0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <51b918262555b_245d3fe17ab11f4836028@matthew-canos-macbook-pro.local.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Welcome to Pillbox, Erik</h1>
+    <p>
+      You have successfully created your Pillbox account!
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+----==_mimepart_51b9182622700_245d3fe17ab11f483589--
+
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-06-13 00:53:58.166840', "current_sign_in_at" = '2013-06-13 00:53:58.166840', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-06-13 00:53:58.167687' WHERE "users"."id" = 11
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/mypillbox
+Completed 302 Found in 195ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT "reminders".* FROM "reminders" WHERE "reminders"."user_id" = 11 ORDER BY date[0m
+  Rendered pillbox/_reminders_short.html.erb (1.0ms)
+  [1m[35mMedication Load (0.2ms)[0m  SELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 11 ORDER BY name
+  Rendered pillbox/_meds_list.html.erb (0.6ms)
+  Rendered pillbox/_coaches.html.erb (0.0ms)
+  Rendered pillbox/_buddies.html.erb (0.0ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (4.6ms)
+  Rendered common/_header.html.erb (0.6ms)
+  Rendered common/_footer.html.erb (0.1ms)
+Completed 200 OK in 229ms (Views: 226.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:53:58 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-06-12 17:54:30 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rP4QUzh++hSSJ2v1VYYQGKDNAQRwAknIBTkD1xHzINY="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.5ms)
+  Rendered common/_header.html.erb (3.7ms)
+  Rendered common/_footer.html.erb (0.4ms)
+Completed 200 OK in 556ms (Views: 555.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /bootstrap.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /footer.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /header.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /medications.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /reminders.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /pillbox.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /pillbox.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:31 -0700
+Served asset /medications.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:32 -0700
+Served asset /reminders.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:32 -0700
+Served asset /application.js - 304 Not Modified (67ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-12 17:54:32 -0700
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.9ms)
+  Rendered common/_header.html.erb (1.9ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 232ms (Views: 231.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-12 17:54:49 -0700
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ba3lR+2ICD0krwi6NeXA5kutACpznXl8DMZz6vLwxD4=", "user"=>{"name"=>"Erik", "email"=>"sferik+testing4@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone_number"=>"4153122382", "phone_is_cell"=>"1", "notification_freq"=>"All", "email_enabled"=>"1", "sms_enabled"=>"1", "calls_enabled"=>"0"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'sferik+testing4@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (6.6ms)[0m  INSERT INTO "users" ("accepted_invitation", "calls_enabled", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "email_enabled", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "notification_freq", "phone_is_cell", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "sms_enabled", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["accepted_invitation", false], ["calls_enabled", false], ["created_at", Thu, 13 Jun 2013 00:54:49 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "sferik+testing4@gmail.com"], ["email_enabled", true], ["encrypted_password", "$2a$10$2flEUJ6ftDc0m7Wcfb5Nregv7cXvuzN64bQI7toUPzHmDl77URH8S"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Erik"], ["notification_freq", "All"], ["phone_is_cell", true], ["phone_number", 4153122382], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["sms_enabled", true], ["updated_at", Thu, 13 Jun 2013 00:54:49 UTC +00:00]]
+  [1m[36m (50.3ms)[0m  [1mcommit transaction[0m
+  Rendered pillbox_mailer/welcome_email.html.erb (0.6ms)
+  Rendered pillbox_mailer/welcome_email.text.erb (0.5ms)
+
+Sent mail to sferik+testing4@gmail.com (2696ms)
+Date: Wed, 12 Jun 2013 17:54:50 -0700
+From: pillbox.application@gmail.com
+To: sferik+testing4@gmail.com
+Message-ID: <51b9185a70a1d_24a63ff8aa8f9cc87001f@matthew-canos-macbook-pro.local.mail>
+Subject: Welcome to PillBox
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_51b9185a6ad00_24a63ff8aa8f9cc8697a0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_51b9185a6ad00_24a63ff8aa8f9cc8697a0
+Date: Wed, 12 Jun 2013 17:54:50 -0700
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <51b9185a6e9f4_24a63ff8aa8f9cc869887@matthew-canos-macbook-pro.local.mail>
+
+Welcome to Pillbox, Erik
+===============================================
+
+You have successfully created your Pillbox account!
+
+Thanks for joining and have a great day!
+
+----==_mimepart_51b9185a6ad00_24a63ff8aa8f9cc8697a0
+Date: Wed, 12 Jun 2013 17:54:50 -0700
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <51b9185a6ffdf_24a63ff8aa8f9cc869923@matthew-canos-macbook-pro.local.mail>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Welcome to Pillbox, Erik</h1>
+    <p>
+      You have successfully created your Pillbox account!
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+----==_mimepart_51b9185a6ad00_24a63ff8aa8f9cc8697a0--
+
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-13 00:54:53.142058', "current_sign_in_at" = '2013-06-13 00:54:53.142058', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-06-13 00:54:53.143278' WHERE "users"."id" = 12[0m
+  [1m[35m (50.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/mypillbox
+Completed 302 Found in 3849ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mypillbox" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Processing by PillboxController#mypillbox as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT "reminders".* FROM "reminders" WHERE "reminders"."user_id" = 12 ORDER BY date
+  Rendered pillbox/_reminders_short.html.erb (3.3ms)
+  [1m[36mMedication Load (0.2ms)[0m  [1mSELECT "medications".* FROM "medications" WHERE "medications"."user_id" = 12 ORDER BY name[0m
+  Rendered pillbox/_meds_list.html.erb (3.5ms)
+  Rendered pillbox/_coaches.html.erb (0.7ms)
+  Rendered pillbox/_buddies.html.erb (0.6ms)
+  Rendered pillbox/mypillbox.html.erb within layouts/application (13.1ms)
+  Rendered common/_header.html.erb (0.7ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 263ms (Views: 220.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 17:54:54 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-06-12 18:24:09 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ba3lR+2ICD0krwi6NeXA5kutACpznXl8DMZz6vLwxD4="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-12 18:24:09 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered common/_header.html.erb (2.1ms)
+  Rendered common/_footer.html.erb (0.0ms)
+Completed 200 OK in 227ms (Views: 226.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /medications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /pillbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /reminders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pillbox.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /pillbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/medications.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /medications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reminders.js?body=1" for 127.0.0.1 at 2013-06-12 18:24:10 -0700
+Served asset /reminders.js - 304 Not Modified (0ms)
