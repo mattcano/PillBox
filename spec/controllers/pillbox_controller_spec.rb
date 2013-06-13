@@ -23,7 +23,6 @@ describe PillboxController do
       med2 = Medication.create(:user_id => @user.id, :name => "Alpha")
       get :mypillbox
       expect(assigns(:meds_array)).to eq [med2, med1] 
-      expect(assigns(:counter)).to eq 1
     end
   end
 

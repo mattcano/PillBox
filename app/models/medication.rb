@@ -17,10 +17,11 @@ class Medication < ActiveRecord::Base
 
   # Creates the next "num" reminders
   def create_reminders(num)
+    reminders_created = false
     now = Time.now
     if self.period == "per day"
-      while num > 0 
-        if self.frequency == 1
+      if self.frequency == 1
+        while num > 0
           time = 9
           now = now.tomorrow unless now.hour < time
           Reminder.create(
@@ -28,15 +29,19 @@ class Medication < ActiveRecord::Base
             user_id: self.user_id, 
             medication_id: self.id,
             message: "Take #{self.dosage_quant} #{self.dosage_size} of #{self.name} at #{time}:00#{time<12 ? "AM" : "PM"}."
-            )
+          )
           num -= 1
         end
+        reminders_created = true
       end
     end
+    remove_old_reminders if reminders_created
   end
 
-protected
+private
+
+  def remove_old_reminders
+    Reminder.where("user_id = ? AND medication_id = ? AND created_at < ?", self.user_id, self.id, (Time.now - 5)).destroy_all
+  end
   
-
-
 end
