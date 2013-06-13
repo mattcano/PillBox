@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'rails_admin'
+gem 'twilio-ruby'
 
 gem 'rails', '3.2.13'
 

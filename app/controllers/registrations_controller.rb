@@ -1,5 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  
+
   # POST /resource
   def create
     build_resource
@@ -9,6 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
 
         # Adding this line to send an email
         PillboxMailer.welcome_email(resource).deliver
+        welcome_text(resource) if resource.sms_enabled
 
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_up(resource_name, resource)
