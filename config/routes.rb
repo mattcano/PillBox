@@ -21,7 +21,7 @@ PillBox::Application.routes.draw do
 
   match 'user_root' => 'pillbox#mypillbox'
 
-  get "/send_email_reminder/:id", :controller => "reminders", :action => "send_email_reminder"
-  get "/send_text_reminder/:id", :controller => "reminders", :action => "send_text_reminder"
+  post "/send_email_reminder/:id", :controller => "reminders", :action => "send_email_reminder"
+  post "/send_text_reminder/:id", :controller => "reminders", :action => "send_text_reminder"
 
 end

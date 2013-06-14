@@ -3,32 +3,18 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
-  $(".email_reminder").on "click", (event) ->
-  link = $(this)
-  event.preventDefault()
-  $.ajax
-    url: link.attr("href")
-    method: "get"
-    dataType: "json"
-    beforeSend: ->
+  $(".email_reminder, .text_reminder").on "click", (event) ->
+    link = $(this)
+    event.preventDefault()
+    $.ajax
+      url: link.attr("href")
+      method: "post"
+      dataType: "json"
+      beforeSend: ->
 
-    complete: ->
+      complete: ->
 
-    success: ->
+      success: ->
+        alert('Reminder sent!')
 
-    error: ->
-
-  $(".text_reminder").on "click", (event) ->
-  link = $(this)
-  event.preventDefault()
-  $.ajax
-    url: link.attr("href")
-    method: "get"
-    dataType: "json"
-    beforeSend: ->
-
-    complete: ->
-
-    success: ->
-
-    error: ->
+      error: ->

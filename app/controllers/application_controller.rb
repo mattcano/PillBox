@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def reminder_text(user, reminder)
-    user_phone = user.phone_number.gsub!(/\D/, "") 
+    user_phone = user.phone_number.gsub(/[^0-9a-z]/i, '')
     reminder_message = "Pillbox: #{user.name}, this is a friendly Pillbox reminder to #{reminder.message}, #{reminder.date.localtime.strftime("%m/%d/%y")}."
     send_text(user_phone, reminder_message)
   end

@@ -88,11 +88,13 @@ class RemindersController < ApplicationController
     @reminder = Reminder.find(params[:id])
     @user = current_user
     PillboxMailer.reminder_email(@user, @reminder)
-  end
+    render :json => @reminder
+   end
 
   def send_text_reminder
     @reminder = Reminder.find(params[:id])
     @user = current_user
     reminder_text(@user, @reminder)
+    render :json => @reminder
   end
 end
