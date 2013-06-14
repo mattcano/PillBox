@@ -17,4 +17,6 @@ class User < ActiveRecord::Base
   has_many :medications
   has_many :reminders
 
+  
+
 end

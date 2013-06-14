@@ -3,19 +3,19 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :name %><br />
+  <div><%= f.label :name %>
   <%= f.text_field :name, :autofocus => true %></div>
 
-  <div><%= f.label :email %><br />
+  <div><%= f.label :email %>
   <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %><br />
+  <div><%= f.label :password %>
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :phone_number %><br />
+  <div><%= f.label :phone_number %>
   <%= f.telephone_field :phone_number %></div>
 
   <div><%= f.label :phone_is_cell, "Is your phone SMS capable?" %>
@@ -27,7 +27,7 @@
 
   <h3 class="muted">Settings</h3>
 
-  <div><%= f.label :notification_freq, "Notification frequency: " %><br />
+  <div><%= f.label :notification_freq, "Notification frequency: " %>
   <%= f.select(:notification_freq, options_for_select([["All", "All"], ["Daily", "Daily"], ["Bi-weekly", "Bi-weekly"], ["Weekly", "Weekly"]], "All")) %></div>
 
   <div><br><%= f.label :email_enabled, "Would you like us to send you <strong>Email Notifications</strong>?".html_safe %>

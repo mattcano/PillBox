@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613014302) do
+ActiveRecord::Schema.define(:version => 20130614005243) do
 
   create_table "coaches_dependents", :force => true do |t|
     t.integer  "dependent_id"
@@ -71,9 +71,9 @@ ActiveRecord::Schema.define(:version => 20130613014302) do
     t.datetime "updated_at",                                :null => false
     t.string   "name"
     t.boolean  "accepted_invitation",    :default => false
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.boolean  "phone_is_cell",          :default => true
-    t.boolean  "calls_enabled",          :default => false
+    t.boolean  "calls_enabled",          :default => true
     t.boolean  "sms_enabled",            :default => true
     t.string   "notification_freq"
     t.boolean  "email_enabled",          :default => true

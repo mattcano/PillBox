@@ -2,9 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def welcome_text(user)
+    user_phone = user.phone_number.gsub!(/\D/, "") 
     url = "http://pill-box.herokuapp.com/"
     welcome_message = "Welcome to Pillbox #{user.name}! Login now to manage your Pillbox #{url}"
-    send_text(user.phone_number, welcome_message)
+    send_text(user_phone, welcome_message)
   end
 
   def send_text(number_to_send_to, message)
