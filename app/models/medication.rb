@@ -28,7 +28,7 @@ class Medication < ActiveRecord::Base
             date: Time.new(now.year, now.month, now.day, time).localtime, 
             user_id: self.user_id, 
             medication_id: self.id,
-            message: "Take #{self.dosage_quant} #{self.dosage_size} of #{self.name} at #{time}:00#{time<12 ? "AM" : "PM"}."
+            message: "take #{self.dosage_quant} #{self.dosage_size} of #{self.name} at #{time}:00#{time<12 ? "AM" : "PM"}"
           )
           num -= 1
         end

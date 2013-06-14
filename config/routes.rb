@@ -4,7 +4,6 @@ PillBox::Application.routes.draw do
 
   resources :reminders
 
-
   resources :medications
 
   devise_for :users, :controllers => {:registrations => "registrations"}
@@ -22,6 +21,7 @@ PillBox::Application.routes.draw do
 
   match 'user_root' => 'pillbox#mypillbox'
 
-  # get "/medications/new", :controller => "medications", :action => "new"
+  get "/send_email_reminder/:id", :controller => "reminders", :action => "send_email_reminder"
+  get "/send_text_reminder/:id", :controller => "reminders", :action => "send_text_reminder"
 
 end

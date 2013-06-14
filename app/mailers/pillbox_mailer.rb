@@ -1,9 +1,15 @@
 class PillboxMailer < ActionMailer::Base
-  default from: "pillbox.application@gmail.com"
+  default from: "Pillbox.Application@gmail.com"
 
   def welcome_email(user)
     @user = user
-    @url = "http://pill-box.herokuapp.com/"
-    mail(:to => user.email, :subject => "Welcome to PillBox")
+    mail(:to => @user.email, :subject => "Welcome to PillBox")
+  end
+
+  def reminder_email(user, reminder)
+    @user = user
+    @reminder = reminder
+    @reminder_array = @user.reminders.order(:date).take(5)
+    mail(:to => @user.email, :subject => "Pillbox Reminder")
   end
 end
