@@ -1,6 +1,6 @@
 
 <div class="reminders">
-  <h3 >Reminders (next 5)</h3>
+  <h3>Next Reminders</h3>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @reminder_array.take(5).each_with_index do |r, index|%>
+      <% @reminder_array.take(3).each_with_index do |r, index|%>
         <tr>
           <td><%= index + 1 %></td>
           <td><%= r.date.to_date == Date.today ? "Today" : r.date.localtime.strftime("%m/%d/%y") %></td>
