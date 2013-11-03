@@ -21,7 +21,6 @@
             <td><%= r.medication.notes %></td>
             <td><a href="/send_email_reminder/<%= r.id.to_s %>" class="email_reminder btn btn-info btn-small">Email</a></td>
             <td><a href="/send_text_reminder/<%= r.id.to_s %>" class="text_reminder btn btn-success btn-small">Text</a></td>
-            <td><a href="/send_voice_reminder/<%= r.id.to_s %>" class="voice_reminder btn btn-danger btn-small">Voice</a></td>
           </tr>
         <% end %>
       <% end %>
