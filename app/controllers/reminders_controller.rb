@@ -97,4 +97,35 @@ class RemindersController < ApplicationController
     reminder_text(@user, @reminder)
     render :json => @reminder
   end
+
+  def send_voice_reminder
+    @reminder = Reminder.find(params[:id])
+    @user = current_user
+    reminder_voice(@user, @reminder)
+    render :json => @reminder
+  end
+
+  def reminder_call
+    @post_to =  "/directions"
+    render :action => "reminder.xml.builder", :layout => false
+  end
+
+  def directions
+    if params['Digits'] == '1'
+      redirect_to :action => 'reminder_call'
+      return
+    end
+
+    if params['Digits'] == '2'
+      redirect_to :action => 'goodbye'
+      return
+    end
+
+    @redirect_to = "/goodbye"
+    render :action => "goodbye.xml.builder", :layout => false 
+  end
+
+  def goodbye
+    render :action => "goodbye.xml.builder", :layout => false 
+  end
 end

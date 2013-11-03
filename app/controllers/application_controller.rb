@@ -26,7 +26,38 @@ class ApplicationController < ActionController::Base
       :to => number_to_send_to,
       :body => message
     )
+  end
 
+  def reminder_voice(user, reminder)
+    user_phone = user.phone_number.gsub(/[^0-9a-z]/i, '')
+    reminder_message = "Hi #{user.name}, your Pillbox coach wanted to make sure you #{reminder.message} on #{reminder.date.localtime.strftime("%m/%d/%y")}."
+    send_voice(user_phone, reminder)
+  end
+
+  def send_voice(number_to_send_to, reminder)
+    twilio_sid = ENV['TWILIO_SID']
+    twilio_token = ENV['TWILIO_TOKEN']
+    twilio_phone_number = ENV['TWILIO_NUMBER']
+
+    if !number_to_send_to
+      redirect_to :action => '.', 'msg' => 'Invalid phone number'
+      return
+    end
+
+    begin
+      @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+
+      @twilio_client.account.calls.create(
+        :from => "+1#{twilio_phone_number}",
+        :to => number_to_send_to,
+        :url => "/reminder_call/#{reminder.id}"
+      )
+    rescue StandardError => bang
+      redirect_to :action => '.', 'msg' => "Error #{bang}"
+      return
+    end
+
+    redirect_to :action => '', 'msg' => "Calling #{number_to_send_to}..."
   end
 
   private

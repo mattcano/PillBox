@@ -5,7 +5,6 @@
     <thead>
       <tr>
         <th></th>
-        <th>Date</th>
         <th>Reminder</th>
         <th>Drug</th>
         <th>Instructions</th>
@@ -13,16 +12,18 @@
       </tr>
     </thead>
     <tbody>
-      <% @reminder_array.take(3).each_with_index do |r, index|%>
-        <tr>
-          <td><%= index + 1 %></td>
-          <td><%= r.date.to_date == Date.today ? "Today" : r.date.localtime.strftime("%m/%d/%y") %></td>
-          <td><%= r.message %></td>
-          <td><%= r.medication.drug %></td>
-          <td><%= r.medication.notes %></td>
-          <td><a href="/send_email_reminder/<%= r.id.to_s %>" class="email_reminder btn btn-info btn-small">Email</a></td>
-          <td><a href="/send_text_reminder/<%= r.id.to_s %>" class="text_reminder btn btn-success btn-small">Text </a></td>
-        </tr>
+      <% @reminder_array.each_with_index do |r, index|%>
+        <% if (r.date.to_date == Date.today) || (r.date.to_date == Date.tomorrow) %>
+          <tr>
+            <td><%= r.date.to_date == Date.today ? "Today" : "Tomorrow" %></td>
+            <td><%= r.message %></td>
+            <td><%= r.medication.drug %></td>
+            <td><%= r.medication.notes %></td>
+            <td><a href="/send_email_reminder/<%= r.id.to_s %>" class="email_reminder btn btn-info btn-small">Email</a></td>
+            <td><a href="/send_text_reminder/<%= r.id.to_s %>" class="text_reminder btn btn-success btn-small">Text</a></td>
+            <td><a href="/send_voice_reminder/<%= r.id.to_s %>" class="voice_reminder btn btn-danger btn-small">Voice</a></td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
 

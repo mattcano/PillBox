@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
-  $(".email_reminder, .text_reminder").on "click", (event) ->
+  $(".email_reminder, .text_reminder, .voice_reminder").on "click", (event) ->
     link = $(this)
     event.preventDefault()
     $.ajax
