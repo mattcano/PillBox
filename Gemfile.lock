@@ -186,6 +186,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.13)
   rails_admin
+  rake (= 10.0.4)
   rspec-rails
   sass-rails (~> 3.2.3)
   simplecov
