@@ -30,11 +30,6 @@
   <%= f.select(:dosage_size, options_for_select([["pills", "pills"], ["scoops", "scoops"], ["shot", "shot"], ["lozenge", "lozenge"], ["other", "other"]], "pills")) %></div>
 
   <div class="field">
-    <%= f.label :bottle_size, "Bottle Size (same units as dose)" %><br />
-    <%= f.number_field :bottle_size %>
-  </div>
-
-  <div class="field">
     <%= f.label "Instructions" %><br />
     <%= f.text_field :notes %>
   </div>

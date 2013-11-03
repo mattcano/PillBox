@@ -25,7 +25,7 @@ PillBox::Application.routes.draw do
   post "/send_text_reminder/:id", :controller => "reminders", :action => "send_text_reminder"
   post "/send_voice_reminder/:id", :controller => "reminders", :action => "send_voice_reminder"
 
-  post "/reminder_call/:id", :controller => "reminders", :action => "reminder_call"
+  post "/reminder_call", :controller => "reminders", :action => "reminder_call"
   post "/directions", :controller => "reminders", :action => "directions"
   post "/goodbye", :controller => "reminders", :action => "goodbye"
 end
