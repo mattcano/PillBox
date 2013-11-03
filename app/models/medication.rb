@@ -19,8 +19,8 @@ class Medication < ActiveRecord::Base
   def create_reminders(num)
     reminders_created = false
     now = Time.now
-    if self.period == "per day"
-      if self.frequency == 1
+    # if self.period == "per day"
+      # if self.frequency == 1
         while num > 0
           time = 9
           now = now.tomorrow unless now.hour < time
@@ -33,8 +33,8 @@ class Medication < ActiveRecord::Base
           num -= 1
         end
         reminders_created = true
-      end
-    end
+      # end
+    # end
     remove_old_reminders if reminders_created
   end
 

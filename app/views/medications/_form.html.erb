@@ -35,16 +35,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :frequency %><br />
-    <%= f.number_field :frequency %>
-  </div>
-
-  <div><%= f.label :period, "Period" %><br />
-  <%= f.select(:period, options_for_select([["per day", "per day"], ["per week", "per week"], ["per month", "per month"]], "per day")) %></div>
-
-  <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_area :notes %>
+    <%= f.label "Instructions" %><br />
+    <%= f.text_field :notes %>
   </div>
   <div class="actions">
     <%= f.submit :class => "btn btn-success" %>

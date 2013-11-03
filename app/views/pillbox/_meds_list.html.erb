@@ -8,8 +8,7 @@
         <th>Name</th>
         <th>Drug</th>
         <th>Dosage</th>
-        <th>Frequency</th>
-        <th>Notes</th>
+        <th>Instructions</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +18,6 @@
           <td><%= med.name %></td>
           <td><%= med.drug %></td>
           <td><%= med.dosage_quant.to_s + " " + med.dosage_size %></td>
-          <td><%= med.frequency.to_s + " " + med.period %></td>
           <td><%= med.notes %></td>
         </tr>
       <% end %>

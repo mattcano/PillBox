@@ -11,7 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
 
         # Adding this line to send an email
         PillboxMailer.welcome_email(resource).deliver
-        welcome_text(resource) if resource.sms_enabled && resource.phone_is_cell
+        welcome_text(resource) if resource.sms_enabled && resource.phone_is_cell && resource.phone_number != ""
 
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_up(resource_name, resource)
