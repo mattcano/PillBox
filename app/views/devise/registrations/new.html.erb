@@ -9,17 +9,17 @@
   <div><%= f.label :email %>
   <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %>
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %></div>
-
   <div><%= f.label :phone_number %>
   <%= f.telephone_field :phone_number %></div>
 
   <div><%= f.label :phone_is_cell, "Is your phone SMS capable?" %>
   <%= f.check_box :phone_is_cell %></div>
+
+  <div><%= f.label :password %>
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %></div>
 
   <div><br><%= f.submit "Sign up" %></div>
 
