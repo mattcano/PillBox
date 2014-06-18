@@ -34,32 +34,31 @@ class ApplicationController < ActionController::Base
     send_voice(user_phone, reminder_message)
   end
 
-  # #Commenting our voice because not working yet
-  # def send_voice(number_to_send_to, message)
-  #   twilio_sid = ENV['TWILIO_SID']
-  #   twilio_token = ENV['TWILIO_TOKEN']
-  #   twilio_phone_number = ENV['TWILIO_NUMBER']
+  def send_voice(number_to_send_to, message)
+    twilio_sid = ENV['TWILIO_SID']
+    twilio_token = ENV['TWILIO_TOKEN']
+    twilio_phone_number = ENV['TWILIO_NUMBER']
 
-  #   # if !number_to_send_to
-  #   #   redirect_to :action => '.', 'msg' => 'Invalid phone number'
-  #   #   return
-  #   # end
+    # if !number_to_send_to
+    #   redirect_to :action => '.', 'msg' => 'Invalid phone number'
+    #   return
+    # end
 
-  #   # begin
-  #     @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+    # begin
+      @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
 
-  #     @twilio_client.account.calls.create(
-  #       :from => "+1#{twilio_phone_number}",
-  #       :to => number_to_send_to,
-  #       :url => "/reminder_call"
-  #     )
-  #   # rescue StandardError => bang
-  #   #   redirect_to :action => '.', 'msg' => "Error #{bang}"
-  #   #   return
-  #   # end
+      @twilio_client.account.calls.create(
+        :from => "+1#{twilio_phone_number}",
+        :to => number_to_send_to,
+        :url => "/reminder_call"
+      )
+    # rescue StandardError => bang
+    #   redirect_to :action => '.', 'msg' => "Error #{bang}"
+    #   return
+    # end
 
-  #   redirect_to :action => '', 'msg' => "Calling #{number_to_send_to}..."
-  # end
+    redirect_to :action => '', 'msg' => "Calling #{number_to_send_to}..."
+  end
 
   private
 
