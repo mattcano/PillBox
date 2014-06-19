@@ -1,44 +1,26 @@
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div id="header-container" class="container">
-          <a class="brand" href="/mypillbox" id="logo">My PillBox</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><a href="/myreminders">Reminders</a></li>
-              <li><a href="/meds_list">My Meds</a></li>
-              <li><a href="/medications/new">Add Med</a></li>
-              <li><a href="/coaches">My Coaches</a></li>
-              <li><a href="/buddies">My Patients</a></li>
-<!--               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/users/edit">Settings</a></li>
-                  <li><a href="/medications/new">Add Med</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Coaches</li>
-                  <li><a href="/coaches">My Coaches</a></li>
-                  <li><a href="/addcoach">Add Coach</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Buddies</li>
-                  <li><a href="/buddies">My Buddies</a></li>
-                  <li><a href="/addbuddy">Add New Buddy</a></li>
-                </ul>
-              </li> -->
-            </ul>
-            <% if user_signed_in? %>
-              <div class="pull-right user-header">
-                <span class="user-name"><%= current_user.email %></span>
-                <%= link_to(" Log Out", destroy_user_session_path, :method => :delete, :class => "grey-text") %>
-              </div>
-            <% else %>
-              <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "navbar-form pull-right"}) do |f| %>
-                <%= devise_error_messages! %>
-                <%= f.email_field :email, :placeholder => "Email", :class => "header-form"%>
-                <%= f.password_field :password, :placeholder => "Password", :class => "header-form"%>
-                <%= f.submit "Sign in", :class => "btn" %>
-              <% end %>
-            <% end %>
-          </div>
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="logo" class="navbar-brand" href="#">PillBox</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Mission</a></li>
+            <li><a href="#about">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
     </div>
+
+  </div>
+</div>
