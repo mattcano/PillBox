@@ -1,0 +1,41 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+.main-body {
+  margin-top: 50px;
+}
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+@import "carousel.css.scss";
+@import "footer.css.scss";
+@import "header.css.scss";
+@import "home.css.scss";
+@import "medications.css.scss";
+@import "pillbox.css.scss";
+@import "reminders.css.scss";
+@import "scaffolds.css.scss";
+@import "bootstrap";
+
+/*#send-column {
+  display: inline-table;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.send-column .send-reminder {
+
+}*/
