@@ -15,10 +15,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <%= render 'common/header' %>
-<div class="container main-body">
-   <%= yield %>
-</div>
+
+<%= yield %>
+
  <%= render 'common/footer' %>
 </body>
 </html>

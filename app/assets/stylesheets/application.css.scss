@@ -11,6 +11,18 @@
  *= require_self
  */
 
+// Teal
+$brand-primary: #0e8d94;
+// Green
+$brand-success: #59a80f;
+// Yellow
+$brand-warning: #ffab07;
+// Red
+$brand-danger: #cc0c39;
+// Purple
+$brand-info: #66245b;
+$gray: #434d53;
+
 .main-body {
   margin-top: 50px;
 }
@@ -29,6 +41,8 @@ body {
 @import "reminders.css.scss";
 @import "scaffolds.css.scss";
 @import "bootstrap";
+
+
 
 /*#send-column {
   display: inline-table;
