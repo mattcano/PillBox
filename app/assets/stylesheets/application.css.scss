@@ -39,7 +39,8 @@ body {
 @import "medications.css.scss";
 @import "pillbox.css.scss";
 @import "reminders.css.scss";
-@import "scaffolds.css.scss";
+//Importing "scaffolds.css.scss" causes sides of carousel to not shade correctly
+//@import "scaffolds.css.scss";
 @import "bootstrap";
 
 
