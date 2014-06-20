@@ -6,12 +6,21 @@ describe "User Model" do
 
     before do
       @user = User.create!(
+        :name => "Matt",
+        :email => "mail@gmail.com",
+        :password => "password123",
+        :password_confirmation => "password123",
         :first_name => "Damola",
         :last_name => "Omotosho"
         )
     end
 
+    after do
+      User.destroy_all
+    end
+
     it "should have the fields first_name and last_name" do
+      #expect(@user.name).to eq "Matt"
       expect(@user.first_name).to eq "Damola"
       expect(@user.last_name).to eq "Omotosho"
     end
