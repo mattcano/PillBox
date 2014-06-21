@@ -1,6 +1,17 @@
+#tagline1-carousel {
+  font-size: 4em;
+  font-family: 'Abel', sans-serif;
+  text-align: left;
+  color: $brand-primary;
+  line-height: 1em;
+  padding-bottom: 150px;
+  margin-left: -15%;
+}
+
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-$carousel-height: 800px;
+$carousel-height: 600px;
 
 /* Carousel base class */
 .carousel {
