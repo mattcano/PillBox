@@ -36,12 +36,12 @@ $gray: #434d53;
 
 
 @import "carousel.css.scss";
-@import "footer.css.scss";
 @import "header.css.scss";
-@import "home.css.scss";
-@import "medications.css.scss";
-@import "pillbox.css.scss";
-@import "reminders.css.scss";
+@import "footer.css.scss";
+//@import "home.css.scss";
+//@import "medications.css.scss";
+//@import "pillbox.css.scss";
+//@import "reminders.css.scss";
 //Importing "scaffolds.css.scss" causes sides of carousel to not shade correctly on hover
 //@import "scaffolds.css.scss";
 @import "bootstrap";
