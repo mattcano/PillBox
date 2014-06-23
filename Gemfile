@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'devise'
 # gem 'rails_admin'
 gem 'twilio-ruby'
-
+gem 'jquery-rails'
 gem 'rails', '3.2.13'
 gem 'rake', '10.0.4'
 # Bundle edge Rails instead:
@@ -39,7 +39,7 @@ end
 # If you use Rails 3.2, make sure bootstrap-sass is moved out of the :assets group. This is because, by default in Rails 3.2, assets group gems are not required in production. However, for pre-compilation to succeed in production, bootstrap-sass gem must be required.
 gem 'bootstrap-sass', '~> 3.1.1'
 
-gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
