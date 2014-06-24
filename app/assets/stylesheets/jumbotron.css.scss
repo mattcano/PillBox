@@ -4,9 +4,35 @@ body {
   padding-bottom: 20px;
 }
 
+#tagline1-jumbotron {
+  font-size: 4em;
+  font-family: 'Abel', sans-serif;
+  text-align: left;
+  color: $gray;
+  line-height: 1em;
+  padding-bottom: 20px;
+  max-width: 321px;
+}
+
+.jumbotron:after{
+  content: "";
+  display: block;
+  padding-bottom: 60%;  /* can change aspect ratio */
+}
+
+.jumbotron-content{
+  float: left;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .jumbotron {
+  margin-top: 40px;
   background-image: image-url("Grandpa_Kid.jpg");
   background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* Customize container */
