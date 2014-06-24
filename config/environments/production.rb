@@ -15,6 +15,11 @@ PillBox::Application.configure do
   # Added so Devise can run on Heroku: http://devise.plataformatec.com.br/
   config.assets.initialize_on_precompile = false
 
+# Log error messages when you accidentally call methods on nil.
+  #config.whiny_nils = true
+  config.eager_load = true
+
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -26,7 +31,7 @@ PillBox::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.js_compressor = :uglifier
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
