@@ -4,9 +4,25 @@ gem 'devise'
 # gem 'rails_admin'
 gem 'twilio-ruby'
 gem 'jquery-rails'
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0'
 gem 'rake', '10.0.4'
 gem 'rufus-scheduler', :require => "rufus/scheduler"
+
+gem 'bootstrap-sass', '~> 3.1.1'
+
+gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+
+# add these gems to help with the transition:
+gem 'protected_attributes'
+gem 'rails-observers'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'activerecord-deprecated_finders'
+
+#gem 'hike', '~> 2.1.3'
+#gem 'tzinfo', '~> 1.2.1' 
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,24 +40,6 @@ end
 group :development do
   gem 'sqlite3'
 end
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  # gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'sass-rails', '>= 3.2'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
-# If you use Rails 3.2, make sure bootstrap-sass is moved out of the :assets group. This is because, by default in Rails 3.2, assets group gems are not required in production. However, for pre-compilation to succeed in production, bootstrap-sass gem must be required.
-gem 'bootstrap-sass', '~> 3.1.1'
-
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

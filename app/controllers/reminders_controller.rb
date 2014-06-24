@@ -43,7 +43,7 @@ class RemindersController < ApplicationController
   # POST /reminders
   # POST /reminders.json
   def create
-    @reminder = Reminder.new(params[:reminder])
+    @reminder = Reminder.new(reminder_params)
 
     respond_to do |format|
       if @reminder.save
@@ -62,7 +62,7 @@ class RemindersController < ApplicationController
     @reminder = Reminder.find(params[:id])
 
     respond_to do |format|
-      if @reminder.update_attributes(params[:reminder])
+      if @reminder.update_attributes(reminder_params)
         format.html { redirect_to @reminder, notice: 'Reminder was successfully updated.' }
         format.json { head :no_content }
       else
@@ -127,5 +127,9 @@ class RemindersController < ApplicationController
 
   def goodbye
     render :action => "goodbye.xml.builder", :layout => false 
+  end
+
+  def reminder_params
+    params.require(:reminder).permit(:date, :medication_id, :message, :user_id)
   end
 end
