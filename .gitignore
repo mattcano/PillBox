@@ -17,3 +17,6 @@
 
 # Ignore Forman Login Data
 .env
+
+# Ignore .DS_store files 
+.DS_Store
