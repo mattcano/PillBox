@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 gem 'devise'
 # gem 'rails_admin'
 gem 'twilio-ruby'
@@ -54,3 +55,5 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+ruby '2.0.0'
