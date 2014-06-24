@@ -1,9 +1,13 @@
 <div class="container">
 	<div class="jumbotron">
 		<div class="jumbotron-content">
-		  <h1 id="tagline1-jumbotron" class="">Keep your loved ones healthy.</h1>
+		  <h2 id="tagline1-jumbotron" class="featurette-heading">Keep your loved ones healthy.</h2>
 		  <p class="lead "></p>
-		  <p><%= link_to("Sign Up Now >", "users/sign_up", html_options = {:class => "btn btn-lg btn-primary pull-left"}) %></p>
+		  <p>
+		  	<%= link_to 'users/sign_up', :class => "btn btn-lg btn-primary pull-left" do %>
+  				Sign Up Now <i class="glyphicon glyphicon-chevron-right"></i>
+				<% end %>
+			</p>
 		</div>
 	</div>
 </div>
