@@ -20,3 +20,6 @@
 
 # Ignore .DS_store files 
 .DS_Store
+
+# Ignore .sqlite3 files
+db/*.sqlite3

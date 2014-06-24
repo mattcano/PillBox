@@ -7,11 +7,10 @@ gem 'jquery-rails'
 gem 'rails', '4.0.0'
 gem 'rake', '10.0.4'
 gem 'rufus-scheduler', :require => "rufus/scheduler"
-
+gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'coffee-rails', '~> 4.0.0'
-gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 # add these gems to help with the transition:
