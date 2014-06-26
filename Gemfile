@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+#specify ruby version to enable the deplou to Heroku instance.
+ruby '2.0.0'
+
+gem 'rails_12factor', group: :production
+
 
 gem 'devise'
 # gem 'rails_admin'
