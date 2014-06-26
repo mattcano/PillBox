@@ -50,5 +50,11 @@ module PillBox
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Making sure that test generators use rspec and not test_unit http://stackoverflow.com/questions/9884033/ruby-on-rails-switch-from-test-unit-to-rspec
+    config.generators do |g|
+      g.test_framework :rspec
+    end
+
   end
 end
