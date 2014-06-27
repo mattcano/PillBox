@@ -11,7 +11,6 @@ gem 'devise'
 gem 'twilio-ruby'
 gem 'jquery-rails'
 gem 'rails', '4.0.0'
-gem 'ruby', '2.0.0'
 gem 'rake', '10.0.4'
 gem 'rufus-scheduler', :require => "rufus/scheduler"
 gem 'sass-rails', '~> 4.0.0'
