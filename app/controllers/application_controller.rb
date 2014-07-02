@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  protect_from_forgery with: :exception
 
   def welcome_text(user)
     user_phone = user.phone_number.gsub(/[^0-9a-z]/i, '')
@@ -58,6 +59,12 @@ class ApplicationController < ActionController::Base
     # end
 
     redirect_to :action => '', 'msg' => "Calling #{number_to_send_to}..."
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :remember_me, :name, :accepted_invitation, :phone_number, :phone_is_cell, :calls_enabled, :sms_enabled, :notification_freq, :email_enabled, :first_name, :last_name)}
   end
 
   private

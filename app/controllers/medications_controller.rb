@@ -43,7 +43,7 @@ class MedicationsController < ApplicationController
   # POST /medications
   # POST /medications.json
   def create
-    @medication = Medication.new(params[:medication])
+    @medication = Medication.new(medication_params)
 
     respond_to do |format|
       if @medication.save
@@ -63,7 +63,7 @@ class MedicationsController < ApplicationController
     @medication = Medication.find(params[:id])
 
     respond_to do |format|
-      if @medication.update_attributes(params[:medication])
+      if @medication.update_attributes(medication_params)
         @medication.create_reminders(5)
         format.html { redirect_to mypillbox_url, notice: 'Medication was successfully updated.' }
         format.json { head :no_content }
@@ -85,5 +85,12 @@ class MedicationsController < ApplicationController
       format.html { redirect_to medications_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def medication_params
+    params.require(:medication).permit(:bottle_size, :dosage_quant, :dosage_size, :drug, :frequency,
+                  :name, :notes, :period, :user_id, :added_by)
   end
 end
