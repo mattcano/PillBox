@@ -1,0 +1,28 @@
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="logo" class="navbar-brand" href="#">PillBox</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "MyPillBox", 'mypillbox' %></li>
+            <li><%= link_to "Add Med", "/medications/new" %></li>
+            <li><%= link_to "My Meds", "/meds_list" %></li>
+            <li><%= link_to "Reminders", "/myreminders" %></li>
+            <li><%= link_to "Settings", "/users/edit" %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

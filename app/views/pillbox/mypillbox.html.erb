@@ -1,12 +1,17 @@
-<% if current_user.name %>
-<h1 class="pagination-centered"><%= current_user.name %>'s PillBox</h1>
-<% else %>
-<h1 class="pagination-centered">My PillBox</h1>
-<% end %>
+<% provide(:title, 'MyPillBox') %>
+<%= render 'common/headeruser' %>
 
-<%= render 'reminders_short' %>
+<div class="container user-page">
+	<% if current_user.name %>
+	<h1 class="pagination-centered"><%= current_user.name %>'s PillBox</h1>
+	<% else %>
+	<h1 class="pagination-centered">My PillBox</h1>
+	<% end %>
 
-<hr>
+	<%= render 'reminders_short' %>
 
-<%= render 'meds_list' %>
+	<hr>
 
+	<%= render 'meds_list' %>
+
+</div>
