@@ -1,0 +1,50 @@
+﻿@model MvcApplication2.Models.UserMedicineMap
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>UserMedicineMap</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Patient.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Patient.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Medicine.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Medicine.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RemindTime.RemindValue)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RemindTime.RemindValue)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumberOfPills)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumberOfPills)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsWithFood)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsWithFood)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

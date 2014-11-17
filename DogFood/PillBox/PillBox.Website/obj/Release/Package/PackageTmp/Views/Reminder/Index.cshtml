@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PillBox.Model.Entities.Reminder>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<section class="content-wrapper main-content clear-fix">
+
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class="btn btn-primary" })
+    </p>
+    <table class="pb-page-table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserMedicineMap.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RemindTime.RemindValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResponseTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SnoozeId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserMedicineMap.Id, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RemindTime.RemindValue, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResponseTime, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsTaken, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SnoozeId, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</section>

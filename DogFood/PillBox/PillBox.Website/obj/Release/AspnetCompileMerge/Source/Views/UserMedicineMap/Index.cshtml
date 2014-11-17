@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PillBox.Model.Entities.UserMedicineMap>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medicine.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RemindTime.RemindValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfPills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsWithFood)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medicine.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RemindTime.RemindValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfPills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsWithFood)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

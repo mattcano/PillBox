@@ -1,0 +1,5 @@
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Core\bin\Debug\PillBox.Core.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Core\bin\Debug\PillBox.Core.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Core\obj\Debug\PillBox.Core.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Core\obj\Debug\PillBox.Core.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Core\obj\Debug\PillBox.Core.csprojResolveAssemblyReference.cache

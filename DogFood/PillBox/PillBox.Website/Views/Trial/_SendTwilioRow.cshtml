@@ -1,0 +1,44 @@
+﻿@model PillBox.Website.Models.TrialPatientViewModel
+@Scripts.Render("~/Scripts/jquery-1.9.0.min.js")
+@Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <tr>
+        <td>
+            @Html.CheckBoxFor(model => model.Patient.IsInTrial.Value, new { @class = "pb-name" })
+        </td>
+        <td>
+            @Html.ActionLink(Model.PatientName, "Edit", new { id = Model.Patient.Id }, new { @class = "pb-name" })
+        </td>
+        <td>
+            @Html.CheckBoxFor(model => model.Patient.AutoSendPhone.Value, new { @class = "pb-name" })
+        </td>
+        <td>
+            @Html.CheckBoxFor(model => model.Patient.AutoSendSMS.Value, new { @class = "pb-name" })
+        </td>
+        <td>
+            @Html.ActionLink("Send SMS", "SendSMS", new { id = Model.Patient.Id }, new { @class = "btn btn-success" })
+        </td>
+        <td>
+            @Ajax.ActionLink(
+                linkText: "Send Call",
+                actionName: "SendCall",
+                controllerName: "Trial",
+                routeValues: new { id = Model.Patient.Id},
+                htmlAttributes: new { @class = "btn btn-success", id="sendCall" },
+                ajaxOptions: new AjaxOptions { HttpMethod = "POST",  }
+            )
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Reminder, new { id = "remindMessage"+Model.Patient.Id })
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Patient.Id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}

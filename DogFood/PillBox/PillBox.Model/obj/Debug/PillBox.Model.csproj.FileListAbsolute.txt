@@ -1,0 +1,9 @@
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\bin\Debug\PillBox.Model.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\bin\Debug\PillBox.Model.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\bin\Debug\EntityFramework.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\bin\Debug\EntityFramework.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\obj\Debug\PillBox.Model.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\obj\Debug\PillBox.Model.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Model\obj\Debug\PillBox.Model.csprojResolveAssemblyReference.cache

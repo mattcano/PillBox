@@ -1,0 +1,14 @@
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\PillBox.DAL.dll.config
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\PillBox.DAL.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\PillBox.DAL.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\EntityFramework.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\PillBox.Core.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\PillBox.Model.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\PillBox.Core.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\PillBox.Model.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\EntityFramework.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\obj\Release\PillBox.DAL.csprojResolveAssemblyReference.cache
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\obj\Release\PillBox.DAL.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.DAL\obj\Release\PillBox.DAL.pdb

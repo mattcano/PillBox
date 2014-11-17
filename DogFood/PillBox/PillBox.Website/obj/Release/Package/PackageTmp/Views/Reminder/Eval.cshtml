@@ -1,0 +1,12 @@
+﻿@model PillBox.Website.Models.Evaluation
+
+@{
+    ViewBag.Title = "Evaluation";
+}
+
+<h2>Survey Responder</h2>
+
+@using (Html.BeginForm()){
+    @Html.EditorFor(model => model.Questions)
+    <input type="submit" value="Submit" />
+}

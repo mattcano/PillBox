@@ -1,0 +1,144 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.thumbnail {
+	margin-top: 20px;
+}
+
+.thumbnail > img {
+	height: 200px;
+}
+
+.thumbnail .caption {
+	text-align: center;
+}
+
+.col-xs-4.versus {
+	margin-top: 20px;
+height: 200px;
+text-align: center;
+font-size: 36px;
+padding-top: 90px;
+}
+
+footer {
+	display: none;
+position: fixed;
+bottom: 0px;
+height: 70px;
+}
+
+.pb-page-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0px 0px 20px 0px;
+    border-top: 2px solid #D4D4D4;
+}
+
+.pb-page-table th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #D4D4D4;
+    padding: 8px 6px 8px 6px;
+}
+
+.pb-page-table td {
+    border-bottom: 2px solid #D4D4D4;
+    padding: 15px 8px 15px 8px;
+    vertical-align: top;
+}
+
+.pb-page-table pre, .pg-page-table p {
+    margin: 0px;
+    padding: 0px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.pb-page-table tbody tr:hover td {
+    background-color: #F3F3F3;
+}
+
+a:hover {
+    background-color: transparent;
+}
+
+.sample-header {
+    border: 2px solid #D4D4D4;
+    background: #76B8DB;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-bottom: none;
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+}
+
+.sample-content {
+    display: block;
+    border-width: 0;
+    padding: 15px 20px;
+    background: #FFFFFF;
+    border: 2px solid #D4D4D4;
+    margin: 0px 0px 10px 0px;
+}
+
+.pb-name {
+    width: 40%;
+}
+
+.api-documentation {
+    width: 60%;
+}
+
+.parameter-name {
+    width: 20%;
+}
+
+.parameter-documentation {
+    width: 50%;
+}
+
+.parameter-source {
+    width: 30%;
+}

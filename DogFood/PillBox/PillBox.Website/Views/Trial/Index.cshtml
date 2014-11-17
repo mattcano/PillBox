@@ -1,0 +1,110 @@
+﻿@model PillBox.Website.Models.TrialManagerViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="pb-page-table">
+    <tr>
+        <th>Trial Status Active
+        </th>
+        <th>Patient Name
+        </th>
+        <th>Auto Send Phone
+        </th>
+        <th>Auto Send SMS
+        </th>
+        <th>Send SMS Now
+        </th>
+        <th>Send Call Now
+        </th>
+        <th>Send Message (Optional)
+        </th>
+    </tr>
+
+    @foreach (var item in Model.TrialPatients)
+    {
+        @Html.Partial("_SendTwilioRow", item)
+    }
+
+</table>
+
+<hr />
+
+<h2>Add Patient</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Patient</legend>
+
+        <div class="editor-label">
+            <label>First Name</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Patient.Patient.FirstName)
+            @Html.ValidationMessageFor(model => model.Patient.Patient.FirstName)
+        </div>
+
+        <div class="editor-label">
+            <label>Last Name</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Patient.Patient.LastName)
+            @Html.ValidationMessageFor(model => model.Patient.Patient.LastName)
+        </div>
+
+        <div class="editor-label">
+            <label>Email</label> 
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Patient.Patient.Email)
+            @Html.ValidationMessageFor(model => model.Patient.Patient.Email)
+        </div>
+
+        <div class="editor-label">
+            <label>Trial Status Active</label>
+        </div>
+        <div class="editor-field">
+            @Html.CheckBoxFor(model => model.Patient.Patient.IsInTrial.Value)
+            @Html.ValidationMessageFor(model => model.Patient.Patient.IsInTrial)
+        </div>
+
+        <div class="editor-label">
+            <label>Auto Send SMS</label> 
+        </div>
+        <div class="editor-field">
+            @Html.CheckBoxFor(model => model.Patient.Patient.AutoSendSMS.Value)
+            @Html.ValidationMessageFor(model => model.Patient.Patient.AutoSendSMS)
+        </div>
+
+        <div class="editor-label">
+            <label>Auto Send Call</label>
+        </div>
+        <div class="editor-field">
+            @Html.CheckBoxFor(model => model.Patient.Patient.AutoSendPhone.Value)
+            @Html.ValidationMessageFor(model => model.Patient.Patient.AutoSendPhone)
+        </div>
+
+        <div class="editor-label">
+            <label>Phone Number</label> 
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Patient.Patient.PhoneNumber)
+            @Html.ValidationMessageFor(model => model.Patient.Patient.PhoneNumber)
+        </div>
+        <br />
+        <p>
+            @Html.ActionLink("Add Trial Patient", "Create", null, new { @class = "btn btn-primary" })
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

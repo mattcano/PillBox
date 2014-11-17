@@ -1,0 +1,68 @@
+﻿@model PillBox.Model.Entities.UserMedicineMap
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>UserMedicineMap</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserId, "Patient")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("UserId", String.Empty)
+            @Html.ValidationMessageFor(model => model.UserId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MedicineId, "Medicine")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("MedicineId", String.Empty)
+            @Html.ValidationMessageFor(model => model.MedicineId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RemindTimeId, "RemindTime")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("RemindTimeId", String.Empty)
+            @Html.ValidationMessageFor(model => model.RemindTimeId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumberOfPills)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumberOfPills)
+            @Html.ValidationMessageFor(model => model.NumberOfPills)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsWithFood)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsWithFood)
+            @Html.ValidationMessageFor(model => model.IsWithFood)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

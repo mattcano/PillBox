@@ -1,0 +1,54 @@
+﻿@model PillBox.Model.Entities.UserMedicineMap
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>UserMedicineMap</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Patient.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Patient.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Medicine.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Medicine.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RemindTime.RemindValue)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RemindTime.RemindValue)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumberOfPills)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumberOfPills)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsWithFood)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsWithFood)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
