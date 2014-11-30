@@ -20,38 +20,13 @@
         </th>
         <th>Send Call Now
         </th>
-        <th>Send Message (Optional)
+        <th>
         </th>
     </tr>
 
     @foreach (var item in Model.TrialPatients)
     {
-        <tr>
-            <td>
-                @Html.CheckBoxFor(modelItem => item.Patient.IsInTrial.Value, new { @class = "pb-name" })
-            </td>
-            <td>
-                @Html.ActionLink(item.PatientName, "Edit", new { id = item.Patient.Id }, new { @class = "pb-name" })
-            </td>
-            <td>
-                @Html.CheckBoxFor(modelItem => item.Patient.AutoSendPhone.Value, new { @class = "pb-name" })
-            </td>
-            <td>
-                @Html.CheckBoxFor(modelItem => item.Patient.AutoSendSMS.Value, new { @class = "pb-name" })
-            </td>
-            <td>
-                @Html.ActionLink("Send SMS", "SendSMS", new { id = item.Patient.Id }, new { @class = "btn btn-success" })
-            </td>
-            <td>
-                @Html.ActionLink("Send Call", "SendCall", new { id = item.Patient.Id }, new { @class = "btn btn-success" })
-            </td>
-            <td>
-                @Html.TextBoxFor(modelItem => item.Reminder.Message)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.Patient.Id }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
+        @Html.Partial("_SendTwilioRow", item)
     }
 
 </table>

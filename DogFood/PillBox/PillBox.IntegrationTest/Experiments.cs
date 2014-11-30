@@ -33,7 +33,7 @@ namespace PillBox.IntegrationTest
             builder.Append("	<title>Programmer Questionnaire</title>");
             builder.Append("</head>");
             builder.Append("<body>");
-            builder.Append("	<form method=\"post\" action=\"http://71.237.221.15/pillbox/Home/DatabaseMe\">");
+            builder.Append("	<form method=\"post\" action=\"http://ec2-54-67-55-4.us-west-1.compute.amazonaws.com/Home/DatabaseMe\">");
             builder.Append("		<div>");
             builder.Append("			Enter your first name:&nbsp;");
             builder.Append("			<input type=\"text\" name=\"FirstName\" />");

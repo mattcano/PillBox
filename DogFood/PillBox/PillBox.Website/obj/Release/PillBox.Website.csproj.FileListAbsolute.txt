@@ -51,4 +51,15 @@ C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Twili
 C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Twilio.Mvc.xml
 C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Twilio.Twiml.pdb
 C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Twilio.Twiml.xml
-C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\PillBox.Website.dll.config
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Common.Logging.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Quartz.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Common.Logging.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Common.Logging.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Quartz.pdb
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\Quartz.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\System.Web.Http.WebHost.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\System.Web.Http.WebHost.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\System.Web.Http.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\System.Web.Http.xml
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\System.Net.Http.Formatting.dll
+C:\company\Company_Projects\PillBoxApp\DogFood\PillBox\PillBox.Website\bin\System.Net.Http.Formatting.xml

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\company\\Company_Projects\\PillBoxApp\\DogFood\\PillBox\\PillBox\.Website\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\company\\Company_Projects\\PillBoxApp\\DogFood\\PillBox\\PillBox\.Website\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="PillBoxDB-Web.config Connection String" description="" value="PillBoxDB_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\company\\Company_Projects\\PillBoxApp\\DogFood\\PillBox\\PillBox\.Website\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PillBoxDB']/@connectionString" />
+  </parameter>
+</parameters>

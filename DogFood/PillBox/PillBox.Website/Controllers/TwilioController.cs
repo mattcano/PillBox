@@ -15,26 +15,24 @@ namespace PillBox.Website.Controllers
     {
         private PillBoxContext db = new PillBoxContext();
 
-        public TwiMLResult Welcome(VoiceRequest request)
+        public TwiMLResult Welcome()
         {
             var response = new TwilioResponse();
 
             string name;
 
-            if (request.To.Contains("301"))
-                name = "Damola";
-            else
+            //if (request.To.Contains("301"))
+            //    name = "Damola";
+            //else
                 name = "You";
             
-            response.BeginGather(new { action = "http://71.237.221.15/pillbox/twilio/ProcessResponse", numDigits = "1" })
+            response.BeginGather(new { action = "http://ec2-54-67-55-4.us-west-1.compute.amazonaws.com/twilio/ProcessResponse", numDigits = "1" })
                     .Say("Hey "+ name +" ! This is a pillbox reminder. Have you taken your medicines?"
                             + "Press 1 for yes. Press 2 for no")
                     .EndGather();
 
             return new TwiMLResult(response);
-        }
-
-        
+        }        
 
         public ActionResult ProcessResponse(VoiceRequest request)
         {
@@ -60,7 +58,7 @@ namespace PillBox.Website.Controllers
 
             var call =client.InitiateOutboundCall("4248357603",
                 "3014373223",
-                "http://71.237.221.15/pillbox/twilio/welcome");
+                "http://ec2-54-67-55-4.us-west-1.compute.amazonaws.com/twilio/welcome");
 
                 //client.SendMessage(
                 //"4248357603",

@@ -150,6 +150,7 @@ namespace PillBox.DAL
             {
                 FirstName = "Michelle",
                 Email = "mmjiang@stanford.edu",
+                PhoneNumber = "3609096636",
                 AutoSendPhone = true,
                 AutoSendSMS = true,
                 IsInTrial = true,
@@ -160,6 +161,7 @@ namespace PillBox.DAL
             {
                 FirstName = "Damola",
                 Email = "damola.omotosho@gmail.com",
+                PhoneNumber = "3014373223",
                 AutoSendPhone = true,
                 AutoSendSMS = true,
                 IsInTrial = true,
@@ -170,6 +172,7 @@ namespace PillBox.DAL
             {
                 FirstName = "Matt",
                 Email = "mcano11@stanford.edu",
+                PhoneNumber = "3107130421",
                 AutoSendPhone = true,
                 AutoSendSMS = true,
                 IsInTrial = true,

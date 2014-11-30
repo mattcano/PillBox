@@ -54,12 +54,28 @@ namespace PillBox.Website.Controllers
                 name = "You";
             }
 
-            response.BeginGather(new { action = "http://71.237.221.15/pillbox/trial/ProcessResponse", numDigits = "1" })
-                    .Say("Hey " + name + " ! This is a pillbox reminder. Have you taken your medicines?"
-                            + "Press 1 for yes. Press 2 for no")
+            response.BeginGather(new { action = "http://ec2-54-67-55-4.us-west-1.compute.amazonaws.com/trial/ProcessResponse", numDigits = "1" })
+                    .Say("Hey " + name + " ! This is a pillbox reminder. Have you taken your " + GetMedicinesList(patient.Id)
+                            + "? Press 1 for yes. Press 2 for no")
                     .EndGather();
 
             return new TwiMLResult(response);
+        }
+
+        private string GetMedicinesList(int id)
+        {
+            string medicines = "";
+
+            Patient patient = db.Set<Patient>().Find(id);
+
+            var medList = patient.UserMedicineMaps.Select(m => m.Medicine.Name);
+
+            foreach (var med in medList)
+            {
+                medicines += med + ", ";
+            }
+
+            return medicines;
         }
 
         public ActionResult ProcessResponse(VoiceRequest request)
@@ -126,11 +142,8 @@ namespace PillBox.Website.Controllers
         }
 
         [HttpPost]
-        public ActionResult SendCall(int id, string remindMessage)
-        {
-
-            var temp = remindMessage;
-            
+        public ActionResult SendCall(int id)
+        {            
             Patient patient = db.Set<Patient>().Find(id);
             string accountSid = "ACa68cb3055a5c573f76862831c0995c48";
             string authToken = "8917e0e37320d868756ca59864dd29b6";
@@ -139,7 +152,7 @@ namespace PillBox.Website.Controllers
 
             var call = client.InitiateOutboundCall("4248357603",
                 patient.PhoneNumber,
-                 "http://71.237.221.15/pillbox/Trial/GetResponse");
+                 "http://ec2-54-67-55-4.us-west-1.compute.amazonaws.com/Trial/GetResponse");
             
             if (patient != null)
             {

@@ -2,6 +2,7 @@
 using PillBox.DAL.Entities;
 using PillBox.Services.DI;
 using PillBox.Website.DI;
+using PillBox.Website.ScheduledTasks;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -32,6 +33,8 @@ namespace PillBox.Website
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Database.SetInitializer<PillBoxContext>(new DropCreateDatabaseIfModelChangesWithSeedData());
+
+            JobScheduler.Start();
         }
     }
 }
