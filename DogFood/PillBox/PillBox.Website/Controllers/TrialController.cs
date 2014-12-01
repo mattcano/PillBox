@@ -1,4 +1,5 @@
-﻿using PillBox.DAL.Entities;
+﻿using PillBox.Core;
+using PillBox.DAL.Entities;
 using PillBox.Model.Entities;
 using PillBox.Website.Models;
 using System;
@@ -78,6 +79,26 @@ namespace PillBox.Website.Controllers
             return medicines;
         }
 
+        private string GetMedicinesListForSms(Patient patient)
+        {
+            string medicines = "";
+            string truncate = "";
+
+            var medList = patient.UserMedicineMaps.Select(m => m.Medicine.Name);
+
+            foreach (var med in medList)
+            {
+                medicines += med + ", ";
+            }
+
+            if (medList.Count() > 0)
+            {
+                truncate = medicines.Remove(medicines.Length - 2, 2);
+            }
+
+            return truncate;
+        }
+
         public ActionResult ProcessResponse(VoiceRequest request)
         {
             var response = new TwilioResponse();
@@ -125,6 +146,103 @@ namespace PillBox.Website.Controllers
             return new TwiMLResult(response);
         }
 
+        public void test()
+        {
+            Patient patient = db.Set<Patient>().Find(2);
+
+            Reminder reminder = db.Set<Reminder>().Where(p => p.Patient.Id == patient.Id)
+                .OrderByDescending(p => p.RemindTimeSent)
+                .FirstOrDefault();
+
+            int here = 0;
+        }
+
+        [HttpPost]
+        public ActionResult ProcessTextResponse(SmsRequest request)
+        {
+            var response = new TwilioResponse();
+
+            Patient patient = db.Set<Patient>()
+                .Where(p => p.PhoneNumber.Contains(request.From.Substring(2)))
+                .FirstOrDefault();
+
+            Reminder reminder = db.Set<Reminder>().Where(p => p.Patient.Id == patient.Id)
+                .OrderByDescending(p => p.RemindTimeSent)
+                .FirstOrDefault();
+
+            if (!IsExpired(reminder.RemindTimeSent.Value))
+            {
+                if (request.Body.ToLower().Contains('y'))
+                {
+                    response.Sms("Great job! Keep it up. :)");
+
+                    if (patient != null)
+                    {
+                        reminder.IsTaken = true;
+                        reminder.ResponseTime = DateTime.Now;
+                        reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                        reminder.Patient = patient;
+
+                        db.Entry(reminder).State = EntityState.Modified;
+                        db.SaveChanges();
+                    }
+                }
+                else if (request.Body.ToLower().Contains('n'))
+                {
+                    response.Sms("That’s not good -- let’s get you back on track tomorrow. We want you to stay healthy for your family! Reply with a comment for your records. Msg rates apply.");
+
+                    if (patient != null)
+                    {
+                        reminder.IsTaken = false;
+                        reminder.ResponseTime = DateTime.Now;
+                        reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                        reminder.Patient = patient;
+
+                        db.Entry(reminder).State = EntityState.Modified;
+                        db.SaveChanges();
+                    }
+                }
+                else
+                {
+                    response.Sms("Sorry we where unable to process that response. Please try again..");
+                }
+            }
+            else
+            {
+                response.Sms("Sorry your response came too late! Please wait till the next reminder.");
+            }
+
+            return new TwiMLResult(response);
+        }
+
+        public ActionResult Deactivate(int id)
+        {
+
+            Patient patient = db.Set<Patient>().Find(id);
+
+            patient.IsInTrial = false;
+            patient.AutoSendPhone = false;
+            patient.AutoSendSMS = false;
+            db.Entry(patient).State = EntityState.Modified;
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        private bool IsExpired(DateTime sentTime)
+        {
+            bool expired = false;
+
+            TimeSpan elasped = DateTime.Now.Subtract(sentTime);
+
+            if (elasped.TotalMinutes > 175)
+            {
+                expired = true;
+            }
+
+            return expired;
+        }
+
         public ActionResult SendSMS(int id)
         {
 
@@ -133,10 +251,28 @@ namespace PillBox.Website.Controllers
             string authToken = "8917e0e37320d868756ca59864dd29b6";
             var client = new TwilioRestClient(accountSid, authToken);
 
-            Twilio.Message result = client.SendMessage(
-                "4248357603",
-                patient.PhoneNumber, 
-                "Testing out twilio from .NET");
+            var sms = client.SendSmsMessage(Constants.TWILIO_NUMBER,
+             patient.PhoneNumber,
+
+             "Hello! This is your reminder to take your "
+             +
+             GetMedicinesListForSms(patient)
+             +
+             ". Reply Y if you’ve done so, N if not. Msg rates apply.");
+
+            if (patient != null)
+            {
+                Reminder newReminder = new Reminder();
+
+                newReminder.IsTaken = false;
+                newReminder.RemindTimeSent = DateTime.Now;
+                newReminder.MessageSID = sms.Sid;
+                newReminder.ReminderType = Model.Enum.ReminderType.SMS;
+                newReminder.Patient = patient;
+
+                db.Set<Reminder>().Add(newReminder);
+                db.SaveChanges();
+            }
 
             return RedirectToAction("Index");
         }
@@ -159,7 +295,7 @@ namespace PillBox.Website.Controllers
                 Reminder newReminder = new Reminder();
 
                 newReminder.IsTaken = false;
-                newReminder.RemindSendTime = DateTime.Now;
+                newReminder.RemindTimeSent = DateTime.Now;
                 newReminder.CallSID = call.Sid;
                 newReminder.ReminderType = Model.Enum.ReminderType.PHONE;
                 newReminder.Patient = patient;

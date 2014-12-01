@@ -34,6 +34,7 @@ namespace PillBox.Website
 
             Database.SetInitializer<PillBoxContext>(new DropCreateDatabaseIfModelChangesWithSeedData());
 
+            JobScheduler.EnqueueOnRemindTimes();
             JobScheduler.Start();
         }
     }

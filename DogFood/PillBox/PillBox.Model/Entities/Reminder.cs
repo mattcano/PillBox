@@ -10,7 +10,8 @@ namespace PillBox.Model.Entities
         public Nullable<int> UserMedicineMapId { get; set; }
         public Nullable<int> RemindTimeId { get; set; }
         public Nullable<System.DateTime> ResponseTime { get; set; }
-        public Nullable<System.DateTime> RemindSendTime { get; set; }
+        public string RemindSendTime { get; set; }
+        public Nullable<DateTime> RemindTimeSent { get; set; }
         public Nullable<bool> IsTaken { get; set; }
         public Nullable<int> SnoozeId { get; set; }
         public string CallSID { get; set; }

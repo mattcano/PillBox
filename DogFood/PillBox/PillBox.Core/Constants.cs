@@ -10,7 +10,6 @@ namespace PillBox.Core
         //public const string DB_NAME = "Name=DefaultConnection";
         public static string DB_NAME
         {
-
             get
             {
                 if (!DebuggingService.RunningInDebugMode())
@@ -33,5 +32,10 @@ namespace PillBox.Core
         // Emailer Information
         public const string GMAIL_SERVER = "smtp.gmail.com";
         public const int GMAIL_PORT = 587;
+
+        // Twilio Info
+        public const string TWILIO_ACCOUNTSID = "ACa68cb3055a5c573f76862831c0995c48";
+        public const string TWILIO_AUTHTOKEN = "8917e0e37320d868756ca59864dd29b6";
+        public const string TWILIO_NUMBER = "4248357603";
     }
 }

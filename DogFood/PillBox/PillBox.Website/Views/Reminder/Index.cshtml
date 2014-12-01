@@ -14,19 +14,25 @@
     <table class="pb-page-table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.UserMedicineMap.Id)
+                Patient
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.RemindTime.RemindValue)
+                Medicine
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ResponseTime)
+               Reminder Time
+            </th>
+            <th>
+                Reminder Sent Time
+            </th>
+            <th>
+                Response Time
+            </th>
+            <th>
+                Reminder Type
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IsTaken)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SnoozeId)
             </th>
             <th></th>
         </tr>
@@ -35,19 +41,25 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.UserMedicineMap.Id, new { @class = "pb-name" })
+                    @Html.DisplayFor(modelItem => item.Patient.FirstName, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserMedicineMap.Medicine.Name, new { @class = "pb-name" })
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.RemindTime.RemindValue, new { @class = "pb-name" })
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.RemindSendTime,  new { @class = "pb-name" })
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.ResponseTime, new { @class = "pb-name" })
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.IsTaken, new { @class = "pb-name" })
+                    @Html.DisplayFor(modelItem => item.ReminderType, new { @class = "pb-name" })
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.SnoozeId, new { @class = "pb-name" })
+                    @Html.DisplayFor(modelItem => item.IsTaken, new { @class = "pb-name" })
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
