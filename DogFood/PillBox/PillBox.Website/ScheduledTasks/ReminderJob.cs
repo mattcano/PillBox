@@ -43,14 +43,12 @@ namespace PillBox.Website.ScheduledTasks
                     {
                         userReminders.Add(new Reminder()
                         {
-                            UserMedicineMap = medicine,
-                            RemindTime = medicine.RemindTime,
                             IsTaken = false,
                         });
 
                         writer.RenderBeginTag(HtmlTextWriterTag.Div); //Begin #1
                         writer.RenderBeginTag(HtmlTextWriterTag.Span); //Begin #2
-                        writer.Write(medicine.Medicine.Name + " " + medicine.NumberOfPills);
+                        writer.Write(medicine.Name);
                         writer.RenderEndTag(); // End #2
                         writer.RenderEndTag(); // End #1
                     }
@@ -74,12 +72,9 @@ namespace PillBox.Website.ScheduledTasks
             // who have with auto send sms or phone set to true
             PillBoxContext dbContext = new PillBoxContext();
 
-            RemindTime rTime = GetReminderTime(remindTime);
-
             var trailPatientsCall = dbContext.Patients
                 .Where(p => p.IsInTrial == true)
                 .Where(p => p.AutoSendPhone == true).ToList()
-                .Where(p => p.Medicines.Where(um => um.RemindTime.Id == rTime.Id).ToList().Count != 0)
                 .ToList();
 
             ITwilioService twilioService = new TwilioService();
@@ -94,22 +89,12 @@ namespace PillBox.Website.ScheduledTasks
             var trailPatientsSms = dbContext.Patients
                 .Where(p => p.IsInTrial == true)
                 .Where(p => p.AutoSendSMS == true).ToList()
-                .Where(p => p.Medicines.Where(um => um.RemindTime.Id == rTime.Id).ToList().Count != 0)
                 .ToList();
 
             foreach (var patient in trailPatientsSms)
             {
                 twilioService.SendSMS(patient);
             }
-        }
-
-
-        private static RemindTime GetReminderTime(string remindTarget)
-        {
-            PillBoxContext context = new PillBoxContext();
-            RemindTime rTime = context.RemindTimes.FirstOrDefault(r => r.RemindValue == remindTarget);
-
-            return rTime;
         }
     }
 }

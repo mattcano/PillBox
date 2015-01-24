@@ -15,15 +15,11 @@ namespace PillBox.DAL.Mapping
             // Table & Column Mappings
             this.ToTable("Reminders");
             this.Property(t => t.Id).HasColumnName("Id");
-            this.Property(t => t.RemindTimeId).HasColumnName("RemindTimeId");
             this.Property(t => t.ResponseTime).HasColumnName("ResponseTime");
             this.Property(t => t.IsTaken).HasColumnName("IsTaken");
             this.Property(t => t.SnoozeId).HasColumnName("SnoozeId");
 
             // Relationships
-            this.HasOptional(t => t.RemindTime)
-                .WithMany(t => t.Reminders)
-                .HasForeignKey(d => d.RemindTimeId);
         }
     }
 }

@@ -197,8 +197,6 @@
     <Compile Include="Controllers\TrialController.cs" />
     <Compile Include="Controllers\TwilioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ReminderController.cs" />
-    <Compile Include="Controllers\UserMedicineMapController.cs" />
     <Compile Include="DI\NinjectControllerFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

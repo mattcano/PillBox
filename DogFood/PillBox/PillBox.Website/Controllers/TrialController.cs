@@ -63,13 +63,13 @@ namespace PillBox.Website.Controllers
             return new TwiMLResult(response);
         }
 
-        private string GetMedicinesList(int id)
+        private string GetMedicinesList(object id)
         {
             string medicines = "";
 
-            PillboxUser patient = db.Set<PillboxUser>().Find(id);
+            PillboxUser patient = db.Set<PillboxUser>().Find((Guid)id);
 
-            var medList = patient.Medicines.Select(m => m.Medicine.Name);
+            var medList = patient.Medicines.Select(m => m.Name);
 
             foreach (var med in medList)
             {
@@ -84,7 +84,7 @@ namespace PillBox.Website.Controllers
             string medicines = "";
             string truncate = "";
 
-            var medList = patient.Medicines.Select(m => m.Medicine.Name);
+            var medList = patient.Medicines.Select(m => m.Name);
 
             foreach (var med in medList)
             {

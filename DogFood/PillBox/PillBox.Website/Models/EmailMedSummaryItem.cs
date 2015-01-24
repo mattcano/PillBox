@@ -14,7 +14,7 @@ namespace PillBox.Website.Models
         {
             get
             {
-                return _reminders.ElementAt(0).UserMedicineMap.Medicine.Name;
+                return _reminders.ElementAt(0).Medicine.Name;
             }
         }
         //public int NumOfDaysInARow

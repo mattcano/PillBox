@@ -8,6 +8,7 @@ namespace PillBox.Model.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime RemindTime { get; set; }
+
         public Guid UserId { get; set; }
         public PillboxUser User { get; set; }
 

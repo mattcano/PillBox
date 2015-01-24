@@ -30,49 +30,7 @@ namespace PillBox.Website.Models
 
         public string MedicineName 
         { 
-            get { return Reminder.UserMedicineMap.Medicine.Name; }
-        }
-
-        private string NumberOfPills
-        {
-            get { return Reminder.UserMedicineMap.NumberOfPills.ToString(); }
-        }
-
-        private bool IsWithFood
-        {
-            get { return Reminder.UserMedicineMap.IsWithFood.Value; }
-        }
-
-        public HtmlString PrescriptionLine
-        {
-            get
-            {
-                return new HtmlString(
-                    "Take <b>" + NumberOfPills + "</b> pill" + Pluralize +
-                    " of " + MedicineName + WithFood +".");
-            }
-        }
-
-        private string Pluralize
-        {
-            get
-            {
-                if (Int32.Parse(NumberOfPills) > 1)
-                    return "s";
-                else
-                    return "";
-            }
-        }
-
-        private string WithFood
-        {
-            get
-            {
-                if (IsWithFood)
-                    return " with food";
-                else
-                    return "";
-            }
+            get { return Reminder.Medicine.Name; }
         }
     }
 

@@ -67,8 +67,6 @@
     <Compile Include="Entities\Medicine.cs" />
     <Compile Include="Entities\PillboxUser.cs" />
     <Compile Include="Entities\Reminder.cs" />
-    <Compile Include="Entities\RemindTime.cs" />
-    <Compile Include="Entities\UserMedicineMap.cs" />
     <Compile Include="Enum\ReminderType.cs" />
     <Compile Include="IEntityBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

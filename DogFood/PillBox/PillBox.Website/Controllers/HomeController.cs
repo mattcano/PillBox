@@ -9,12 +9,9 @@ namespace PillBox.Website.Controllers
 {
     public class HomeController : Controller
     {
-
-        IPatientService _patientService;
-
-        public HomeController(IPatientService patientService)
+        public HomeController()
         {
-            _patientService = patientService;
+
         }
 
         //
@@ -22,7 +19,8 @@ namespace PillBox.Website.Controllers
 
         public ActionResult Index()
         {
-            return View(_patientService.GetAllUsers());
+            //return View(_patientService.GetAllUsers());
+            return View();
         }
 
 
@@ -34,7 +32,7 @@ namespace PillBox.Website.Controllers
         [HttpPost]
         public void DatabaseMe(FormCollection form)
         {
-            _patientService.AddPatient("New Guy", "newguy@gmail.com");
+            //_patientService.AddPatient("New Guy", "newguy@gmail.com");
         }
     }
 }

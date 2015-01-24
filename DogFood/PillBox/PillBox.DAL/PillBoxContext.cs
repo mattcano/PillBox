@@ -23,16 +23,12 @@ namespace PillBox.DAL.Entities
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<PillboxUser> Patients { get; set; }
         public DbSet<Reminder> Reminders { get; set; }
-        public DbSet<RemindTime> RemindTimes { get; set; }
-        public DbSet<UserMedicineMap> UserMedicineMaps { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new MedicineMap());
             modelBuilder.Configurations.Add(new PatientMap());
             modelBuilder.Configurations.Add(new ReminderMap());
-            modelBuilder.Configurations.Add(new RemindTimeMap());
-            modelBuilder.Configurations.Add(new UserMedicineMapMap());
         }
     }
 }

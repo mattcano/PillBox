@@ -83,8 +83,6 @@
     <Compile Include="Mapping\MedicineMap.cs" />
     <Compile Include="Mapping\PatientMap.cs" />
     <Compile Include="Mapping\ReminderMap.cs" />
-    <Compile Include="Mapping\RemindTimeMap.cs" />
-    <Compile Include="Mapping\UserMedicineMapMap.cs" />
     <Compile Include="PillBoxContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />

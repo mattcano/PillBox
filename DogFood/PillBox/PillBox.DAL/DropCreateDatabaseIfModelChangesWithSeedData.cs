@@ -16,53 +16,6 @@ namespace PillBox.DAL
     {
         protected override void Seed(PillBoxContext context)
         {
-            //Remind Times
-            var remindTimeEarlyMorning = new RemindTime
-            {
-                RemindValue = StringHelper.GetEnumString(
-                RemindTimeEnum.EARLY_MORNING.ToString())            
-            };
-
-            var remindTimeMorning = new RemindTime
-            {
-                RemindValue = StringHelper.GetEnumString(
-                RemindTimeEnum.MORNING.ToString())            
-            };
-
-            var remindTimeEarlyAfternoon = new RemindTime
-            {
-                RemindValue = StringHelper.GetEnumString(
-                RemindTimeEnum.EARLY_AFTERNOON.ToString())
-            };
-
-            var remindTimeAfternoon = new RemindTime
-            {
-                RemindValue = StringHelper.GetEnumString(
-                RemindTimeEnum.AFTERNOON.ToString())
-            };
-
-            var remindTimeEvening = new RemindTime
-            {
-                RemindValue = StringHelper.GetEnumString(
-                RemindTimeEnum.EVENING.ToString())
-            };
-
-            var remindTimeNight = new RemindTime
-            {
-                RemindValue = StringHelper.GetEnumString(
-                RemindTimeEnum.NIGHT.ToString())
-            };
-
-            var remindTimes = new[]
-                {
-                    remindTimeEarlyMorning,
-                    remindTimeMorning,
-                    remindTimeEarlyAfternoon,
-                    remindTimeAfternoon,
-                    remindTimeEvening,
-                    remindTimeNight
-                };
-
             //Medicines
             var medicineAleve = new Medicine
             {
@@ -85,65 +38,6 @@ namespace PillBox.DAL
             };
 
             var medicines = new[] { medicineAleve, medicineVitaminD, medicineFishOil, medicineMultiVitamin };
-
-            //Michelles Medicines
-            var medicinesMichelle = new List<UserMedicineMap>()
-            {
-                new UserMedicineMap
-                { 
-                    Medicine = medicineAleve,
-                    IsWithFood = true,
-                    NumberOfPills = 2,
-                    RemindTime = remindTimeAfternoon
-                }
-
-            };
-
-            //Matts Medicines
-            var medicinesMatt = new List<UserMedicineMap>()
-            {
-                new UserMedicineMap
-                {
-                    Medicine = medicineVitaminD,
-                    IsWithFood = true,
-                    NumberOfPills = 1,
-                    RemindTime = remindTimeMorning
-                },
-                new UserMedicineMap
-                {
-                    Medicine = medicineFishOil,
-                    IsWithFood = true,
-                    NumberOfPills = 1,
-                    RemindTime = remindTimeMorning
-                }
-            };
-
-            //Damolas Medicines
-            var medicinesDamola = new List<UserMedicineMap>()
-            {
-                new UserMedicineMap
-                {
-                    Medicine = medicineVitaminD,
-                    IsWithFood = true,
-                    NumberOfPills = 1,
-                    RemindTime = remindTimeMorning
-                },
-                new UserMedicineMap
-                {
-                    Medicine = medicineFishOil,
-                    IsWithFood = true,
-                    NumberOfPills = 2,
-                    RemindTime = remindTimeMorning
-                },
-                new UserMedicineMap
-                {
-                    Medicine = medicineMultiVitamin,
-                    IsWithFood = true,
-                    NumberOfPills = 1,
-                    RemindTime = remindTimeMorning
-                }
-            };
-
 
             //Patients
             //var patientMichelle = new PillboxUser
@@ -188,7 +82,6 @@ namespace PillBox.DAL
 
 
             List<IEntityBase> list = new List<IEntityBase>();
-            list.AddRange(remindTimes);
             //list.AddRange(patients);
             list.AddRange(medicines);
 

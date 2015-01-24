@@ -10,11 +10,10 @@ namespace PillBox.Website.Models
     {
         PillboxUser patient;
         string reminderMessage;
-        List<UserMedicineMap> medicines;
 
         public TrialPatientViewModel()
         {
-            medicines = new List<UserMedicineMap>();
+
         }
 
         public TrialPatientViewModel(PillboxUser patient)
@@ -44,10 +43,5 @@ namespace PillBox.Website.Models
             set { reminderMessage = value; }
         }
 
-        public List<UserMedicineMap> Medicines
-        {
-            get { return medicines; }
-            set { medicines = value; }
-        }
     }
 }
