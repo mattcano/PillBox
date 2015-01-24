@@ -21,7 +21,7 @@ namespace PillBox.DAL.Entities
         }
 
         public DbSet<Medicine> Medicines { get; set; }
-        public DbSet<Patient> Patients { get; set; }
+        public DbSet<PillboxUser> Patients { get; set; }
         public DbSet<Reminder> Reminders { get; set; }
         public DbSet<RemindTime> RemindTimes { get; set; }
         public DbSet<UserMedicineMap> UserMedicineMaps { get; set; }

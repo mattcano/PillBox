@@ -23,7 +23,7 @@ namespace PillBox.Services
                     Constants.TWILIO_AUTHTOKEN);
         }
 
-        public void SendSMS(Patient patient)
+        public void SendSMS(PillboxUser patient)
         {
 
             var sms = client.SendSmsMessage(Constants.TWILIO_NUMBER,
@@ -51,12 +51,12 @@ namespace PillBox.Services
             
         }
 
-        private string GetMedicinesListForSms(Patient patient)
+        private string GetMedicinesListForSms(PillboxUser patient)
         {
             string medicines = "";
             string truncate = "";
 
-            var medList = patient.UserMedicineMaps.Select(m => m.Medicine.Name);
+            var medList = patient.Medicines.Select(m => m.Name);
 
             foreach (var med in medList)
             {
@@ -71,7 +71,7 @@ namespace PillBox.Services
             return truncate;
         }
 
-        public void SendSMS(Patient patient, string message)
+        public void SendSMS(PillboxUser patient, string message)
         {
             throw new NotImplementedException();
         }
@@ -81,7 +81,7 @@ namespace PillBox.Services
             throw new NotImplementedException();
         }
 
-        public void SendPhoneCall(Patient patient)
+        public void SendPhoneCall(PillboxUser patient)
         {
             var call = client.InitiateOutboundCall(
                 Constants.TWILIO_NUMBER,
@@ -103,7 +103,7 @@ namespace PillBox.Services
             }
         }
 
-        public void SendPhoneCall(Patient patient, string message)
+        public void SendPhoneCall(PillboxUser patient, string message)
         {
             throw new NotImplementedException();
         }

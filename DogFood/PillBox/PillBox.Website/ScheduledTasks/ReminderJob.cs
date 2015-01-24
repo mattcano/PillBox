@@ -39,7 +39,7 @@ namespace PillBox.Website.ScheduledTasks
 
                     //writer.AddAttribute
 
-                    foreach (var medicine in user.UserMedicineMaps)
+                    foreach (var medicine in user.Medicines)
                     {
                         userReminders.Add(new Reminder()
                         {
@@ -79,7 +79,7 @@ namespace PillBox.Website.ScheduledTasks
             var trailPatientsCall = dbContext.Patients
                 .Where(p => p.IsInTrial == true)
                 .Where(p => p.AutoSendPhone == true).ToList()
-                .Where(p => p.UserMedicineMaps.Where(um => um.RemindTime.Id == rTime.Id).ToList().Count != 0)
+                .Where(p => p.Medicines.Where(um => um.RemindTime.Id == rTime.Id).ToList().Count != 0)
                 .ToList();
 
             ITwilioService twilioService = new TwilioService();
@@ -94,7 +94,7 @@ namespace PillBox.Website.ScheduledTasks
             var trailPatientsSms = dbContext.Patients
                 .Where(p => p.IsInTrial == true)
                 .Where(p => p.AutoSendSMS == true).ToList()
-                .Where(p => p.UserMedicineMaps.Where(um => um.RemindTime.Id == rTime.Id).ToList().Count != 0)
+                .Where(p => p.Medicines.Where(um => um.RemindTime.Id == rTime.Id).ToList().Count != 0)
                 .ToList();
 
             foreach (var patient in trailPatientsSms)

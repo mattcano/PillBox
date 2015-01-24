@@ -7,7 +7,7 @@ namespace PillBox.Model.Entities
     public partial class Reminder : IEntityBase
     {
         public int Id { get; set; }
-        public Nullable<int> UserMedicineMapId { get; set; }
+        public Nullable<int> MedicineId { get; set; }
         public Nullable<int> RemindTimeId { get; set; }
         public Nullable<System.DateTime> ResponseTime { get; set; }
         public string RemindSendTime { get; set; }
@@ -19,7 +19,7 @@ namespace PillBox.Model.Entities
         public string Message { get; set; }
         public ReminderType ReminderType { get; set;}
         public virtual RemindTime RemindTime { get; set; }
-        public virtual UserMedicineMap UserMedicineMap { get; set; }
-        public virtual Patient Patient { get; set; }
+        public virtual Medicine Medicine { get; set; }
+        public virtual PillboxUser Patient { get; set; }
     }
 }

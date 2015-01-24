@@ -26,7 +26,7 @@ namespace PillBox.Website.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Patient patient = db.Patients.Find(id);
+            PillboxUser patient = db.Patients.Find(id);
             if (patient == null)
             {
                 return HttpNotFound();
@@ -47,7 +47,7 @@ namespace PillBox.Website.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Patient patient)
+        public ActionResult Create(PillboxUser patient)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace PillBox.Website.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Patient patient = db.Patients.Find(id);
+            PillboxUser patient = db.Patients.Find(id);
             if (patient == null)
             {
                 return HttpNotFound();
@@ -77,7 +77,7 @@ namespace PillBox.Website.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Patient patient)
+        public ActionResult Edit(PillboxUser patient)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace PillBox.Website.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Patient patient = db.Patients.Find(id);
+            PillboxUser patient = db.Patients.Find(id);
             if (patient == null)
             {
                 return HttpNotFound();
@@ -108,7 +108,7 @@ namespace PillBox.Website.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Patient patient = db.Patients.Find(id);
+            PillboxUser patient = db.Patients.Find(id);
             db.Patients.Remove(patient);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -116,7 +116,7 @@ namespace PillBox.Website.Controllers
 
         public ActionResult WeeklySummary(int id = 0)
         {
-            Patient patient = db.Patients.Find(id);
+            PillboxUser patient = db.Patients.Find(id);
             if (patient == null)
             {
                 return HttpNotFound();

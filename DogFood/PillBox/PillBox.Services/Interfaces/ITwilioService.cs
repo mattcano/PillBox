@@ -8,10 +8,10 @@ namespace PillBox.Services.Interfaces
 {
     public interface ITwilioService
     {
-        void SendSMS(Patient patient);
-        void SendSMS(Patient patient, string message);
-        void SendPhoneCall(Patient patient);
-        void SendPhoneCall(Patient patient, string message);
+        void SendSMS(PillboxUser patient);
+        void SendSMS(PillboxUser patient, string message);
+        void SendPhoneCall(PillboxUser patient);
+        void SendPhoneCall(PillboxUser patient, string message);
         void UpdateResponseDB(int responseId);
     }
 }

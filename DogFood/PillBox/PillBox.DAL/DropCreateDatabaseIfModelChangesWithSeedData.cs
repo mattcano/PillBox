@@ -146,50 +146,50 @@ namespace PillBox.DAL
 
 
             //Patients
-            var patientMichelle = new Patient
-            {
-                FirstName = "Michelle",
-                Email = "mmjiang@stanford.edu",
-                PhoneNumber = "3609096636",
-                AutoSendPhone = true,
-                AutoSendSMS = true,
-                IsInTrial = true,
-                UserMedicineMaps = medicinesMichelle
-            };
+            //var patientMichelle = new PillboxUser
+            //{
+            //    FirstName = "Michelle",
+            //    Email = "mmjiang@stanford.edu",
+            //    PhoneNumber = "3609096636",
+            //    AutoSendPhone = true,
+            //    AutoSendSMS = true,
+            //    IsInTrial = true,
+            //    Medicines = medicinesMichelle
+            //};
 
-            var patientDamola = new Patient
-            {
-                FirstName = "Damola",
-                Email = "damola.omotosho@gmail.com",
-                PhoneNumber = "3014373223",
-                AutoSendPhone = true,
-                AutoSendSMS = true,
-                IsInTrial = true,
-                UserMedicineMaps = medicinesDamola
-            };
+            //var patientDamola = new PillboxUser
+            //{
+            //    FirstName = "Damola",
+            //    Email = "damola.omotosho@gmail.com",
+            //    PhoneNumber = "3014373223",
+            //    AutoSendPhone = true,
+            //    AutoSendSMS = true,
+            //    IsInTrial = true,
+            //    Medicines = medicinesDamola
+            //};
 
-            var patientMatt = new Patient
-            {
-                FirstName = "Matt",
-                Email = "mcano11@stanford.edu",
-                PhoneNumber = "3107130421",
-                AutoSendPhone = true,
-                AutoSendSMS = true,
-                IsInTrial = true,
-                UserMedicineMaps = medicinesMatt
-            };
+            //var patientMatt = new PillboxUser
+            //{
+            //    FirstName = "Matt",
+            //    Email = "mcano11@stanford.edu",
+            //    PhoneNumber = "3107130421",
+            //    AutoSendPhone = true,
+            //    AutoSendSMS = true,
+            //    IsInTrial = true,
+            //    Medicines = medicinesMatt
+            //};
 
-            var patients = new[]
-            {
-                patientMichelle,
-                patientDamola,
-                patientMatt
-            };
+            //var patients = new[]
+            //{
+            //    patientMichelle,
+            //    patientDamola,
+            //    patientMatt
+            //};
 
 
             List<IEntityBase> list = new List<IEntityBase>();
             list.AddRange(remindTimes);
-            list.AddRange(patients);
+            //list.AddRange(patients);
             list.AddRange(medicines);
 
 

@@ -5,13 +5,11 @@ namespace PillBox.Model.Entities
 {
     public partial class Medicine : IEntityBase
     {
-        public Medicine()
-        {
-            this.UserMedicineMaps = new List<UserMedicineMap>();
-        }
-
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<UserMedicineMap> UserMedicineMaps { get; set; }
+        public DateTime RemindTime { get; set; }
+        public Guid UserId { get; set; }
+        public PillboxUser User { get; set; }
+
     }
 }

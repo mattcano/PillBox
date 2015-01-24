@@ -8,7 +8,7 @@ namespace PillBox.Website.Models
 {
     public class TrialPatientViewModel
     {
-        Patient patient;
+        PillboxUser patient;
         string reminderMessage;
         List<UserMedicineMap> medicines;
 
@@ -17,7 +17,7 @@ namespace PillBox.Website.Models
             medicines = new List<UserMedicineMap>();
         }
 
-        public TrialPatientViewModel(Patient patient)
+        public TrialPatientViewModel(PillboxUser patient)
             :this()
         {
             this.patient = patient;
@@ -32,7 +32,7 @@ namespace PillBox.Website.Models
             }
         }
 
-        public Patient Patient
+        public PillboxUser Patient
         {
             get { return patient; }
             set { patient = value; }

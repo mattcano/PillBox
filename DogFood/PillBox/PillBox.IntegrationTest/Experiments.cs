@@ -189,18 +189,17 @@ namespace PillBox.IntegrationTest
 
                     //writer.AddAttribute
 
-                    foreach (var medicine in user.UserMedicineMaps)
+                    foreach (var medicine in user.Medicines)
                     {
                         userReminders.Add(new Reminder()
                         {
-                            UserMedicineMap = medicine,
-                            RemindTime = medicine.RemindTime,
+                            Medicine = medicine,
                             IsTaken = false,
                         });
 
                         writer.RenderBeginTag(HtmlTextWriterTag.Div); //Begin #1
                         writer.RenderBeginTag(HtmlTextWriterTag.Span); //Begin #2
-                        writer.Write(medicine.Medicine.Name + " " + medicine.NumberOfPills);
+                        writer.Write(medicine.Name);
                         writer.RenderEndTag(); // End #2
                         writer.RenderEndTag(); // End #1
                     }

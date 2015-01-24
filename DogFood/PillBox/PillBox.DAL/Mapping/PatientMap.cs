@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace PillBox.DAL.Mapping
 {
-    public class PatientMap : EntityTypeConfiguration<Patient>
+    public class PatientMap : EntityTypeConfiguration<PillboxUser>
     {
         public PatientMap()
         {

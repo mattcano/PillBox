@@ -24,7 +24,6 @@ namespace PillBox.Services.DI
             Bind<IRepository>().To<Repository>();
             Bind<ISessionFactory>().ToProvider(new SessionFactoryProvider(_context));
             Bind<IUnitOfWork>().ToProvider(new UnitOfWorkProvider(_context));
-            Bind<IPatientService>().To<PatientService>();
             Bind<IMedicineService>().To<MedicineService>();
         }
     }

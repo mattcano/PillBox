@@ -22,12 +22,12 @@ namespace PillBox.DAL.Mapping
             this.Property(t => t.RemindTimeId).HasColumnName("RemindTimeId");
 
             // Relationships
-            this.HasOptional(t => t.Medicine)
-                .WithMany(t => t.UserMedicineMaps)
-                .HasForeignKey(d => d.MedicineId);
-            this.HasOptional(t => t.Patient)
-                .WithMany(t => t.UserMedicineMaps)
-                .HasForeignKey(d => d.UserId);
+            //this.HasOptional(t => t.Medicine)
+            //    .WithMany(t => t.UserMedicineMaps)
+            //    .HasForeignKey(d => d.MedicineId);
+            //this.HasOptional(t => t.Patient)
+            //    .WithMany(t => t.Medicines)
+            //    .HasForeignKey(d => d.UserId);
 
         }
     }
