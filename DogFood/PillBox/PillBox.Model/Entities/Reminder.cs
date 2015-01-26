@@ -18,6 +18,6 @@ namespace PillBox.Model.Entities
         public virtual string Message { get; set; }
         public virtual ReminderType ReminderType { get; set;}
         public virtual Medicine Medicine { get; set; }
-        public virtual PillboxUser Patient { get; set; }
+        public virtual PillBoxUser Patient { get; set; }
     }
 }

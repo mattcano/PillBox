@@ -32,8 +32,6 @@ namespace PillBox.Website
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            Database.SetInitializer<PillBoxContext>(new DropCreateDatabaseIfModelChangesWithSeedData());
-
             JobScheduler.EnqueueOnRemindTimes();
             JobScheduler.Start();
         }

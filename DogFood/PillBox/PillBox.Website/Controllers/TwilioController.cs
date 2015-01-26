@@ -13,7 +13,7 @@ namespace PillBox.Website.Controllers
 {
     public class TwilioController : Controller
     {
-        private PillBoxContext db = new PillBoxContext();
+        private PillBoxDbContext db = new PillBoxDbContext();
 
         public TwiMLResult Welcome()
         {

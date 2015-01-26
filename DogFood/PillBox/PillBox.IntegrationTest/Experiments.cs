@@ -169,13 +169,13 @@ namespace PillBox.IntegrationTest
 
         public class PillBoxEmailerJob : IJob
         {
-            PillBoxContext db;
+            PillBoxDbContext db;
 
             public void Execute(IJobExecutionContext context)
             {
-                db = new PillBoxContext();
+                db = new PillBoxDbContext();
 
-                var users = db.Patients.ToList();
+                var users = db.Set<PillBoxUser>();
 
                 foreach (var user in users)
                 {

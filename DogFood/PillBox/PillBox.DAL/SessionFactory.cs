@@ -19,7 +19,7 @@ namespace PillBox.DAL
 
         public SessionFactory()
         {
-            _context = new PillBoxContext();
+            _context = new PillBoxDbContext();
         }
 
         public SessionFactory(DbContext context)

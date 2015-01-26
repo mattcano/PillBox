@@ -12,18 +12,18 @@ namespace PillBox.Services
 {
     public class TwilioService:ITwilioService, IDisposable
     {
-        PillBoxContext context;
+        PillBoxDbContext context;
         TwilioRestClient client;
 
         public TwilioService()
         {
-            context = new PillBoxContext();
+            context = new PillBoxDbContext();
             client = new TwilioRestClient
                 (Constants.TWILIO_ACCOUNTSID, 
                     Constants.TWILIO_AUTHTOKEN);
         }
 
-        public void SendSMS(PillboxUser patient)
+        public void SendSMS(PillBoxUser patient)
         {
 
             var sms = client.SendSmsMessage(Constants.TWILIO_NUMBER,
@@ -51,7 +51,7 @@ namespace PillBox.Services
             
         }
 
-        private string GetMedicinesListForSms(PillboxUser patient)
+        private string GetMedicinesListForSms(PillBoxUser patient)
         {
             string medicines = "";
             string truncate = "";
@@ -71,7 +71,7 @@ namespace PillBox.Services
             return truncate;
         }
 
-        public void SendSMS(PillboxUser patient, string message)
+        public void SendSMS(PillBoxUser patient, string message)
         {
             throw new NotImplementedException();
         }
@@ -81,7 +81,7 @@ namespace PillBox.Services
             throw new NotImplementedException();
         }
 
-        public void SendPhoneCall(PillboxUser patient)
+        public void SendPhoneCall(PillBoxUser patient)
         {
             var call = client.InitiateOutboundCall(
                 Constants.TWILIO_NUMBER,
@@ -103,7 +103,7 @@ namespace PillBox.Services
             }
         }
 
-        public void SendPhoneCall(PillboxUser patient, string message)
+        public void SendPhoneCall(PillBoxUser patient, string message)
         {
             throw new NotImplementedException();
         }

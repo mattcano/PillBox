@@ -16,13 +16,13 @@ namespace PillBox.Website.ScheduledTasks
 {
     public class PillBoxEmailerJob : IJob
     {
-        PillBoxContext db;
+        PillBoxDbContext db;
 
         public void Execute(IJobExecutionContext context)
         {
-            db = new PillBoxContext();
+            db = new PillBoxDbContext();
 
-            var users = db.Patients.ToList();
+            var users = db.Set<PillBoxUser>().ToList();
 
             foreach (var user in users)
             {
@@ -70,9 +70,9 @@ namespace PillBox.Website.ScheduledTasks
 
             // Get all currently active trial patients
             // who have with auto send sms or phone set to true
-            PillBoxContext dbContext = new PillBoxContext();
+            PillBoxDbContext dbContext = new PillBoxDbContext();
 
-            var trailPatientsCall = dbContext.Patients
+            var trailPatientsCall = dbContext.Set<PillBoxUser>()
                 .Where(p => p.IsInTrial == true)
                 .Where(p => p.AutoSendPhone == true).ToList()
                 .ToList();
@@ -86,7 +86,7 @@ namespace PillBox.Website.ScheduledTasks
 
             Thread.Sleep(1000);
 
-            var trailPatientsSms = dbContext.Patients
+            var trailPatientsSms = dbContext.Set<PillBoxUser>()
                 .Where(p => p.IsInTrial == true)
                 .Where(p => p.AutoSendSMS == true).ToList()
                 .ToList();

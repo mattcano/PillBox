@@ -8,7 +8,7 @@ namespace PillBox.Website.Models
 {
     public class TrialPatientViewModel
     {
-        PillboxUser patient;
+        PillBoxUser patient;
         string reminderMessage;
 
         public TrialPatientViewModel()
@@ -16,7 +16,7 @@ namespace PillBox.Website.Models
 
         }
 
-        public TrialPatientViewModel(PillboxUser patient)
+        public TrialPatientViewModel(PillBoxUser patient)
             :this()
         {
             this.patient = patient;
@@ -31,7 +31,7 @@ namespace PillBox.Website.Models
             }
         }
 
-        public PillboxUser Patient
+        public PillBoxUser Patient
         {
             get { return patient; }
             set { patient = value; }

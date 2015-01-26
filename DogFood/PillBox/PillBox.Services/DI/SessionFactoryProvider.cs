@@ -15,7 +15,7 @@ namespace PillBox.Services.DI
 
         public SessionFactoryProvider()
         {
-            _context = new PillBoxContext();
+            _context = new PillBoxDbContext();
         }
 
         public SessionFactoryProvider(DbContext context)

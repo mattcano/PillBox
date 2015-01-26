@@ -17,14 +17,14 @@ namespace PillBox.Website.Controllers
 {
     public class TrialController : Controller
     {
-        private PillBoxContext db = new PillBoxContext();
+        private PillBoxDbContext db = new PillBoxDbContext();
 
         //
         // GET: /Trial/
 
         public ActionResult Index()
         {
-            var patients = db.Patients.ToList();
+            var patients = db.Set<PillBoxUser>().ToList();
             List<TrialPatientViewModel> trailPatients = 
                 new List<TrialPatientViewModel>(patients.Select(tp => new TrialPatientViewModel(tp)));
 
@@ -40,7 +40,7 @@ namespace PillBox.Website.Controllers
 
             string name;
 
-            PillboxUser patient = db.Set<PillboxUser>()
+            PillBoxUser patient = db.Set<PillBoxUser>()
                 .Where(p => p.PhoneNumber.Contains(request.To.Substring(2)))
                 .FirstOrDefault();
 
@@ -67,7 +67,7 @@ namespace PillBox.Website.Controllers
         {
             string medicines = "";
 
-            PillboxUser patient = db.Set<PillboxUser>().Find((Guid)id);
+            PillBoxUser patient = db.Set<PillBoxUser>().Find((Guid)id);
 
             var medList = patient.Medicines.Select(m => m.Name);
 
@@ -79,7 +79,7 @@ namespace PillBox.Website.Controllers
             return medicines;
         }
 
-        private string GetMedicinesListForSms(PillboxUser patient)
+        private string GetMedicinesListForSms(PillBoxUser patient)
         {
             string medicines = "";
             string truncate = "";
@@ -103,7 +103,7 @@ namespace PillBox.Website.Controllers
         {
             var response = new TwilioResponse();
 
-            PillboxUser patient = db.Set<PillboxUser>()
+            PillBoxUser patient = db.Set<PillBoxUser>()
                 .Where(p => p.PhoneNumber.Contains(request.To.Substring(3)))
                 .FirstOrDefault();
 
@@ -148,7 +148,7 @@ namespace PillBox.Website.Controllers
 
         public void test()
         {
-            PillboxUser patient = db.Set<PillboxUser>().Find(2);
+            PillBoxUser patient = db.Set<PillBoxUser>().Find(2);
 
             Reminder reminder = db.Set<Reminder>().Where(p => p.Patient.Id == patient.Id)
                 .OrderByDescending(p => p.RemindTimeSent)
@@ -162,7 +162,7 @@ namespace PillBox.Website.Controllers
         {
             var response = new TwilioResponse();
 
-            PillboxUser patient = db.Set<PillboxUser>()
+            PillBoxUser patient = db.Set<PillBoxUser>()
                 .Where(p => p.PhoneNumber.Contains(request.From.Substring(2)))
                 .FirstOrDefault();
 
@@ -218,7 +218,7 @@ namespace PillBox.Website.Controllers
         public ActionResult Deactivate(int id)
         {
 
-            PillboxUser patient = db.Set<PillboxUser>().Find(id);
+            PillBoxUser patient = db.Set<PillBoxUser>().Find(id);
 
             patient.IsInTrial = false;
             patient.AutoSendPhone = false;
@@ -246,7 +246,7 @@ namespace PillBox.Website.Controllers
         public ActionResult SendSMS(int id)
         {
 
-            PillboxUser patient = db.Set<PillboxUser>().Find(id);
+            PillBoxUser patient = db.Set<PillBoxUser>().Find(id);
             string accountSid = "ACa68cb3055a5c573f76862831c0995c48";
             string authToken = "8917e0e37320d868756ca59864dd29b6";
             var client = new TwilioRestClient(accountSid, authToken);
@@ -280,7 +280,7 @@ namespace PillBox.Website.Controllers
         [HttpPost]
         public ActionResult SendCall(int id)
         {            
-            PillboxUser patient = db.Set<PillboxUser>().Find(id);
+            PillBoxUser patient = db.Set<PillBoxUser>().Find(id);
             string accountSid = "ACa68cb3055a5c573f76862831c0995c48";
             string authToken = "8917e0e37320d868756ca59864dd29b6";
             var client = new TwilioRestClient(accountSid, authToken);

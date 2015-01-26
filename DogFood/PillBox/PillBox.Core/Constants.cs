@@ -37,5 +37,12 @@ namespace PillBox.Core
         public const string TWILIO_ACCOUNTSID = "ACa68cb3055a5c573f76862831c0995c48";
         public const string TWILIO_AUTHTOKEN = "8917e0e37320d868756ca59864dd29b6";
         public const string TWILIO_NUMBER = "4248357603";
+
+        //Misc
+        public const string FEMALE = "F";
+        public const string MALE = "M";
+        public const string AGE_GROUP_18_25 = "18-25";
+        public const string AGE_GROUP_26_45 = "26-45";
+        public const string AGE_GROUP_46_ABOVE = "46 and Above";
     }
 }

@@ -11,12 +11,12 @@ namespace PillBox.Services.DI
 
         public DICoreModule()
         {
-            _context = new PillBoxContext();
+            _context = new PillBoxDbContext();
         }
 
         public DICoreModule(string dbName)
         {
-            _context = new PillBoxContext(dbName);
+            _context = new PillBoxDbContext(dbName);
         }
 
         public override void Load()

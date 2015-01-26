@@ -11,123 +11,123 @@ namespace PillBox.Website.Controllers
 {
     public class PatientController : Controller
     {
-        private PillBoxContext db = new PillBoxContext();
+        //private PillBoxDbContext db = new PillBoxDbContext();
 
-        //
-        // GET: /Patient/
+        ////
+        //// GET: /Patient/
 
-        public ActionResult Index()
-        {
-            return View(db.Patients.ToList());
-        }
+        //public ActionResult Index()
+        //{
+        //    return View(db.Patients.ToList());
+        //}
 
-        //
-        // GET: /Patient/Details/5
+        ////
+        //// GET: /Patient/Details/5
 
-        public ActionResult Details(int id = 0)
-        {
-            PillboxUser patient = db.Patients.Find(id);
-            if (patient == null)
-            {
-                return HttpNotFound();
-            }
-            return View(patient);
-        }
+        //public ActionResult Details(int id = 0)
+        //{
+        //    PillBoxUser patient = db.Patients.Find(id);
+        //    if (patient == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(patient);
+        //}
 
-        //
-        // GET: /Patient/Create
+        ////
+        //// GET: /Patient/Create
 
-        public ActionResult Create()
-        {
-            return View();
-        }
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
 
-        //
-        // POST: /Patient/Create
+        ////
+        //// POST: /Patient/Create
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(PillboxUser patient)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Patients.Add(patient);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create(PillBoxUser patient)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Patients.Add(patient);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(patient);
-        }
+        //    return View(patient);
+        //}
 
-        //
-        // GET: /Patient/Edit/5
+        ////
+        //// GET: /Patient/Edit/5
 
-        public ActionResult Edit(int id = 0)
-        {
-            PillboxUser patient = db.Patients.Find(id);
-            if (patient == null)
-            {
-                return HttpNotFound();
-            }
-            return View(patient);
-        }
+        //public ActionResult Edit(int id = 0)
+        //{
+        //    PillBoxUser patient = db.Patients.Find(id);
+        //    if (patient == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(patient);
+        //}
 
-        //
-        // POST: /Patient/Edit/5
+        ////
+        //// POST: /Patient/Edit/5
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(PillboxUser patient)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(patient).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(patient);
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit(PillBoxUser patient)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Entry(patient).State = EntityState.Modified;
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(patient);
+        //}
 
-        //
-        // GET: /Patient/Delete/5
+        ////
+        //// GET: /Patient/Delete/5
 
-        public ActionResult Delete(int id = 0)
-        {
-            PillboxUser patient = db.Patients.Find(id);
-            if (patient == null)
-            {
-                return HttpNotFound();
-            }
-            return View(patient);
-        }
+        //public ActionResult Delete(int id = 0)
+        //{
+        //    PillBoxUser patient = db.Patients.Find(id);
+        //    if (patient == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(patient);
+        //}
 
-        //
-        // POST: /Patient/Delete/5
+        ////
+        //// POST: /Patient/Delete/5
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            PillboxUser patient = db.Patients.Find(id);
-            db.Patients.Remove(patient);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    PillBoxUser patient = db.Patients.Find(id);
+        //    db.Patients.Remove(patient);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
-        public ActionResult WeeklySummary(int id = 0)
-        {
-            PillboxUser patient = db.Patients.Find(id);
-            if (patient == null)
-            {
-                return HttpNotFound();
-            }
-            return View(patient);
-        }
+        //public ActionResult WeeklySummary(int id = 0)
+        //{
+        //    PillBoxUser patient = db.Patients.Find(id);
+        //    if (patient == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(patient);
+        //}
 
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    db.Dispose();
+        //    base.Dispose(disposing);
+        //}
     }
 }
