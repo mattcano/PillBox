@@ -9,7 +9,7 @@ namespace PillBox.Model.Entities
         public string Name { get; set; }
         public Nullable<DateTime> RemindTime { get; set; }
 
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public PillBoxUser User { get; set; }
 
     }

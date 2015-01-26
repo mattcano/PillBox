@@ -1,14 +1,87 @@
-﻿@model IEnumerable<PillBox.Model.Entities.Patient>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>PillBox</title>
+    <link data-turbolinks-track="true" href="/assets/application-39e29d91d58e19541f3847015e9c47d0.css" media="all" rel="stylesheet" />
+    <script data-turbolinks-track="true" src="/assets/application-0a5c488d13d4d9539e99c03a44247f3f.js"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="/CQaJXCkz/tkwYOk49RFJFQjIchCSYWsKpps4JZigV4=" name="csrf-token" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
 
-@{
-    ViewBag.Title = "Index";
-}
+    <div id="main-body" class="container">
+        <div class="jumbotron" style="background:url(/content/images/grandpakid.jpg);padding-left:60px;padding-right:60px;border-radius:6px;border-bottom:0;text-align:center;background-size:100%; background-repeat:no-repeat;">
+            <div class="jumbotron-content">
+                <h2 id="tagline1-jumbotron" class="featurette-heading">Keep your loved ones healthy.</h2>
+                <p class="lead "></p>
+                <p>
+                    <a class="btn btn-lg btn-primary pull-left" href="/signup">
+                        Sign Up Now <i class="glyphicon glyphicon-chevron-right"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
 
-<h2>Index</h2>
+        <div class="marketing">
+            <hr class="featurette-divider">
+            <div id="missionsec" class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Focus on Life <span class="text-muted"></span></h2>
+                    <p class="lead">PillBox fits into your relationships with your loved ones and seamlessly moves medications from the center of your relationships to the background, allowing you to focus on the parts of life that really matter, while you keep your loved ones healthy.</p>
+                </div>
+                <div class="col-md-5">
+                    <img alt="Family Together" class=" landing-icon featurette-image img-responsive center-block" src="~/content/images/family.png" />
+                </div>
+            </div>
 
-<p>
-    @Html.ActionLink("Manage Patients", "Index", "Patient")
-</p>
-<p>
-    @Html.ActionLink("Manage Medicines", "Index", "Medicine")
-</p>
+            <hr class="featurette-divider">
+
+            <div id="productsec" class="row featurette">
+                <div class="col-md-5">
+                    <img alt="Cloud and Phones" class="featurette-image img-responsive center-block landing-icon left-landing-icon" src="~/content/images/cloud.png" />
+                </div>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Family-Social Medication Reminders<span class="text-muted"></span></h2>
+                    <p class="lead">Interactive SMS and automated calls allow family to interact with the service without the need for a smartphone or technical knowhow. PillBox leverages the power of a cloud-connected service to deliver rich analytics, gamified incentives and engaging group communications.</p>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Keep Your Loved Ones Healthy.<span class="text-muted"></span></h2>
+                    <p class="lead">PillBox brings in the entire family to create mutual responsibility around the health of those we love so that you can structure your conversation and relationships to go beyond medications. We enable you to express your love in a way that changes their behavior so that together, you can keep your loved ones healthy.</p>
+                </div>
+                <div class="col-md-5">
+                    <img alt="Couple Hugging" class="featurette-image img-responsive center-block landing-icon" src="~/content/images/love.png" />
+                </div>
+            </div>
+            <hr class="featurette-divider">
+        </div>
+        <div id="footer-container" class="container">
+            <ul class="footer-list">
+                <li><a href="/about">About</a></li>
+                <li>&middot;</li>
+                <li><a href="/credits">Credits</a></li>
+                <li>&middot;</li>
+                <li><a href="/help">Help</a></li>
+                <li>&middot;</li>
+                <li><a href="/contact">Contact</a></li>
+                <li>&middot;</li>
+                <li><a href="/terms">Terms</a></li>
+                <li>&middot;</li>
+                <li><a href="/privacy">Privacy</a></li>
+            </ul>
+            <p><a href="/" id="logo" class="brand">PillBox</a></p>
+            <p>&copy; 2013</p>
+        </div>
+    </div>
+
+    <div class="container"></div>
+
+</body>
+</html>

@@ -42,30 +42,30 @@ input[type="checkbox"].input-validation-error {
 }
 
 .thumbnail {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
-.thumbnail > img {
-	height: 200px;
-}
+    .thumbnail > img {
+        height: 200px;
+    }
 
-.thumbnail .caption {
-	text-align: center;
-}
+    .thumbnail .caption {
+        text-align: center;
+    }
 
 .col-xs-4.versus {
-	margin-top: 20px;
-height: 200px;
-text-align: center;
-font-size: 36px;
-padding-top: 90px;
+    margin-top: 20px;
+    height: 200px;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 90px;
 }
 
 footer {
-	display: none;
-position: fixed;
-bottom: 0px;
-height: 70px;
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    height: 70px;
 }
 
 .pb-page-table {
@@ -76,29 +76,29 @@ height: 70px;
     border-top: 2px solid #D4D4D4;
 }
 
-.pb-page-table th {
-    text-align: left;
-    font-weight: bold;
-    border-bottom: 2px solid #D4D4D4;
-    padding: 8px 6px 8px 6px;
-}
+    .pb-page-table th {
+        text-align: left;
+        font-weight: bold;
+        border-bottom: 2px solid #D4D4D4;
+        padding: 8px 6px 8px 6px;
+    }
 
-.pb-page-table td {
-    border-bottom: 2px solid #D4D4D4;
-    padding: 15px 8px 15px 8px;
-    vertical-align: top;
-}
+    .pb-page-table td {
+        border-bottom: 2px solid #D4D4D4;
+        padding: 15px 8px 15px 8px;
+        vertical-align: top;
+    }
 
-.pb-page-table pre, .pg-page-table p {
-    margin: 0px;
-    padding: 0px;
-    font-family: inherit;
-    font-size: 100%;
-}
+    .pb-page-table pre, .pg-page-table p {
+        margin: 0px;
+        padding: 0px;
+        font-family: inherit;
+        font-size: 100%;
+    }
 
-.pb-page-table tbody tr:hover td {
-    background-color: #F3F3F3;
-}
+    .pb-page-table tbody tr:hover td {
+        background-color: #F3F3F3;
+    }
 
 a:hover {
     background-color: transparent;
@@ -141,4 +141,11 @@ a:hover {
 
 .parameter-source {
     width: 30%;
+}
+
+.jumbotron {
+    background-image: url(~/content/images/kid.jpg);
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }

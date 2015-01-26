@@ -39,7 +39,7 @@ namespace PillBox.DAL.Entities
         {
             modelBuilder.Configurations.Add(new MedicineMap());
             modelBuilder.Configurations.Add(new ReminderMap());
-            
+
             base.OnModelCreating(modelBuilder);
         }
     }

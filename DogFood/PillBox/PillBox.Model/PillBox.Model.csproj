@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Medicine.cs" />
+    <Compile Include="Entities\PillBoxRole.cs" />
     <Compile Include="Entities\PillBoxUser.cs" />
     <Compile Include="Entities\Reminder.cs" />
     <Compile Include="Enum\ReminderType.cs" />

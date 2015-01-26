@@ -7,17 +7,20 @@ using System.Text;
 
 namespace PillBox.Services
 {
-    interface IMedicineService
+    public interface IMedicineService
     {
         bool AddMedicine(string name);
+        bool DeleteUserMedicines(string id);
     }
 
     public class MedicineService : IMedicineService
     {
         IRepository _repo;
+        IUnitOfWork _uow;
 
-        public MedicineService(IRepository repo)
+        public MedicineService(IUnitOfWork uow, IRepository repo)
         {
+            _uow = uow;
             _repo = repo;
         }
 
@@ -37,6 +40,26 @@ namespace PillBox.Services
             }
 
             return true;
+        }
+
+        public bool DeleteUserMedicines(string id)
+        {
+            try
+            {
+                var userMedicines = _repo.GetList<Medicine>(m => m.UserId == id);
+
+                //_uow.
+                foreach(var med in userMedicines)
+                {
+                    _repo.DeleteEntity(med);
+                }
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

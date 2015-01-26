@@ -198,8 +198,10 @@
     <Compile Include="App_Start\PillBoxConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\RoleAdminController.cs" />
     <Compile Include="Controllers\TrialController.cs" />
     <Compile Include="Controllers\TwilioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -209,11 +211,16 @@
     </Compile>
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\HtmlPrefixScopeExtensions.cs" />
+    <Compile Include="Helpers\IdentityHelpers.cs" />
     <Compile Include="Models\AdminHomeViewModel.cs" />
+    <Compile Include="Models\CreateMedicineModel.cs" />
     <Compile Include="Models\CreatePatientModel.cs" />
     <Compile Include="Models\EmailMedSummaryItem.cs" />
     <Compile Include="Models\Evaluation.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ReminderQuestion.cs" />
+    <Compile Include="Models\RoleEditModel.cs" />
+    <Compile Include="Models\RoleModificationModel.cs" />
     <Compile Include="Models\TrialManagerViewModel.cs" />
     <Compile Include="Models\TrialPatientViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -225,6 +232,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\cloud.png" />
+    <Content Include="Content\images\family.png" />
+    <Content Include="Content\images\grandpakid.jpg" />
+    <Content Include="Content\images\love.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -324,6 +335,10 @@
     <Content Include="Views\Patient\Index.cshtml" />
     <Content Include="Views\Trial\_SendTwilioRow.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\RoleAdmin\Index.cshtml" />
+    <Content Include="Views\RoleAdmin\Create.cshtml" />
+    <Content Include="Views\RoleAdmin\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

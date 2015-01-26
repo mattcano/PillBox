@@ -1,0 +1,22 @@
+﻿@model PillBox.Website.Models.LoginModel
+@{ ViewBag.Title = "Login"; }
+
+<h2>Login</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    
+    <input type="hidden" name="returnUrl" value="@ViewBag.ReturnURL" />
+    <div class="form-group">
+        <label>Phone Number</label>
+        @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-primary" type="submit">Log In</button>
+}

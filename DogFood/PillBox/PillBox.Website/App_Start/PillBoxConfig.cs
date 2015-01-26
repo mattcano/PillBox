@@ -15,6 +15,7 @@ namespace PillBox
         {
             app.CreatePerOwinContext<PillBoxDbContext>(PillBoxDbContext.Create);
             app.CreatePerOwinContext<PillBoxUserManager>(PillBoxUserManager.Create);
+            app.CreatePerOwinContext<PillBoxRoleManager>(PillBoxRoleManager.Create);
 
             app.UseCookieAuthentication(new Microsoft.Owin.Security.Cookies.CookieAuthenticationOptions{
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
