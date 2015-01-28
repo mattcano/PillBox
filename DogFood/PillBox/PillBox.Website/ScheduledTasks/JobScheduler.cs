@@ -11,6 +11,7 @@ namespace PillBox.Website.ScheduledTasks
 {
     public class JobScheduler
     {
+        static PillBoxDbContext db = new PillBoxDbContext();
         static IScheduler scheduler;
 
         static JobScheduler()
@@ -29,6 +30,16 @@ namespace PillBox.Website.ScheduledTasks
         public static void AddJob(IJobDetail job, ITrigger trigger)
         {
             scheduler.ScheduleJob(job, trigger);
+        }
+
+        public static void ScheduleCurrentMedicineReminders()
+        {
+            var medicines = db.Set<Medicine>();
+
+            foreach (var med in medicines)
+            {
+                ScheduleMedicineReminder(med);
+            }
         }
 
         public static void EnqueueOnRemindTimes()
@@ -112,6 +123,35 @@ namespace PillBox.Website.ScheduledTasks
             AddJob(afternoonDetail, afternoonTrigger);
             AddJob(eveningDetail, eveningTrigger);
             AddJob(nightDetail, nightTrigger);
+        }
+
+        public static void ScheduleMedicineReminder(Medicine med)
+        {
+            if ((med.User != null))
+            {
+                int medicineId = med.Id;
+                string medicine = med.Name;
+                int remindHour = Int32.Parse(med.RemindTime.Value.ToString("HH"));
+                int remindMinute = med.RemindTime.Value.Minute;
+                string phoneNumber = med.User.PhoneNumber;
+                string userId = med.User.Id;
+
+                IJobDetail job = JobBuilder.Create<TwilioSmsJob>()
+                    .WithIdentity(medicineId.ToString(), "JobInfo")
+                    .Build();
+
+                ITrigger trigger = TriggerBuilder.Create()
+                    .WithIdentity(medicineId.ToString(), "TriggerInfo")
+                    .WithSchedule(CronScheduleBuilder.DailyAtHourAndMinute(remindHour, remindMinute))
+                    .UsingJobData("phoneNumber", phoneNumber)
+                    .UsingJobData("userId", userId)
+                    .UsingJobData("medicine", medicine)
+                    .UsingJobData("medicineId", medicineId)
+                    .ForJob(job)
+                    .Build();
+
+                AddJob(job, trigger);
+            }
         }
     }
 }
