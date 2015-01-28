@@ -4,6 +4,7 @@ using PillBox.DAL.Entities;
 using PillBox.Model.Entities;
 using PillBox.Services;
 using PillBox.Website.Models;
+using PillBox.Website.ScheduledTasks;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -11,19 +12,23 @@ using System.Web.Mvc;
 
 namespace PillBox.Website.Controllers
 {
-    [Authorize(Roles="Admin")]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         PillBoxDbContext db;
 
-        
+
         public AdminController()
         {
             db = new PillBoxDbContext();
         }
 
-        //[AllowAnonymous]
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Dashboard()
         {
             AdminHomeViewModel model = new AdminHomeViewModel();
             model.Users = UserManager.Users.ToList();
@@ -41,7 +46,7 @@ namespace PillBox.Website.Controllers
             }
             else
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Dashboard");
             }
         }
 
@@ -72,7 +77,38 @@ namespace PillBox.Website.Controllers
         //}
 
         [HttpPost]
-        //[AllowAnonymous]
+        public async Task<ActionResult> AddMed(AdminHomeViewModel model)
+        {
+            PillBoxUser user = await UserManager.FindByIdAsync(model.CreateMedicineModel.UserId);
+
+            if (user != null)
+            {
+                Medicine med = null;
+
+                if (!string.IsNullOrEmpty(model.CreateMedicineModel.MedicineName))
+                {
+                    med = new Medicine() { Name = model.CreateMedicineModel.MedicineName };
+                }
+
+                if (med != null && model.CreateMedicineModel.RemindTime != null)
+                {
+                    med.RemindTime = model.CreateMedicineModel.RemindTime;
+                    user.Medicines.Add(med);
+
+                }
+
+                IdentityResult result = await UserManager.UpdateAsync(user);
+
+                if(result.Succeeded)
+                    JobScheduler.ScheduleMedicineReminder(med);
+
+                return RedirectToAction("Dashboard");
+            }
+
+            return View("Error", new string[] { "User Not Found" });
+        }
+
+        [HttpPost]
         public async Task<ActionResult> Create(AdminHomeViewModel model)
         {
             IdentityResult result = null;
@@ -106,7 +142,8 @@ namespace PillBox.Website.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index");
+                    JobScheduler.ScheduleMedicineReminder(med);
+                    return RedirectToAction("Dashboard");
                 }
                 else
                 {
@@ -130,11 +167,21 @@ namespace PillBox.Website.Controllers
 
             if (user != null)
             {
+                //TODO Figure out how to do this with Cascade Deletes
+
+                var userReminders = db.Reminders.Where(m => m.UserId == id);
+                foreach (var reminder in userReminders)
+                {
+                    db.Reminders.Remove(reminder);
+                }
+
+                await db.SaveChangesAsync();
+
                 //TODO Figure out how to do this with Cascade Deletes & Identity
                 // First Delete User Meds
                 var userMedicines = db.Medicines.Where(m => m.UserId == id);
 
-                foreach(var med in userMedicines)
+                foreach (var med in userMedicines)
                 {
                     db.Medicines.Remove(med);
                 }
@@ -144,7 +191,7 @@ namespace PillBox.Website.Controllers
                 IdentityResult result = await UserManager.DeleteAsync(user);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Dashboard");
                 }
                 else
                 {
