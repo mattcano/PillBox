@@ -16,7 +16,7 @@ namespace PillBox.Core
                 {
 
 
-                    return "Name=DefaultConnection";
+                    return "Name=DeployContext";
                     
                 }
                 else
