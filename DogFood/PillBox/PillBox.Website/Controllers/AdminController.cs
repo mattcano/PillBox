@@ -5,6 +5,7 @@ using PillBox.Model.Entities;
 using PillBox.Services;
 using PillBox.Website.Models;
 using PillBox.Website.ScheduledTasks;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -92,14 +93,23 @@ namespace PillBox.Website.Controllers
 
                 if (med != null && model.CreateMedicineModel.RemindTime != null)
                 {
-                    med.RemindTime = model.CreateMedicineModel.RemindTime;
+                    string temp = null;
+                    try
+                    {
+                        temp = model.CreateMedicineModel.RemindTime.Value.ToString();
+                    }
+                    catch
+                    {
+
+                    }
+                    med.RemindTime = string.IsNullOrEmpty(temp) ? (DateTime?)null : DateTime.Parse(temp);
                     user.Medicines.Add(med);
 
                 }
 
                 IdentityResult result = await UserManager.UpdateAsync(user);
 
-                if(result.Succeeded)
+                if (result.Succeeded)
                     JobScheduler.ScheduleMedicineReminder(med);
 
                 return RedirectToAction("Dashboard");
@@ -134,7 +144,17 @@ namespace PillBox.Website.Controllers
 
                 if (med != null && model.CreatePatientModel.RemindTime != null)
                 {
-                    med.RemindTime = model.CreatePatientModel.RemindTime;
+                    string temp = null;
+                    try
+                    {
+                        temp = model.CreatePatientModel.RemindTime.Value.ToString();
+                        //temp = model.CreatePatientModel.RemindTime.Value.ToUniversalTime().ToString();
+                    }
+                    catch
+                    {
+
+                    }
+                    med.RemindTime = string.IsNullOrEmpty(temp) ? (DateTime?)null : DateTime.Parse(temp);
                     user.Medicines.Add(med);
                 }
 

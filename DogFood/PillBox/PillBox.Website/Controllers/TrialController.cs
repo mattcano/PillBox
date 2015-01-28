@@ -144,6 +144,7 @@ namespace PillBox.Website.Controllers
                     {
                         reminder.IsTaken = true;
                         reminder.ResponseTime = DateTime.Now;
+                        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
                         reminder.ReminderType = Model.Enum.ReminderType.SMS;
                         reminder.User = patient;
 
@@ -159,6 +160,7 @@ namespace PillBox.Website.Controllers
                     {
                         reminder.IsTaken = false;
                         reminder.ResponseTime = DateTime.Now;
+                        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
                         reminder.ReminderType = Model.Enum.ReminderType.SMS;
                         reminder.User = patient;
 
