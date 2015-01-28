@@ -43,7 +43,7 @@ namespace PillBox.Services
                 newReminder.RemindTimeSent = DateTime.Now;
                 newReminder.MessageSID = sms.Sid;
                 newReminder.ReminderType = Model.Enum.ReminderType.SMS;
-                newReminder.Patient = patient;
+                newReminder.User = patient;
 
                 context.Set<Reminder>().Add(newReminder);
                 context.SaveChanges();
@@ -71,9 +71,27 @@ namespace PillBox.Services
             return truncate;
         }
 
-        public void SendSMS(PillBoxUser patient, string message)
+        public void SendSMS(string userId, int medicineId, string phoneNumber, string message)
         {
-            throw new NotImplementedException();
+
+            var sms = client.SendSmsMessage(Constants.TWILIO_NUMBER, phoneNumber, message);
+
+            if ((phoneNumber != null) && 
+                (medicineId != null) && 
+                (userId != null))
+            {
+                Reminder newReminder = new Reminder();
+
+                newReminder.IsTaken = false;
+                newReminder.RemindTimeSent = DateTime.Now;
+                newReminder.MessageSID = sms.Sid;
+                newReminder.ReminderType = Model.Enum.ReminderType.SMS;
+                newReminder.UserId = userId;
+                newReminder.MedicineId = medicineId;
+
+                context.Set<Reminder>().Add(newReminder);
+                context.SaveChanges();
+            }
         }
 
         public void UpdateResponseDB(int responseId)
@@ -96,7 +114,7 @@ namespace PillBox.Services
                 newReminder.RemindTimeSent = DateTime.Now;
                 newReminder.CallSID = call.Sid;
                 newReminder.ReminderType = Model.Enum.ReminderType.PHONE;
-                newReminder.Patient = patient;
+                newReminder.User = patient;
 
                 context.Set<Reminder>().Add(newReminder);
                 context.SaveChanges();
