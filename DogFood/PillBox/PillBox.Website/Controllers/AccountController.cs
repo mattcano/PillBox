@@ -39,6 +39,8 @@ namespace PillBox.Website.Controllers
                     AuthManager.SignOut();
                     AuthManager.SignIn(
                         new AuthenticationProperties { IsPersistent = false }, ident);
+                    if (string.IsNullOrEmpty(returnUrl))
+                        return RedirectToAction("Index","Home");
                     return Redirect(returnUrl);
                 }
             }
