@@ -25,6 +25,7 @@ namespace PillBox.Website.ScheduledTasks
         public static void Start()
         {
             scheduler.Start();
+            ScheduleServerPingEvery2Mins();
         }
 
         public static void AddJob(IJobDetail job, ITrigger trigger)
@@ -32,9 +33,28 @@ namespace PillBox.Website.ScheduledTasks
             scheduler.ScheduleJob(job, trigger);
         }
 
+        private static void ScheduleServerPingEvery2Mins()
+        {
+            // define the job and tie it to our PingJob class
+            IJobDetail job = JobBuilder.Create<PingJob>()
+                .WithIdentity("ServerPing", "ServerPing")
+                .Build();
+
+            // Trigger the job to run now, and then repeat every 10 seconds
+            ITrigger trigger = TriggerBuilder.Create()
+                .WithIdentity("ServerPing", "ServerPing")
+                .StartNow()
+                .WithSimpleSchedule(x => x
+                    .WithIntervalInSeconds(120)
+                    .RepeatForever())
+                .Build();
+
+            AddJob(job, trigger);
+        }
+
         public static void ScheduleCurrentMedicineReminders()
         {
-            var medicines = db.Set<Medicine>();
+            var medicines = db.Set<Medicine>().Include("User");
 
             foreach (var med in medicines)
             {
@@ -127,7 +147,7 @@ namespace PillBox.Website.ScheduledTasks
 
         public static void ScheduleMedicineReminder(Medicine med)
         {
-            if ((med.User != null))
+            if ((!string.IsNullOrEmpty(med.UserId)))
             {
                 int medicineId = med.Id;
                 string medicine = med.Name;

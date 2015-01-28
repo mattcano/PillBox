@@ -32,7 +32,8 @@ namespace PillBox.Website
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            JobScheduler.EnqueueOnRemindTimes();
+            //JobScheduler.EnqueueOnRemindTimes();
+            JobScheduler.ScheduleCurrentMedicineReminders();
             JobScheduler.Start();
         }
     }

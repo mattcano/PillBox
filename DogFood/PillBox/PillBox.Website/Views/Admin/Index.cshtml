@@ -1,97 +1,12 @@
-﻿@using PillBox.Core
-@model PillBox.Website.Models.AdminHomeViewModel
-
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Admin Home";
 }
 
+<h2>Home</h2>
 
-<table class="table">
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Gender</th>
-        <th>Age Group</th>
-        <th>Phone</th>
-        <th>Remind Time</th>
-        <th>Medication</th>
-        <th></th>
-    </tr>
-    <tr>
-        @using (Html.BeginForm("Create", "Admin"))
-        {
-            <td>@Html.TextBoxFor(x => x.CreatePatientModel.FirstName)</td>
-            <td>@Html.TextBoxFor(x => x.CreatePatientModel.LastName)</td>
-            <td>@Html.DropDownListFor(x => x.CreatePatientModel.Gender, new SelectList(new string[] { Constants.FEMALE, Constants.MALE }))</td>
-            <td>@Html.DropDownListFor(x => x.CreatePatientModel.AgeGroup, new SelectList(new string[] { Constants.AGE_GROUP_18_25, Constants.AGE_GROUP_26_45, Constants.AGE_GROUP_46_ABOVE }))</td>
-            <td>@Html.TextBoxFor(x => x.CreatePatientModel.PhoneNumber)</td>
-            <td>@Html.TextBoxFor(x => x.CreatePatientModel.RemindTime)</td>
-            <td>@Html.TextBoxFor(x => x.CreatePatientModel.Medicine)</td>
-            <td>
-                <button type="submit" class="btn btn-primary">Create</button>
-            </td>
-        }
-    </tr>
-</table>
-<br />
-<table>
-    <tr>
-        <th>User</th>
-        <th>Remind Time</th>
-        <th>Medication</th>
-        <th></th>
-    </tr>
-    <tr>
-        <td>
-            @*@Html.DropDownListFor(x => x.CreateMedicineModel.UserId,)*@
-        </td>
-        <td>Remind Time</td>
-        <td>Medication</td>
-    </tr>
-</table>
-<br />
-<table class="table table-striped">
-    <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Gender</th>
-        <th>Age Group</th>
-        <th>Phone</th>
-        <th>Medications/Remind Time</th>
-        <th></th>
-    </tr>
-    @if (Model.Users.Count() == 0)
-    {
-        <tr><td colspan="4" class="text-center">No User Accounts</td></tr>
-    }
-    else
-    {
-        foreach (var user in Model.Users)
-        {
-            <tr>
-                <td>@user.Id</td>
-                <td>@user.FirstName</td>
-                <td>@user.LastName</td>
-                <td>@user.Gender</td>
-                <td>@user.AgeGroup</td>
-                <td>@user.PhoneNumber</td>
-                <td>
-                    @user.MedicineTimeList
-                </td>
-                <td>
-                    @using (Html.BeginForm("Delete", "Admin", new { id = user.Id }))
-                    {
-                        @Html.ActionLink("Edit", "Edit", new { id = user.Id }, new { @class = "btn btn-primary btn-xs" })
-                        @Html.ActionLink("Add Med", "Add", new { id = user.Id }, new { @class = "btn btn-primary btn-xs" })
-                        <button class="btn btn-danger btn-xs" type="submit">
-                            Delete
-                        </button>
-                    }
-                </td>
-            </tr>
-        }
-    }
-</table>
-<br />
-@Html.ActionLink("Create", "Create", null, new { @class = "btn btn-primary" })
+<p>
+    @Html.ActionLink("Manage Users", "Dashboard", "Admin")
+</p>
+<p>
+    @Html.ActionLink("Manage Roles", "Index", "RoleAdmin")
+</p>

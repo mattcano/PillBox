@@ -228,6 +228,73 @@ namespace PillBox.IntegrationTest
             }
         }
 
+        public class TwilioSmsJob : IJob
+        {
+            static TwilioService twilioService = new TwilioService();
+
+            public void Execute(IJobExecutionContext context)
+            {
+                JobKey key = context.JobDetail.Key;
+
+                JobDataMap dataMap = context.Trigger.JobDataMap;
+
+                string userId = dataMap.GetString("userId");
+                int medicineId = dataMap.GetInt("medicineId");
+                string phoneNumber = dataMap.GetString("phoneNumber");
+                string medicine = dataMap.GetString ("medicine");
+
+                string reminderMessage =  
+                    "Hello! This is a PillBox reminder to take your " + medicine + ". Reply Y if you’ve done so, N if not. Msg rates apply.";
+
+                twilioService.SendSMS(userId, medicineId, phoneNumber, reminderMessage);
+            }
+        }
+
+        [TestMethod]
+        public void Quartz_Cron_Twilio_Text()
+        {
+            PillBoxDbContext db = new PillBoxDbContext();
+
+            // Construct a scheduler factory
+            ISchedulerFactory schedFactory = new StdSchedulerFactory();
+
+            // Get a scheduler
+            IScheduler sched = schedFactory.GetScheduler();
+            sched.Start();
+
+            var user = db.Set<PillBoxUser>().FirstOrDefault(u => u.FirstName ==  "Damola");
+            var medicines = db.Set<Medicine>().Where(m => m.User.FirstName == "Damola").ToList();
+
+            if((user!= null) && medicines.Count != 0)
+            {
+                int medicineId = medicines[0].Id;
+                string medicine = medicines[0].Name;
+                int remindHour = Int32.Parse(medicines[0].RemindTime.Value.ToString("HH"));
+                int remindMinute = medicines[0].RemindTime.Value.Minute;
+                string phoneNumber = user.PhoneNumber;
+                string userId = user.Id;
+
+                IJobDetail job = JobBuilder.Create<TwilioSmsJob>()
+                    .WithIdentity(medicineId.ToString(), "JobInfo")
+                    .Build();
+
+                ITrigger trigger = TriggerBuilder.Create()
+                    .WithIdentity(medicineId.ToString(), "TriggerInfo")
+                    .WithSchedule(CronScheduleBuilder.DailyAtHourAndMinute(remindHour, remindMinute))
+                    .UsingJobData("phoneNumber", phoneNumber)
+                    .UsingJobData("userId", userId)
+                    .UsingJobData("medicine", medicine)
+                    .UsingJobData("medicineId", medicineId)
+                    .ForJob(job)
+                    .Build();
+
+                sched.ScheduleJob(job, trigger);
+
+                Console.ReadLine();
+            }
+            
+        }
+        
         [TestMethod]
         public void Can_Send_SMS_From_Twilio()
         {
