@@ -41,7 +41,7 @@ namespace PillBox.Model.Entities
                 
                 foreach(var med in Medicines)
                 {
-                    medsList += (med.Name + " " + med.RemindTime.GetValueOrDefault().ToShortTimeString() + "\n");
+                    medsList += (med.Name + " " + med.RemindTime.GetValueOrDefault().ToShortTimeString() + "<br />");
                 }
 
                 return medsList;
