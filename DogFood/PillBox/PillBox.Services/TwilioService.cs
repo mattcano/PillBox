@@ -12,6 +12,9 @@ namespace PillBox.Services
 {
     public class TwilioService:ITwilioService, IDisposable
     {
+
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         PillBoxDbContext context;
         TwilioRestClient client;
 
@@ -73,13 +76,14 @@ namespace PillBox.Services
 
         public void SendSMS(string userId, int medicineId, string phoneNumber, string message)
         {
-
+            log.Info("Begin sending message to: " + phoneNumber +" At " + DateTime.Now +".");
             var sms = client.SendSmsMessage(Constants.TWILIO_NUMBER, phoneNumber, message);
 
             if ((phoneNumber != null) && 
                 (medicineId != null) && 
                 (userId != null))
             {
+                log.Info("Begin generating new reminder");
                 Reminder newReminder = new Reminder();
 
                 newReminder.IsTaken = false;
@@ -91,6 +95,7 @@ namespace PillBox.Services
 
                 context.Set<Reminder>().Add(newReminder);
                 context.SaveChanges();
+                log.Info("End generating new reminder");
             }
         }
 

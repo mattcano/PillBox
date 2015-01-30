@@ -13,6 +13,8 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+
 namespace PillBox.Website
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -20,8 +22,11 @@ namespace PillBox.Website
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         protected void Application_Start()
         {
+            if (log.IsInfoEnabled) log.Info("Starting PillBox Website");
             NinjectBootstrapper.Initialize();
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory(NinjectBootstrapper.Kernel));
 

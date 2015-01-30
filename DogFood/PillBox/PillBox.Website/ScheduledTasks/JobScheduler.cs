@@ -11,6 +11,8 @@ namespace PillBox.Website.ScheduledTasks
 {
     public class JobScheduler
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         static PillBoxDbContext db = new PillBoxDbContext();
         static IScheduler scheduler;
 
@@ -24,8 +26,10 @@ namespace PillBox.Website.ScheduledTasks
 
         public static void Start()
         {
+            log.Info("Starting job scheduler");
             scheduler.Start();
             ScheduleServerPingEvery2Mins();
+            log.Info("End job scheduler");
         }
 
         public static void AddJob(IJobDetail job, ITrigger trigger)
@@ -35,6 +39,7 @@ namespace PillBox.Website.ScheduledTasks
 
         private static void ScheduleServerPingEvery2Mins()
         {
+            log.Info("Begin 2 minute server pinging");
             // define the job and tie it to our PingJob class
             IJobDetail job = JobBuilder.Create<PingJob>()
                 .WithIdentity("ServerPing", "ServerPing")
@@ -54,6 +59,7 @@ namespace PillBox.Website.ScheduledTasks
 
         public static void ScheduleCurrentMedicineReminders()
         {
+            log.Info("Reschedule existing medicine reminders");
             var medicines = db.Set<Medicine>().Include("User");
 
             foreach (var med in medicines)
@@ -170,6 +176,7 @@ namespace PillBox.Website.ScheduledTasks
                     .ForJob(job)
                     .Build();
 
+                log.Info("Scheduling User: "+ med.User.FullName +" Medicine: "+ med.Name +" RemindTime: " + med.RemindTime.Value.ToShortTimeString() + " Phone Number: " + med.User.PhoneNumber);
                 AddJob(job, trigger);
             }
         }

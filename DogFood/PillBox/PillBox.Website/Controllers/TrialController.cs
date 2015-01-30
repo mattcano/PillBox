@@ -17,6 +17,8 @@ namespace PillBox.Website.Controllers
 {
     public class TrialController : Controller
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         private PillBoxDbContext db = new PillBoxDbContext();
 
         //
@@ -124,24 +126,33 @@ namespace PillBox.Website.Controllers
         [HttpPost]
         public ActionResult ProcessTextResponse(SmsRequest request)
         {
+            log.Info("Begin processing text response");
             var response = new TwilioResponse();
 
             PillBoxUser patient = db.Set<PillBoxUser>()
                 .Where(p => p.PhoneNumber.Contains(request.From.Substring(2)))
                 .FirstOrDefault();
 
+            log.Info("Patient name: " + patient.FullName);
+
             Reminder reminder = db.Set<Reminder>().Where(p => p.User.Id == patient.Id)
                 .OrderByDescending(p => p.RemindTimeSent)
                 .FirstOrDefault();
+            log.Info("Reminder Id: " + reminder.Id);
 
+            log.Info("User responded: " + request.Body);
             if (!IsExpired(reminder.RemindTimeSent.Value))
             {
+                log.Info("Begin sending twilio response to user");
+
                 if (request.Body.ToLower().Contains('y'))
                 {
+                    log.Info("User responded yes");
                     response.Sms("Great job! Keep it up. :)");
 
                     if (patient != null)
                     {
+                        log.Info("Begin update response to true");
                         reminder.IsTaken = true;
                         reminder.ResponseTime = DateTime.Now;
                         //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
@@ -150,14 +161,17 @@ namespace PillBox.Website.Controllers
 
                         db.Entry(reminder).State = EntityState.Modified;
                         db.SaveChanges();
+                        log.Info("End update response to true");
                     }
                 }
                 else if (request.Body.ToLower().Contains('n'))
                 {
+                    log.Info("User responded no");
                     response.Sms("That’s not good -- let’s get you back on track tomorrow. We want you to stay healthy for your family! Reply with a comment for your records. Msg rates apply.");
 
                     if (patient != null)
                     {
+                        log.Info("Begin update response to false");
                         reminder.IsTaken = false;
                         reminder.ResponseTime = DateTime.Now;
                         //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
@@ -166,10 +180,12 @@ namespace PillBox.Website.Controllers
 
                         db.Entry(reminder).State = EntityState.Modified;
                         db.SaveChanges();
+                        log.Info("End update response to false");
                     }
                 }
                 else
                 {
+                    log.Info("User responded with an unexpected response: " + request.Body);
                     response.Sms("Sorry we where unable to process that response. Please try again..");
                 }
             }
@@ -178,6 +194,7 @@ namespace PillBox.Website.Controllers
                 response.Sms("Sorry your response came too late! Please wait till the next reminder.");
             }
 
+            log.Info("Return twilio response to user text response");
             return new TwiMLResult(response);
         }
 
@@ -309,9 +326,11 @@ namespace PillBox.Website.Controllers
 
             if (elasped.TotalMinutes > 175)
             {
+                log.Info("Is expired.");
                 expired = true;
             }
 
+            log.Info("Not expired");
             return expired;
         }
     }
