@@ -145,7 +145,8 @@ namespace PillBox.Website.Controllers
             {
                 log.Info("Begin sending twilio response to user");
 
-                if (request.Body.ToLower().Contains('y'))
+                if ((request.Body.ToLower().Contains('y') ||
+                    request.Body.ToLower().Contains("yes")) && request.Body.Length <= 4)
                 {
                     log.Info("User responded yes");
                     response.Sms("Great job! Keep it up. :)");
@@ -157,6 +158,7 @@ namespace PillBox.Website.Controllers
                         reminder.ResponseTime = DateTime.Now;
                         //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
                         reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                        reminder.Message = request.Body;
                         reminder.User = patient;
 
                         db.Entry(reminder).State = EntityState.Modified;
@@ -164,10 +166,11 @@ namespace PillBox.Website.Controllers
                         log.Info("End update response to true");
                     }
                 }
-                else if (request.Body.ToLower().Contains('n'))
+                else if (request.Body.ToLower().Contains('n') ||
+                    request.Body.ToLower().Contains("no") && request.Body.Length <= 4)
                 {
                     log.Info("User responded no");
-                    response.Sms("That’s not good -- let’s get you back on track tomorrow. We want you to stay healthy for your family! Reply with a comment for your records. Msg rates apply.");
+                    response.Sms("That’s not good -- let’s get you back on track tomorrow. We want you to stay healthy for your family!");
 
                     if (patient != null)
                     {
@@ -176,6 +179,7 @@ namespace PillBox.Website.Controllers
                         reminder.ResponseTime = DateTime.Now;
                         //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
                         reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                        reminder.Message = request.Body;
                         reminder.User = patient;
 
                         db.Entry(reminder).State = EntityState.Modified;
@@ -185,12 +189,45 @@ namespace PillBox.Website.Controllers
                 }
                 else
                 {
-                    log.Info("User responded with an unexpected response: " + request.Body);
-                    response.Sms("Sorry we where unable to process that response. Please try again..");
+                    log.Info("User responded non-standardly");
+
+                    if (patient != null)
+                    {
+                        log.Info("Begin update non standard response");
+                        reminder.ResponseTime = DateTime.Now;
+                        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
+                        reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                        reminder.Message = request.Body;
+                        reminder.User = patient;
+
+                        db.Entry(reminder).State = EntityState.Modified;
+                        db.SaveChanges();
+                        log.Info("End update non standard response");
+                    }
+                    log.Info("User responded with: " + request.Body);
+                    response.Sms("Thank you. Your response has been recorded.");
                 }
             }
             else
             {
+                log.Info("User responded too late");
+
+                if(patient != null)
+                {
+                    log.Info("Begin update late response");
+                    reminder.IsTaken = false;
+                    reminder.ResponseTime = DateTime.Now;
+                    //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
+                    reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                    reminder.Message = "@LATE -" + request.Body;
+                    reminder.User = patient;
+
+                    db.Entry(reminder).State = EntityState.Modified;
+                    db.SaveChanges();
+                    log.Info("End update late response");
+                }
+
+                log.Info("User responded with: " + request.Body);
                 response.Sms("Sorry your response came too late! Please wait till the next reminder.");
             }
 

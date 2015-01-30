@@ -29,7 +29,7 @@ namespace PillBox.Website.ScheduledTasks
             log.Info("Starting job scheduler");
             scheduler.Start();
             ScheduleServerPingEvery2Mins();
-            log.Info("End job scheduler");
+            log.Info("Job scheduler start successful");
         }
 
         public static void AddJob(IJobDetail job, ITrigger trigger)
