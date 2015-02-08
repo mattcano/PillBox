@@ -1,0 +1,87 @@
+﻿@model IEnumerable<PillBox.Website.Models.DataFeedViewModel>
+
+@{
+    ViewBag.Title = "Data Feed";
+}
+
+<section class="content-wrapper main-content clear-fix">
+
+    <h2>Data Feed</h2>
+
+    <table class="pb-page-table">
+        <tr>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+               Gender
+            </th>
+            <th>
+                Age Group
+            </th>
+            <th>
+                Medicine
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Reminder Time
+            </th>
+            <th>
+                Response Time
+            </th>
+            <th>
+                Response
+            </th>
+            <th>
+                Response Message
+            </th>
+            <th>
+                Late Response?
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgeGroup, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicineName, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RemindSentDate, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReminderSendTime, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResponseDateTime, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsTaken, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResponseMessage, new { @class = "pb-name" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsLateResponse, new { @class = "pb-name" })
+                </td>
+            </tr>
+        }
+    </table>
+</section>
