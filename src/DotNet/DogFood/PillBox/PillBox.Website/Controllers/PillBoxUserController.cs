@@ -7,21 +7,30 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
 using PillBox.Website.Models;
+using System.Linq;
 
 namespace PillBox.Website.Controllers
 {
     [Authorize]
     public class PillBoxUserController : Controller
     {
-        private PillBoxDbContext db = new PillBoxDbContext();
+        private PillBoxDbContext db;
+
+        public PillBoxUserController()
+        {
+            db = new PillBoxDbContext();
+        }
 
         //
         // GET: /Patient/
 
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             string userId = User.Identity.GetUserId();
-            PillBoxUser user = await UserManager.FindByIdAsync(userId);
+            PillBoxUser user = db.Set<PillBoxUser>()
+                                .Include("Medicines")
+                                .Include("Reminders")
+                                .FirstOrDefault(u => u.Id == userId);
 
             var model = new PillBoxUserViewModel(user);
 

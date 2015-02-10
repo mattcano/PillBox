@@ -19,6 +19,7 @@ namespace PillBox.Website.Models
 
         public PillBoxUserViewModel(PillBoxUser user)
         {
+            this.user = user;
             userPillBox = PopulateUserPillBox();
             weeklyProgress = PopulateWeeklyProgress();
             peopleICareFor = PopulatePeopleICareFor();
@@ -89,6 +90,8 @@ namespace PillBox.Website.Models
         private IEnumerable<string> PopulatePeopleCheeringMeOn()
         {
             IEnumerable<string> list = new List<string>();
+
+            //TODO get the people following you
 
             return list;
         }

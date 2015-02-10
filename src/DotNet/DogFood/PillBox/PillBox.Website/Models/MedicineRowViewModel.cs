@@ -7,16 +7,19 @@ namespace PillBox.Website.Models
 {
     public class MedicineRowViewModel
     {
-        private string p1;
-        private string p2;
-        private int p3;
+        private string medName;
+        private string remindTimeString;
+        private int medId;
 
-        public MedicineRowViewModel(string p1, string p2, int p3)
+        public MedicineRowViewModel(string medName, string remindTimeString, int medId)
         {
-            // TODO: Complete member initialization
-            this.p1 = p1;
-            this.p2 = p2;
-            this.p3 = p3;
+            this.medName = medName;
+            this.remindTimeString = remindTimeString;
+            this.medId = medId;
         }
+
+        public string MedName { get { return medName; } }
+        public string RemindTimeString { get { return remindTimeString; } }
+        public int MedId { get { return medId; } }
     }
 }

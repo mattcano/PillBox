@@ -7,16 +7,19 @@ namespace PillBox.Website.Models
 {
     public class WeeklyProgressRowViewModel
     {
-        private string p1;
+        private string medName;
         private int hits;
-        private int p2;
+        private int totalForWeek;
 
-        public WeeklyProgressRowViewModel(string p1, int hits, int p2)
+        public WeeklyProgressRowViewModel(string medName, int hits, int totalForWeek)
         {
-            // TODO: Complete member initialization
-            this.p1 = p1;
+            this.medName = medName;
             this.hits = hits;
-            this.p2 = p2;
+            this.totalForWeek = totalForWeek;
         }
+
+        public string MedName { get { return medName; } }
+        public int Hits { get { return hits; } }
+        public int TotalForWeek { get { return totalForWeek; } }
     }
 }

@@ -1,0 +1,143 @@
+﻿@model PillBox.Website.Models.PillBoxUserViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Model.User.FirstName 's DashBoard </h2>
+
+<h3>My PillBox</h3>
+<table class="table">
+    <tr>
+        <th>Reminder Time</th>
+        <th>Medication</th>
+        <td></td>
+    </tr>
+
+    @if (Model.UserPillBox.Count() == 0)
+    {
+        <tr><td colspan="3" class="text-center">No User Medications</td></tr>
+    }
+    else
+    {
+        foreach (var med in Model.UserPillBox)
+        {
+            <tr>
+                <td>@med.RemindTimeString</td>
+                <td>@med.MedName</td>
+                <td>
+                    @using (Html.BeginForm("Delete", "Medication", new { id = med.MedId }))
+                    {
+                        @Html.ActionLink("Edit", "Medication", new { id = med.MedId }, new { @class = "btn btn-primary btn-xs" })
+                        <button class="btn btn-danger btn-xs" type="submit">
+                            Delete
+                        </button>
+                    }
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<h3>Weekly Progress: @Model.StartOfWeek - @Model.EndOfWeek </h3>
+<table style="border-spacing: 10px 5px; border-collapse: separate;">
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    @if (Model.WeeklyProgress.Count() == 0)
+    {
+        <tr><td colspan="3" class="text-center">No Progress For This Week</td></tr>
+    }
+    else
+    {
+        foreach (var med in Model.WeeklyProgress)
+        {
+            <tr>
+                <td>@med.MedName</td>
+                <td>
+                    <table style="border: 1px solid black">
+                        <tr>
+                            @{
+            for (int i = 0; i <= med.TotalForWeek; i++)
+            {
+                string hitsString;
+                if (i == 4)
+                {
+                    hitsString = med.Hits.ToString();
+                }
+                else
+                {
+                    hitsString = "";
+                }
+
+                if (i + 1 <= med.Hits)
+                {
+                    <td width="25px" bgcolor="#4BACC6">@hitsString</td>
+                }
+                else
+                {
+                    <td width="25px">@hitsString</td>
+                }
+            }
+                            }
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    out of @med.TotalForWeek
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<h3>People I'm Caring For</h3>
+<table class="table">
+    <tr>
+        <th colspan="2">Name</th>
+    </tr>
+    @if (Model.PeopleICareFor.Count() == 0)
+    {
+        <tr><td colspan="2" class="text-center">You are not currently tracking anyone's health.</td></tr>
+    }
+    else
+    {
+        foreach(var person in Model.PeopleICareFor)
+        {
+            <tr>
+                <td>Person's Name</td>
+                <td>
+                    @using (Html.BeginForm("Delete", "PillBoxUser", new { id = 1 }))
+                    {
+                        @Html.ActionLink("Edit", "PillBoxUser", new { id = 1 }, new { @class = "btn btn-primary btn-xs" })
+                        <button class="btn btn-danger btn-xs" type="submit">
+                            Delete
+                        </button>
+                    }
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<h3>People Cheering Me On</h3>
+<table class="table">
+    <tr>
+        <th>Name</th>
+    </tr>
+    @if(Model.PeopleCheeringMeOn.Count() == 0)
+    {
+        <tr><td class="text-center">No one is currently following you.</td></tr>
+    }
+    else
+    {
+        foreach(var person in Model.PeopleCheeringMeOn)
+        {
+            <tr>
+                <td>@person</td>
+            </tr>
+        }
+    }
+</table>
