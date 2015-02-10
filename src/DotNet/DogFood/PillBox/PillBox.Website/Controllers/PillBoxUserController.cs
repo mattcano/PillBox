@@ -1,38 +1,45 @@
 ﻿using PillBox.DAL.Entities;
 using PillBox.Model.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
+using PillBox.Services;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
+using System.Threading.Tasks;
+using PillBox.Website.Models;
 
 namespace PillBox.Website.Controllers
 {
-    public class PatientController : Controller
+    [Authorize]
+    public class PillBoxUserController : Controller
     {
-        //private PillBoxDbContext db = new PillBoxDbContext();
+        private PillBoxDbContext db = new PillBoxDbContext();
 
-        ////
-        //// GET: /Patient/
+        //
+        // GET: /Patient/
 
-        //public ActionResult Index()
-        //{
-        //    return View(db.Patients.ToList());
-        //}
+        public async Task<ActionResult> Index()
+        {
+            string userId = User.Identity.GetUserId();
+            PillBoxUser user = await UserManager.FindByIdAsync(userId);
 
-        ////
-        //// GET: /Patient/Details/5
+            var model = new PillBoxUserViewModel(user);
 
-        //public ActionResult Details(int id = 0)
-        //{
-        //    PillBoxUser patient = db.Patients.Find(id);
-        //    if (patient == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(patient);
-        //}
+            return View(model);
+        }
+
+        //
+        // GET: /Patient/Details/5
+
+        public async Task<ActionResult> Details(string id)
+        {
+            PillBoxUser user = await UserManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
 
         ////
         //// GET: /Patient/Create
@@ -124,10 +131,19 @@ namespace PillBox.Website.Controllers
         //    return View(patient);
         //}
 
-        //protected override void Dispose(bool disposing)
-        //{
-        //    db.Dispose();
-        //    base.Dispose(disposing);
-        //}
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
+
+        private PillBoxUserManager UserManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().GetUserManager<PillBoxUserManager>();
+            }
+        }
+
     }
 }

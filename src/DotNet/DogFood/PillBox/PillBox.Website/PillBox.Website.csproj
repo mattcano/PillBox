@@ -203,7 +203,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\PillBoxUserController.cs" />
     <Compile Include="Controllers\ReminderController.cs" />
     <Compile Include="Controllers\RoleAdminController.cs" />
     <Compile Include="Controllers\TrialController.cs" />
@@ -223,11 +223,15 @@
     <Compile Include="Models\EmailMedSummaryItem.cs" />
     <Compile Include="Models\Evaluation.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\MedicineRowViewModel.cs" />
+    <Compile Include="Models\PeopleICareForRowViewModel.cs" />
+    <Compile Include="Models\PillBoxUserViewModel.cs" />
     <Compile Include="Models\ReminderQuestion.cs" />
     <Compile Include="Models\RoleEditModel.cs" />
     <Compile Include="Models\RoleModificationModel.cs" />
     <Compile Include="Models\TrialManagerViewModel.cs" />
     <Compile Include="Models\TrialPatientViewModel.cs" />
+    <Compile Include="Models\WeeklyProgressRowViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScheduledTasks\JobScheduler.cs" />
     <Compile Include="ScheduledTasks\PingJob.cs" />
