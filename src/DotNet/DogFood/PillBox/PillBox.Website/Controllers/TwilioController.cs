@@ -56,12 +56,12 @@ namespace PillBox.Website.Controllers
             string authToken = "8917e0e37320d868756ca59864dd29b6";
             var client = new TwilioRestClient(accountSid, authToken);
 
-            var call =client.InitiateOutboundCall("4248357603",
+            var call =client.InitiateOutboundCall("6506668667",
                 "3014373223",
                 "http://ec2-54-67-55-4.us-west-1.compute.amazonaws.com/twilio/welcome");
 
                 //client.SendMessage(
-                //"4248357603",
+                //"6506668667",
                 //"3014373223",
                 //"Testing out twilio from .NET"
                 //);

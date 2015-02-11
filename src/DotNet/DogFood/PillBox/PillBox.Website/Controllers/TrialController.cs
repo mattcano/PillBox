@@ -137,13 +137,13 @@ namespace PillBox.Website.Controllers
 
             log.Info("Patient name: " + patient.FullName);
 
-            Reminder reminder = db.Set<Reminder>().Where(p => p.User.Id == patient.Id)
+            Reminder reminder = db.Set<Reminder>().Where(p => p.User.Id == patient.Id && p.ResponseTime == null)
                 .OrderByDescending(p => p.RemindTimeSent)
                 .FirstOrDefault();
             log.Info("Reminder Id: " + reminder.Id);
 
             log.Info("User responded: " + request.Body);
-            if (!IsExpired(reminder.RemindTimeSent.Value))
+            if (!IsExpired(reminder))
             {
                 log.Info("Begin sending twilio response to user");
 
@@ -168,30 +168,30 @@ namespace PillBox.Website.Controllers
                         log.Info("End update response to true");
                     }
                 }
-                else if (request.Body.ToLower().Contains('n') ||
-                    request.Body.ToLower().Contains("no") && request.Body.Length <= 4)
-                {
-                    log.Info("User responded no");
-                    response.Sms("That’s not good -- let’s get you back on track tomorrow. We want you to stay healthy for your family!");
+                //else if (request.Body.ToLower().Contains('n') ||
+                //    request.Body.ToLower().Contains("no") && request.Body.Length <= 4)
+                //{
+                //    log.Info("User responded no");
+                //    response.Sms("That’s not good -- let’s get you back on track tomorrow. We want you to stay healthy for your family!");
 
-                    if (patient != null)
-                    {
-                        log.Info("Begin update response to false");
-                        reminder.IsTaken = false;
-                        reminder.ResponseTime = DateTime.Now;
-                        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
-                        reminder.ReminderType = Model.Enum.ReminderType.SMS;
-                        reminder.Message = request.Body;
-                        reminder.User = patient;
+                //    if (patient != null)
+                //    {
+                //        log.Info("Begin update response to false");
+                //        reminder.IsTaken = false;
+                //        reminder.ResponseTime = DateTime.Now;
+                //        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
+                //        reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                //        reminder.Message = request.Body;
+                //        reminder.User = patient;
 
-                        db.Entry(reminder).State = EntityState.Modified;
-                        db.SaveChanges();
-                        log.Info("End update response to false");
-                    }
-                }
+                //        db.Entry(reminder).State = EntityState.Modified;
+                //        db.SaveChanges();
+                //        log.Info("End update response to false");
+                //    }
+                //}
                 else
                 {
-                    log.Info("User responded non-standardly");
+                    log.Info("User response non-standard");
 
                     if (patient != null)
                     {
@@ -214,7 +214,7 @@ namespace PillBox.Website.Controllers
             {
                 log.Info("User responded too late");
 
-                if(patient != null)
+                if (patient != null)
                 {
                     log.Info("Begin update late response");
                     reminder.IsTaken = false;
@@ -230,7 +230,6 @@ namespace PillBox.Website.Controllers
                 }
 
                 log.Info("User responded with: " + request.Body);
-                response.Sms("Sorry your response came too late! Please wait till the next reminder.");
             }
 
             log.Info("Return twilio response to user text response");
@@ -294,7 +293,7 @@ namespace PillBox.Website.Controllers
             var client = new TwilioRestClient(accountSid, authToken);
 
 
-            var call = client.InitiateOutboundCall("4248357603",
+            var call = client.InitiateOutboundCall("6506668667",
                 patient.PhoneNumber,
                  "http://ec2-54-67-55-4.us-west-1.compute.amazonaws.com/Trial/GetResponse");
 
@@ -357,13 +356,13 @@ namespace PillBox.Website.Controllers
             return truncate;
         }
 
-        private bool IsExpired(DateTime sentTime)
+        private bool IsExpired(Reminder reminder)
         {
             bool expired = false;
 
-            TimeSpan elasped = DateTime.Now.Subtract(sentTime);
+            TimeSpan elasped = DateTime.Now.Subtract(reminder.RemindTimeSent.Value);
 
-            if (elasped.TotalMinutes > 180)
+            if (elasped.TotalHours >= 24)
             {
                 log.Info("Is expired.");
                 expired = true;

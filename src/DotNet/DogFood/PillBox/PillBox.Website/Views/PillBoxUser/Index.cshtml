@@ -26,13 +26,13 @@
                 <td>@med.RemindTimeString</td>
                 <td>@med.MedName</td>
                 <td>
-                    @using (Html.BeginForm("Delete", "Medication", new { id = med.MedId }))
+                    @*@using (Html.BeginForm("Delete", "Medication", new { id = med.MedId }))
                     {
                         @Html.ActionLink("Edit", "Medication", new { id = med.MedId }, new { @class = "btn btn-primary btn-xs" })
                         <button class="btn btn-danger btn-xs" type="submit">
                             Delete
                         </button>
-                    }
+                    }*@
                 </td>
             </tr>
         }

@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using Twilio;
 
 namespace PillBox.Services
 {
-    public class TwilioService:ITwilioService, IDisposable
+    public class TwilioService : ITwilioService, IDisposable
     {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -22,7 +23,7 @@ namespace PillBox.Services
         {
             context = new PillBoxDbContext();
             client = new TwilioRestClient
-                (Constants.TWILIO_ACCOUNTSID, 
+                (Constants.TWILIO_ACCOUNTSID,
                     Constants.TWILIO_AUTHTOKEN);
         }
 
@@ -32,7 +33,7 @@ namespace PillBox.Services
             var sms = client.SendSmsMessage(Constants.TWILIO_NUMBER,
                 patient.PhoneNumber,
 
-                "Hello! This is your reminder to take your " 
+                "Hello! This is your reminder to take your "
                 +
                 GetMedicinesListForSms(patient)
                 +
@@ -51,7 +52,7 @@ namespace PillBox.Services
                 context.Set<Reminder>().Add(newReminder);
                 context.SaveChanges();
             }
-            
+
         }
 
         private string GetMedicinesListForSms(PillBoxUser patient)
@@ -76,11 +77,42 @@ namespace PillBox.Services
 
         public void SendSMS(string userId, int medicineId, string phoneNumber, string message)
         {
-            log.Info("Begin sending message to: " + phoneNumber +" At " + DateTime.Now +".");
-            var sms = client.SendSmsMessage(Constants.TWILIO_NUMBER, phoneNumber, message);
+            log.Info("Begin sending message to: " + phoneNumber + " At " + DateTime.Now + ".");
 
-            if ((phoneNumber != null) && 
-                (medicineId != null) && 
+            double messageLength = message.Length;
+            double totalNumberOfTextsToSend = Math.Ceiling(messageLength / Constants.TEXT_MESSAGE_LENGTH);
+
+            List<string> textList = new List<string>();
+
+            int breakLocation = 0;
+
+            for (int i = 1; i <= totalNumberOfTextsToSend; i++)
+            {
+                string subString;
+
+                try
+                {
+                    subString = message.Substring(breakLocation, (int)Constants.TEXT_MESSAGE_LENGTH);
+                }
+                catch
+                {
+                    subString = message.Substring(breakLocation, (int)messageLength - breakLocation);
+                }
+
+                textList.Add(subString);
+                breakLocation += breakLocation + (int)Constants.TEXT_MESSAGE_LENGTH;
+            }
+
+            SMSMessage sms = null;
+
+            foreach (var text in textList)
+            {
+                sms = client.SendSmsMessage(Constants.TWILIO_NUMBER, phoneNumber, text);
+                Thread.Sleep(700);
+            }
+
+            if ((phoneNumber != null) &&
+                (medicineId != null) &&
                 (userId != null))
             {
                 log.Info("Begin generating new reminder");

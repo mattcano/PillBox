@@ -303,7 +303,7 @@ namespace PillBox.IntegrationTest
             var client = new TwilioRestClient(accountSid, authToken);
 
             Message result = client.SendMessage(
-                "4248357603",
+                "6506668667",
                 "3014373223", 
                 "Testing out twilio from .NET"
                 );

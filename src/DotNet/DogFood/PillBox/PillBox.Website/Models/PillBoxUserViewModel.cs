@@ -66,7 +66,7 @@ namespace PillBox.Website.Models
 
                 var reminders = from r in user.Reminders
                                 where r.MedicineId == med.Id &&
-                                r.ReminderSendTime >= startOfWeek
+                                r.RemindTimeSent >= startOfWeek
                                 select r;
 
                 hits = reminders.Where(r => r.IsTaken.Value == true).Count();
