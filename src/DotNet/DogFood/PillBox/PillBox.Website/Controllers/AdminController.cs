@@ -16,8 +16,9 @@ namespace PillBox.Website.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        PillBoxDbContext db;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        PillBoxDbContext db;
 
         public AdminController()
         {
@@ -148,34 +149,37 @@ namespace PillBox.Website.Controllers
                     PhoneNumber = model.CreatePatientModel.PhoneNumber,
                 };
 
-                Medicine med = null;
-
-                if (!string.IsNullOrEmpty(model.CreatePatientModel.Medicine))
-                {
-                    med = new Medicine() { Name = model.CreatePatientModel.Medicine };
-                }
-
-                if (med != null && model.CreatePatientModel.RemindTime != null)
-                {
-                    string temp = null;
-                    try
-                    {
-                        temp = model.CreatePatientModel.RemindTime.Value.ToString();
-                        //temp = model.CreatePatientModel.RemindTime.Value.ToUniversalTime().ToString();
-                    }
-                    catch
-                    {
-
-                    }
-                    med.RemindTime = string.IsNullOrEmpty(temp) ? (DateTime?)null : DateTime.Parse(temp);
-                    user.Medicines.Add(med);
-                }
-
                 result = await UserManager.CreateAsync(user, user.PhoneNumber);
 
-                if (result.Succeeded)
+                if (result.Succeeded) // Successful user creation
                 {
-                    JobScheduler.ScheduleMedicineReminder(med);
+                    Medicine med = null;
+
+                    if (!string.IsNullOrEmpty(model.CreatePatientModel.Medicine))
+                    {
+                        med = new Medicine() { Name = model.CreatePatientModel.Medicine };
+                    }
+
+                    if (med != null && model.CreatePatientModel.RemindTime != null)
+                    {
+                        string temp = null;
+                        try
+                        {
+                            temp = model.CreatePatientModel.RemindTime.Value.ToString();
+                            //temp = model.CreatePatientModel.RemindTime.Value.ToUniversalTime().ToString(); 
+                            med.RemindTime = string.IsNullOrEmpty(temp) ? (DateTime?)DateTime.Now : DateTime.Parse(temp);
+                            user.Medicines.Add(med);
+
+                            IdentityResult medResult = await UserManager.UpdateAsync(user);
+
+                            if (medResult.Succeeded)
+                                JobScheduler.ScheduleMedicineReminder(med);
+                        }
+                        catch
+                        {
+
+                        }
+                    }
                     return RedirectToAction("Dashboard");
                 }
                 else
@@ -197,14 +201,16 @@ namespace PillBox.Website.Controllers
         {
 
             PillBoxUser user = await UserManager.FindByIdAsync(id);
+            log.Info("Begin deleting " + user.FullName + " UserId: " + id);
 
             if (user != null)
             {
                 //TODO Figure out how to do this with Cascade Deletes
-
                 var userReminders = db.Reminders.Where(m => m.UserId == id);
+                log.Info("Deleting " + userReminders.Count() + " reminders.");
                 foreach (var reminder in userReminders)
                 {
+                    log.Info("Delete ReminderId: " + reminder.Id);
                     db.Reminders.Remove(reminder);
                 }
 
@@ -213,26 +219,33 @@ namespace PillBox.Website.Controllers
                 //TODO Figure out how to do this with Cascade Deletes & Identity
                 // First Delete User Meds
                 var userMedicines = db.Medicines.Where(m => m.UserId == id);
-
+                log.Info("Deleting " + userMedicines.Count() + " medicines.");
                 foreach (var med in userMedicines)
                 {
+                    log.Info("Delete MedicineId: " + med.Id);
+                    JobScheduler.RemoveJob(med.Id);
                     db.Medicines.Remove(med);
                 }
 
                 await db.SaveChangesAsync();
 
+                string userName = user.FullName;
+
                 IdentityResult result = await UserManager.DeleteAsync(user);
                 if (result.Succeeded)
                 {
+                    log.Info("End user delete successful for " + userName);
                     return RedirectToAction("Dashboard");
                 }
                 else
                 {
+                    log.Info("End user delete un-successful for " + userName);
                     return View("Error", result.Errors);
                 }
             }
             else
             {
+                log.Info("User with id: " + id + " not found to delete");
                 return View("Error", new string[] { "User Not Found" });
             }
         }

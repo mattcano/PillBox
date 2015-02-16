@@ -2,8 +2,10 @@
 using PillBox.Model.Entities;
 using Quartz;
 using Quartz.Impl;
+using Quartz.Impl.Matchers;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -15,6 +17,22 @@ namespace PillBox.Website.ScheduledTasks
 
         static PillBoxDbContext db = new PillBoxDbContext();
         static IScheduler scheduler;
+
+        public static List<DataRow> Jobs
+        {
+            get
+            {
+                return GetJobs().AsEnumerable().ToList();
+            }
+        }
+
+        public static int NumberOfJobs
+        {
+            get
+            {
+                return Jobs.Count;
+            }
+        }
 
         static JobScheduler()
         {
@@ -35,6 +53,12 @@ namespace PillBox.Website.ScheduledTasks
         public static void AddJob(IJobDetail job, ITrigger trigger)
         {
             scheduler.ScheduleJob(job, trigger);
+        }
+
+        public static void RemoveJob(int medicineId)
+        {
+            log.Info("Deleting job with MedicineId: " + medicineId);
+            scheduler.DeleteJob(new JobKey(medicineId.ToString(), "JobInfo"));
         }
 
         private static void ScheduleServerPingEvery2Mins()
@@ -180,5 +204,56 @@ namespace PillBox.Website.ScheduledTasks
                 AddJob(job, trigger);
             }
         }
+
+        private static DataTable GetJobs()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("GroupName");
+            table.Columns.Add("JobName");
+            table.Columns.Add("JobDescription");
+            table.Columns.Add("TriggerName");
+            table.Columns.Add("TriggerGroupName");
+            table.Columns.Add("TriggerType");
+            table.Columns.Add("TriggerState");
+            table.Columns.Add("NextFireTime");
+            table.Columns.Add("PreviousFireTime");
+            var jobGroups = scheduler.GetJobGroupNames();
+            foreach (string group in jobGroups)
+            {
+                var groupMatcher = GroupMatcher<JobKey>.GroupContains(group);
+                var jobKeys = scheduler.GetJobKeys(groupMatcher);
+                foreach (var jobKey in jobKeys)
+                {
+                    var detail = scheduler.GetJobDetail(jobKey);
+                    var triggers = scheduler.GetTriggersOfJob(jobKey);
+                    foreach (ITrigger trigger in triggers)
+                    {
+                        DataRow row = table.NewRow();
+                        row["GroupName"] = group;
+                        row["JobName"] = jobKey.Name;
+                        row["JobDescription"] = detail.Description;
+                        row["TriggerName"] = trigger.Key.Name;
+                        row["TriggerGroupName"] = trigger.Key.Group;
+                        row["TriggerType"] = trigger.GetType().Name;
+                        row["TriggerState"] = scheduler.GetTriggerState(trigger.Key);
+                        DateTimeOffset? nextFireTime = trigger.GetNextFireTimeUtc();
+                        if (nextFireTime.HasValue)
+                        {
+                            row["NextFireTime"] = TimeZone.CurrentTimeZone.ToLocalTime(nextFireTime.Value.DateTime);
+                        }
+
+                        DateTimeOffset? previousFireTime = trigger.GetPreviousFireTimeUtc();
+                        if (previousFireTime.HasValue)
+                        {
+                            row["PreviousFireTime"] = TimeZone.CurrentTimeZone.ToLocalTime(previousFireTime.Value.DateTime);
+                        }
+
+                        table.Rows.Add(row);
+                    }
+                }
+            }
+            return table;
+        }
+
     }
 }

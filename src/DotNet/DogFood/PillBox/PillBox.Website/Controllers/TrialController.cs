@@ -131,105 +131,115 @@ namespace PillBox.Website.Controllers
             log.Info("Begin processing text response");
             var response = new TwilioResponse();
 
-            PillBoxUser patient = db.Set<PillBoxUser>()
-                .Where(p => p.PhoneNumber.Contains(request.From.Substring(2)))
-                .FirstOrDefault();
-
-            log.Info("Patient name: " + patient.FullName);
-
-            Reminder reminder = db.Set<Reminder>().Where(p => p.User.Id == patient.Id && p.ResponseTime == null)
-                .OrderByDescending(p => p.RemindTimeSent)
-                .FirstOrDefault();
-            log.Info("Reminder Id: " + reminder.Id);
-
-            log.Info("User responded: " + request.Body);
-            if (!IsExpired(reminder))
+            try
             {
-                log.Info("Begin sending twilio response to user");
+                PillBoxUser patient = db.Set<PillBoxUser>()
+                    .Where(p => p.PhoneNumber.Contains(request.From.Substring(2)))
+                    .FirstOrDefault();
 
-                if ((request.Body.ToLower().Contains('y') ||
-                    request.Body.ToLower().Contains("yes")) && request.Body.Length <= 4)
+                // TODO None of this other logic makes sense if there
+                // is no matching patient send user message
+                // telling them to contact you at damola.omotosho@gmail.com
+
+                log.Info("Patient name: " + patient.FullName);
+
+                Reminder reminder = db.Set<Reminder>().Where(p => p.User.Id == patient.Id && p.ResponseTime == null)
+                    .OrderByDescending(p => p.RemindTimeSent)
+                    .FirstOrDefault();
+
+                // TODO if the patient is valid
+                // but there is no unanswered reminder for them
+                // and you know that they where supposed to recieve/generate
+                // reminders for medicines today that have not been generated
+                // do the reminder generation for the day. Add chaining if there
+                // were multiple medicines they were supposed to take.
+
+                log.Info("Reminder Id: " + reminder.Id);
+
+                log.Info("User responded: " + request.Body);
+
+                if (reminder == null)
                 {
-                    log.Info("User responded yes");
-                    response.Sms("Great job! Keep it up. :)");
+                    log.Info("Unable to find a valid reminder for this user response");
+                    log.Info("Text recieved from: " + request.From + " Message: " + request.Body);
+                    response.Sms("Thank you. We already recorded your response earlier.");
+                }
+                else if (!IsExpired(reminder))
+                {
+                    log.Info("Begin sending twilio response to user");
 
-                    if (patient != null)
+                    if ((request.Body.ToLower().Contains('y') ||
+                        request.Body.ToLower().Contains("yes")) && request.Body.Length <= 4)
                     {
-                        log.Info("Begin update response to true");
-                        reminder.IsTaken = true;
-                        reminder.ResponseTime = DateTime.Now;
-                        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
-                        reminder.ReminderType = Model.Enum.ReminderType.SMS;
-                        reminder.Message = request.Body;
-                        reminder.User = patient;
+                        log.Info("User responded yes");
+                        response.Sms("Great job! Keep it up. :)");
 
-                        db.Entry(reminder).State = EntityState.Modified;
-                        db.SaveChanges();
-                        log.Info("End update response to true");
+                        if (patient != null)
+                        {
+                            log.Info("Begin update response to true");
+                            reminder.IsTaken = true;
+                            reminder.ResponseTime = DateTime.Now;
+                            reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                            reminder.Message = request.Body;
+                            reminder.User = patient;
+
+                            db.Entry(reminder).State = EntityState.Modified;
+                            db.SaveChanges();
+                            log.Info("End update response to true");
+                        }
+                    }
+                    else
+                    {
+                        log.Info("User response non-standard");
+
+                        if (patient != null)
+                        {
+                            log.Info("Begin update non standard response");
+                            reminder.ResponseTime = DateTime.Now;
+                            reminder.ReminderType = Model.Enum.ReminderType.SMS;
+                            reminder.Message = request.Body;
+                            reminder.User = patient;
+
+                            db.Entry(reminder).State = EntityState.Modified;
+                            db.SaveChanges();
+                            log.Info("End update non standard response");
+                        }
+                        log.Info("User responded with: " + request.Body);
+                        response.Sms("Thank you. Your response has been recorded.");
                     }
                 }
-                //else if (request.Body.ToLower().Contains('n') ||
-                //    request.Body.ToLower().Contains("no") && request.Body.Length <= 4)
+                //else if (IsExpired(reminder))
                 //{
-                //    log.Info("User responded no");
-                //    response.Sms("That’s not good -- let’s get you back on track tomorrow. We want you to stay healthy for your family!");
+                //    log.Info("User responded too late");
 
                 //    if (patient != null)
                 //    {
-                //        log.Info("Begin update response to false");
+                //        log.Info("Begin update late response");
                 //        reminder.IsTaken = false;
                 //        reminder.ResponseTime = DateTime.Now;
-                //        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
                 //        reminder.ReminderType = Model.Enum.ReminderType.SMS;
-                //        reminder.Message = request.Body;
+                //        reminder.Message = "@LATE -" + request.Body;
                 //        reminder.User = patient;
 
                 //        db.Entry(reminder).State = EntityState.Modified;
                 //        db.SaveChanges();
-                //        log.Info("End update response to false");
+                //        log.Info("End update late response");
                 //    }
+
+                //    log.Info("User responded with: " + request.Body);
                 //}
                 else
                 {
-                    log.Info("User response non-standard");
-
-                    if (patient != null)
-                    {
-                        log.Info("Begin update non standard response");
-                        reminder.ResponseTime = DateTime.Now;
-                        //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
-                        reminder.ReminderType = Model.Enum.ReminderType.SMS;
-                        reminder.Message = request.Body;
-                        reminder.User = patient;
-
-                        db.Entry(reminder).State = EntityState.Modified;
-                        db.SaveChanges();
-                        log.Info("End update non standard response");
-                    }
-                    log.Info("User responded with: " + request.Body);
-                    response.Sms("Thank you. Your response has been recorded.");
+                    log.Info("I really dont know how we managed to get here.");
                 }
             }
-            else
+            catch(Exception ex)
             {
-                log.Info("User responded too late");
+                ///TODO this is just bad too much logic
+                ///in a controller
+                log.Info("An exception occurred",ex);
+                log.Info("Text recieved from: " + request.From + " Message: " + request.Body);
 
-                if (patient != null)
-                {
-                    log.Info("Begin update late response");
-                    reminder.IsTaken = false;
-                    reminder.ResponseTime = DateTime.Now;
-                    //reminder.ResponseTime = DateTime.Now.ToUniversalTime();
-                    reminder.ReminderType = Model.Enum.ReminderType.SMS;
-                    reminder.Message = "@LATE -" + request.Body;
-                    reminder.User = patient;
-
-                    db.Entry(reminder).State = EntityState.Modified;
-                    db.SaveChanges();
-                    log.Info("End update late response");
-                }
-
-                log.Info("User responded with: " + request.Body);
             }
 
             log.Info("Return twilio response to user text response");
@@ -366,6 +376,7 @@ namespace PillBox.Website.Controllers
             {
                 log.Info("Is expired.");
                 expired = true;
+                return expired;
             }
 
             log.Info("Not expired");
