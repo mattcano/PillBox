@@ -230,7 +230,9 @@ namespace PillBox.Website.Controllers
                 //}
                 else
                 {
-                    log.Info("I really dont know how we managed to get here.");
+                    log.Info("Reminder generation error.");
+                    log.Info("User responded with: " + request.Body);
+                    response.Sms("Thank you. Your response has been recorded in our logs. Thanks for being an awesome beta tester!");
                 }
             }
             catch(Exception ex)

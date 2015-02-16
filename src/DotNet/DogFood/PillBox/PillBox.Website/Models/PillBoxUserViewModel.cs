@@ -19,13 +19,14 @@ namespace PillBox.Website.Models
 
         public PillBoxUserViewModel(PillBoxUser user)
         {
+            SetWeekString();
+
             this.user = user;
             userPillBox = PopulateUserPillBox();
             weeklyProgress = PopulateWeeklyProgress();
             peopleICareFor = PopulatePeopleICareFor();
             peopleCheeringMeOn = PopulatePeopleCheeringMeOn();
 
-            SetWeekString();
         }
 
         public PillBoxUser User { get { return user; } }
