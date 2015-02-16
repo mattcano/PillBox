@@ -7,6 +7,7 @@ using PillBox.Website.Models;
 using PillBox.Website.ScheduledTasks;
 using System;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -53,43 +54,89 @@ namespace PillBox.Website.Controllers
 
         public async Task<ActionResult> Edit(string id)
         {
+            if (id == null)         
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
             PillBoxUser user = await UserManager.FindByIdAsync(id);
 
-            if (user != null)
-            {
-                return View(user);
-            }
-            else
-            {
+            if (user == null)  
                 return RedirectToAction("Dashboard");
-            }
+
+            return View(user);
         }
 
-        //TODO Finish
-        //[HttpPost]
-        //public async Task<ActionResult> Edit(EditPatientModel model)
-        //{
-        //    PillBoxUser user = await UserManager.FindByIdAsync(model.id);
+        bool PropertyChanged(string curValue, string newValue)
+        {
+            return newValue != curValue;
+        }
 
-        //    if (user != null)
-        //    {
-        //        if(!string.IsNullOrEmpty(model.CurrentPassword) && 
-        //            !string.IsNullOrEmpty(model.NewPassword))
-        //        {
-        //            IdentityResult validPass = await UserManager.ChangePasswordAsync(user.Id, model.CurrentPassword, model.NewPassword);
-        //            if (validPass.Succeeded)
-        //            {
-        //                user.PasswordHash = UserManager.PasswordHasher.HashPassword(model.NewPassword);
-        //            }
-        //            else
-        //            {
-        //                AddErrorsFromResult(validPass);
-        //            }
-        //        }
+        [HttpPost]
+        public async Task<ActionResult> Edit([Bind(Include = "Id,UserName,FirstName,LastName,Email,PhoneNumber,Gender,AgeGroup")]PillBoxUser formUser)
+        {
+            if (ModelState.IsValid)
+            {
+                PillBoxUser user = await UserManager.FindByIdAsync(formUser.Id);
+                if (user != null)
+                {
+                    if (PropertyChanged(user.FirstName, formUser.FirstName))    user.FirstName = formUser.FirstName;
+                    if (PropertyChanged(user.LastName, formUser.LastName))      user.LastName = formUser.LastName;
+                    if (PropertyChanged(user.Email, formUser.Email))            user.Email = formUser.Email;
+                    if (PropertyChanged(user.PhoneNumber, formUser.PhoneNumber))user.PhoneNumber = formUser.PhoneNumber;
+                    if (PropertyChanged(user.Gender, formUser.Gender))          user.Gender = formUser.Gender;
+                    if (PropertyChanged(user.AgeGroup, formUser.AgeGroup))      user.AgeGroup = formUser.AgeGroup;
 
-        //        if
-        //    }
-        //}
+                    IdentityResult validUser = await UserManager.UserValidator.ValidateAsync(user);
+
+                    if (!validUser.Succeeded)
+                        AddErrorsFromResult(validUser);
+
+                    IdentityResult result = await UserManager.UpdateAsync(user);
+
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Dashboard");
+                    }
+                    else
+                    {
+                        AddErrorsFromResult(result);
+                    }
+                    return View("Error", result.Errors);
+                }
+            }
+
+            var errorList = ModelState.Values.SelectMany(m => m.Errors)
+                            .Select(e => e.ErrorMessage)
+                            .ToList();
+
+            return View("Error", errorList);
+        }
+
+        public ActionResult DeleteMed(int medId)
+        {
+            //TODO Write Delete Code
+            return View();
+        }
+
+        public async Task<ActionResult> EditMed(int medId)
+        {
+            if (medId == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            Medicine med = await db.Set<Medicine>().FindAsync(medId);
+
+            if (med == null)
+                return View("Error", new string[] { "User Not Found" });
+                
+            //TODO finish edit view
+            return View(med);
+        }
+
+        [HttpPost]
+        public ActionResult EditMed(Medicine med)
+        {
+            //TODO Write Edit Post Code
+            return View();
+        }
 
         [HttpPost]
         public async Task<ActionResult> AddMed(AdminHomeViewModel model)

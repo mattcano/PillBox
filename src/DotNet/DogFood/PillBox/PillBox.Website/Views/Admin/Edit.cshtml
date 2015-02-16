@@ -1,0 +1,91 @@
+﻿@model PillBox.Model.Entities.PillBoxUser
+@using PillBox.Core
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@Html.ValidationSummary(true)
+<h2>PillBox User @Model.FullName</h2>
+
+<div class="form-group">
+    <label>User Id</label>
+    <p class="form-control-static">@Model.Id</p>
+    <label>User Name</label>
+    <p class="form-control-static">@Model.UserName</p>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>First Name</label>
+        @Html.TextBoxFor(model => model.FirstName)
+    </div>
+
+    <div class="form-group">
+        <label>Last Name</label>
+        @Html.TextBoxFor(model => model.LastName)
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        <label>Phone Number</label>
+        @Html.TextBoxFor(model => model.PhoneNumber)
+    </div>
+
+    <div class="form-group">
+        <label>Gender</label>
+        @Html.DropDownListFor(model => model.Gender
+            , new SelectList(new string[] { Constants.FEMALE, Constants.MALE }))
+    </div>
+
+    <div class="form-group">
+        <label>Age Group</label>
+        @Html.DropDownListFor(model => model.AgeGroup
+            , new SelectList(new string[] { Constants.AGE_GROUP_18_25, Constants.AGE_GROUP_26_45, Constants.AGE_GROUP_46_ABOVE }))
+    </div>
+
+    <fieldset>
+        <legend> Medications </legend>
+
+        <table class="table">
+            <tr>
+                <th>Remind Time</th>
+                <th>Medication</th>
+                <th></th>
+            </tr>
+            @if (Model.Medicines == null || Model.Medicines.Count == 0)
+            {
+                <tr><td colspan="3">No User Medicines.</td></tr>
+            }
+            else
+            {
+                foreach (var med in Model.Medicines)
+                {
+                    <tr>
+                        <td><p class="form-control-static">@med.RemindTime.Value.ToShortTimeString()</p></td>
+                        <td><p class="form-control-static">@med.Name</p></td>
+                        <td>
+                            @Html.ActionLink("Edit", "EditMed", new { id = med.Id }, new { @class = "btn btn-primary btn-xs" })
+                            @Html.ActionLink("Delete", "DeleteMed", new { id = med.Id }, new { @class = "btn btn-danger btn-xs" })
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Dashboard")
+</div>
