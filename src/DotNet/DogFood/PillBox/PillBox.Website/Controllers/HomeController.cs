@@ -26,7 +26,7 @@ namespace PillBox.Website.Controllers
             if (ipaddress == "" || ipaddress == null)
                 ipaddress = Request.ServerVariables["REMOTE_ADDR"];
 
-            log.Info("Visit from:  " + ipaddress);
+            //log.Info("Visit from:  " + ipaddress);
             
             //return View(_patientService.GetAllUsers());
             return View();

@@ -14,7 +14,7 @@ namespace PillBox.Website.ScheduledTasks
 
         public void Execute(IJobExecutionContext context)
         {
-            log.Info("Ping. Still Alive.");
+            //log.Info("Ping. Still Alive.");
             try
             {
                 var tcs = new TaskCompletionSource<string>();
