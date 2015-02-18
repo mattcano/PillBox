@@ -1,7 +1,26 @@
-﻿
+﻿@model PillBox.Model.Entities.Medicine
+
 @{
-    ViewBag.Title = "EditMed";
+    ViewBag.Title = "Edit Medicine";
 }
 
-<h2>EditMed</h2>
+<h2>Edit Medicine for @Model.User.FirstName</h2>
 
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Medicine Name</label>
+        @Html.TextBoxFor(model => model.Name);
+    </div>
+
+    <div class="form-group">
+        <label>Remind Time</label>
+        @Html.TextBoxFor(model => model.RemindTime, "{0:t}", new { id = "remindTime", placeholder = "HH:MM AM|PM" })
+    </div>
+
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+}

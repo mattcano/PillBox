@@ -8,15 +8,15 @@
 @Html.ValidationSummary(true)
 <h2>PillBox User @Model.FullName</h2>
 
-<div class="form-group">
-    <label>User Id</label>
-    <p class="form-control-static">@Model.Id</p>
-    <label>User Name</label>
-    <p class="form-control-static">@Model.UserName</p>
-</div>
-
 @using (Html.BeginForm())
 {
+    <div class="form-group">
+        <label>User Id</label>
+        <p class="form-control-static">@Model.Id</p>
+        <label>User Name</label>
+        <p class="form-control-static">@Model.UserName</p>
+    </div>
+
     @Html.HiddenFor(model => model.Id)
 
     <div class="form-group">
